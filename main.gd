@@ -1,7 +1,11 @@
 extends Node2D
 
-func _ready():
-	print("Ready!")
+func _ready():	
+	var player = get_node("player")
+	var opponent = get_node("opponent")
+	
+	PS2D.body_add_collision_exception(player.get_rid(), opponent.get_rid())
+	
 	set_process(true)
 
 func _process(delta):
