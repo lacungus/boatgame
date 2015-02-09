@@ -2,10 +2,13 @@ extends Node2D
 
 var player
 var opponent
+var application
 
 func _ready():	
-	player = get_node("player")
-	opponent = get_node("opponent")
+	application = get_node("/root/application")
+
+	player = application.get_player()
+	opponent = application.get_opponent()
 	
 	PS2D.body_add_collision_exception(player.get_rid(), opponent.get_rid())
 	
