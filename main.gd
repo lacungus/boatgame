@@ -15,8 +15,13 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	print(is_player_dead())
+	
 	if (Input.is_action_pressed("ui_left")):
 		player.apply_impulse( Vector2(-10, 0), Vector2(-10, 0) )
 
 	if (Input.is_action_pressed("ui_right")):
 		player.apply_impulse( Vector2(10, 0), Vector2(10, 0) )
+
+func is_player_dead():
+	return player.get_pos().y > application.get_height()

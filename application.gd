@@ -10,4 +10,4 @@ func get_width():
 	return self.get_parent().get_rect().size.width
 
 func get_height():
-	return self.get_parent().get_rect().size.heigt
+	return self.get_parent().get_rect().size.height
