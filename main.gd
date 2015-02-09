@@ -3,6 +3,7 @@ extends Node2D
 var player
 var opponent
 var application
+var is_game_running = true
 
 func _ready():	
 	application = get_node("/root/application")
@@ -15,7 +16,14 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	print(is_player_dead())
+	if is_game_running:
+		run(delta)
+	
+func run(delta):
+	if is_player_dead():
+		is_game_running = false
+		get_node("status_label").set_text("Game Over!")
+		return
 	
 	if (Input.is_action_pressed("ui_left")):
 		player.apply_impulse( Vector2(-10, 0), Vector2(-10, 0) )
