@@ -10,17 +10,27 @@ var opponent_pos0
 func _ready():	
 	application = get_node("/root/application")
 
-	player = application.get_player()
-	player_pos0 = player.get_pos()
-	
-	opponent = application.get_opponent()
-	opponent_pos0 = opponent.get_pos()
+	init_player()
+	init_opponent()
 	
 	PS2D.body_add_collision_exception(player.get_rid(), opponent.get_rid())
 	
 	set_process(true)
 
-
+func init_player():
+	player = application.get_player()
+	player_pos0 = player.get_pos()
+	
+	player.set_is_player(true)
+	player.set_speed(application.PLAYER_SPEED)
+	
+func init_opponent():
+	opponent = application.get_opponent()
+	opponent_pos0 = opponent.get_pos()
+	
+	opponent.set_is_player(true)
+	opponent.set_speed(application.AI_SPEED)
+	
 func _process(delta):
 	if is_game_running:
 		run(delta)
@@ -35,10 +45,10 @@ func run(delta):
 		#return
 	
 	if (Input.is_action_pressed("ui_left")):
-		player.apply_impulse( Vector2(-10, 0), Vector2(-10, 0) )
+		player.run_left()
 
 	if (Input.is_action_pressed("ui_right")):
-		player.apply_impulse( Vector2(10, 0), Vector2(10, 0) )
+		player.run_right()
 
 func is_player_dead():
 	return player.get_pos().y > application.get_height()
