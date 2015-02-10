@@ -31,11 +31,20 @@ func get_is_player():
 func set_speed(speed):
 	self.speed = speed
 	
+func run(direction):
+	if direction == application.DIRECTION_LEFT:
+		apply_impulse(VECTOR_LEFT, Vector2(-self.speed, 0))
+		return
+	if direction == application.DIRECTION_RIGHT:
+		apply_impulse(VECTOR_RIGHT, Vector2(self.speed, 0))
+		return
+	print("Unknown direction: " + direction)
+	
 func run_left():
-	apply_impulse(VECTOR_LEFT, Vector2(-self.speed, 0))
+	run(application.DIRECTION_LEFT)
 
 func run_right():
-	apply_impulse(VECTOR_RIGHT, Vector2(self.speed, 0))
+	run(application.DIRECTION_RIGHT)
 
 func _ready():
 	application = get_node("/root/application")
@@ -53,10 +62,7 @@ func _process(delta):
 		current_direction = make_decision()
 		last_decision_timestamp = current_timestamp
 	
-	if current_direction == application.DIRECTION_LEFT:
-		run_left()
-	if current_direction == application.DIRECTION_RIGHT:
-		run_right()
+	run(current_direction)
 	
 func make_decision():
 	if current_direction == null:
