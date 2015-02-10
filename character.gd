@@ -68,3 +68,6 @@ func make_decision():
 	if current_direction == null:
 		return application.DIRECTION_LEFT
 	return application.opposite_direction(current_direction)
+
+func is_dead():
+	return get_pos().y > application.get_height()

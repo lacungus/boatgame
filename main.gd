@@ -39,19 +39,21 @@ func _process(delta):
 			restart()
 	
 func run(delta):
-	if is_player_dead():
+	if player.is_dead():
 		is_game_running = false
-		get_node("status_label").set_text("Game Over! \n Press Space or Enter to restart.")
-		#return
+		get_node("status_label").set_text("You lost! \n Press Space or Enter to restart.")
+		return
+	
+	if opponent.is_dead():
+		is_game_running = false
+		get_node("status_label").set_text("You won! \n Press Space or Enter to restart.")
+		return
 	
 	if (Input.is_action_pressed("ui_left")):
 		player.run_left()
 
 	if (Input.is_action_pressed("ui_right")):
 		player.run_right()
-
-func is_player_dead():
-	return player.get_pos().y > application.get_height()
 
 func restart():
 	is_game_running = true
