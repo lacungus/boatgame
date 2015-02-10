@@ -48,6 +48,6 @@ func restart():
 	
 	player.set_pos(player_pos0)
 	opponent.set_pos(opponent_pos0)
-	
+	get_node("/root/Game/boat/top").set_rot(0)
 	
 	get_node("status_label").set_text("")

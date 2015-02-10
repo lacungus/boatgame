@@ -7,7 +7,7 @@ func get_opponent():
 	return get_node("/root/Game/opponent")
 	
 func get_boat():
-	return get_node("/root/Game/boat").RigidBody2D
+	return get_node("/root/Game/boat")
 
 func get_width():
 	return self.get_parent().get_rect().size.width
