@@ -57,7 +57,11 @@ func restart():
 	is_game_running = true
 	
 	player.set_pos(player_pos0)
+	player.set_linear_velocity(Vector2(0,0))
+	
 	opponent.set_pos(opponent_pos0)
+	opponent.set_linear_velocity(Vector2(0,0))
+	
 	get_node("/root/Game/boat/top").set_rot(0)
 	
 	get_node("status_label").set_text("")
