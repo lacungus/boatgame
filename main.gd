@@ -28,7 +28,7 @@ func init_opponent():
 	opponent = application.get_opponent()
 	opponent_pos0 = opponent.get_pos()
 	
-	opponent.set_is_player(true)
+	opponent.set_is_player(false)
 	opponent.set_speed(application.AI_SPEED)
 	
 func _process(delta):

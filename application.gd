@@ -2,7 +2,11 @@ extends Node
 
 const PLAYER_SPEED = 3
 
-const AI_SPEED = 5
+const AI_SPEED = 1
+
+# TODO enum?
+const DIRECTION_LEFT = "left"
+const DIRECTION_RIGHT = "right"
 
 func get_player():
 	return get_node("/root/Game/player")
@@ -18,3 +22,12 @@ func get_width():
 
 func get_height():
 	return self.get_parent().get_rect().size.height
+
+# TODO consider moving all direction logic into a separate class
+func opposite_direction(direction):
+	if direction == DIRECTION_LEFT:
+		return DIRECTION_RIGHT
+	if direction == DIRECTION_RIGHT:
+		return DIRECTION_LEFT
+	print("Unable to get opposite direction: " + direction)
+	return null
