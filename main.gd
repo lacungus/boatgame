@@ -41,12 +41,14 @@ func _process(delta):
 func run(delta):
 	if player.is_dead():
 		is_game_running = false
+		
 		get_node("status_label").set_text("You lost! \n Press Space or Enter to restart.")
 		return
 	
 	if opponent.is_dead():
 		is_game_running = false
-		get_node("status_label").set_text("You won! \n Press Space or Enter to restart.")
+		get_node("status_sprite").show()
+		get_node("status_label").set_text("Press Space or Enter to restart.")
 		return
 	
 	if (Input.is_action_pressed("ui_left")):
@@ -66,4 +68,6 @@ func restart():
 	
 	get_node("/root/Game/boat/top").set_rot(0)
 	
+	
 	get_node("status_label").set_text("")
+	get_node("status_sprite").hide()

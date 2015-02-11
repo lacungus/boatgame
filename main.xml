@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/CubanoFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/background.png" type="Texture"></ext_resource>
-	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://assets/you_won.png" type="Texture"></ext_resource>
 	<ext_resource path="res://character.xml" type="PackedScene"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="57">
+			<string_array  len="58">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -66,15 +67,16 @@
 				<string> "player" </string>
 				<string> "RigidBody2D" </string>
 				<string> "ai_1" </string>
+				<string> "status_sprite" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 6 </int>
+			<int> 7 </int>
 			<string> "variants" </string>
-			<array  len="32" shared="false">
+			<array  len="35" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -102,11 +104,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.66342 </real>
+							<real> 0.735092 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -634.697, -167.157 </vector2>
+							<vector2> -370.896, 5.14001 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -211,7 +213,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<vector2> 0.108032, -13.6482 </vector2>
 				<resource  resource_type="Texture" path="res://assets/background.png">  </resource>
@@ -315,22 +317,22 @@
 									<vector3> 0, 0, 0 </vector3>
 								</dictionary>
 							</array>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
@@ -455,22 +457,22 @@
 							</array>
 							<string> "deflight_rot_y" </string>
 							<real> 0.628319 </real>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -584,22 +586,22 @@
 							</array>
 							<string> "deflight_rot_y" </string>
 							<real> 0.628319 </real>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -612,9 +614,12 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
 				</dictionary>
+				<vector2> 400.082, 163.903 </vector2>
+				<vector2> 1.21733, 1.26562 </vector2>
+				<resource  resource_type="Texture" path="res://assets/you_won.png">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="182"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 6, 14, 10, 15, 3, 16, 4, 17, 3, 18, 3, 19, 11, 20, 11, 21, 12, 22, 13, 23, 3, 24, 14, 0, 0, 0, 1, 25, 15, 4, 2, 0, 7, 16, 9, 17, 11, 18, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 19, 29, 20, 30, 21, 31, 22, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 11, 50, 12, 51, 3, 52, 3, 53, 26, 0, 0, 0, 55, 54, 27, 3, 2, 0, 7, 28, 11, 29, 0, 0, 0, 55, 56, 27, 3, 2, 0, 7, 30, 11, 31, 0 </int_array>
+			<int_array  len="227"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 6, 14, 10, 15, 3, 16, 4, 17, 3, 18, 3, 19, 11, 20, 11, 21, 12, 22, 13, 23, 3, 24, 14, 0, 0, 0, 1, 25, 15, 4, 2, 0, 7, 16, 9, 17, 11, 18, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 19, 29, 20, 30, 21, 31, 22, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 11, 50, 12, 51, 3, 52, 3, 53, 26, 0, 0, 0, 55, 54, 27, 3, 2, 0, 7, 28, 11, 29, 0, 0, 0, 55, 56, 27, 3, 2, 0, 7, 30, 11, 31, 0, 0, 0, 13, 57, -1, 19, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 32, 8, 5, 9, 33, 14, 34, 15, 1, 16, 4, 17, 3, 18, 3, 19, 11, 20, 11, 21, 12, 22, 13, 23, 3, 24, 14, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
