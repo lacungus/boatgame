@@ -1,73 +1,88 @@
 extends Node2D
 
-var player
-var opponent
 var application
 var is_game_running = true
-var player_pos0 
-var opponent_pos0
+
+var level_manager
+var current_level
+
+var last_result
 
 func _ready():	
 	application = get_node("/root/application")
 
-	init_player()
-	init_opponent()
+	var level_manager_class = preload("res://level_manager.gd")
+	level_manager = level_manager_class.new(application)
 	
-	PS2D.body_add_collision_exception(player.get_rid(), opponent.get_rid())
+	current_level = level_manager.get_next_level()
+	start_level()
 	
 	set_process(true)
 
-func init_player():
-	player = application.get_player()
-	player_pos0 = player.get_pos()
-	
-	player.set_is_player(true)
-	player.set_speed(application.PLAYER_SPEED)
-	
-func init_opponent():
-	opponent = application.get_opponent()
-	opponent_pos0 = opponent.get_pos()
-	
-	opponent.set_is_player(false)
-	opponent.set_speed(application.AI_SPEED)
-	
 func _process(delta):
 	if is_game_running:
 		run(delta)
 	else:
 		if Input.is_action_pressed("ui_accept"):
-			restart()
-	
+			if last_result == "won":
+				cleanup_level()
+				current_level = level_manager.get_next_level()
+				if current_level == null:
+					get_node("status_label").set_text("No more levels!")
+				else:
+					start_level()
+			else:
+				cleanup_level()
+				start_level()
+
 func run(delta):
-	if player.is_dead():
+	if is_lost():
 		is_game_running = false
-		
-		get_node("status_label").set_text("You lost! \n Press Space or Enter to restart.")
-		return
-	
-	if opponent.is_dead():
+		get_node("status_label").set_text("You lost! \n Press Space or Enter to restart.")		
+		last_result = "lost"	
+		return	
+	if is_won():
 		is_game_running = false
 		get_node("status_sprite").show()
-		get_node("status_label").set_text("Press Space or Enter to restart.")
+		get_node("status_label").set_text("You won! \n Press Space or Enter to start next level.")
+		last_result = "won"
 		return
+
+func is_lost():
+	for character in current_level.characters:
+		if character.get_is_player() && character.is_dead():
+			return true
+	return false
 	
-	if (Input.is_action_pressed("ui_left")):
-		player.run_left()
-
-	if (Input.is_action_pressed("ui_right")):
-		player.run_right()
-
-func restart():
+func is_won():
+	for character in current_level.characters:
+		if !character.get_is_player() && !character.is_dead():
+			return false
+	return true
+	
+func start_level():
 	is_game_running = true
-	
-	player.set_pos(player_pos0)
-	player.set_linear_velocity(Vector2(0,0))
-	
-	opponent.set_pos(opponent_pos0)
-	opponent.set_linear_velocity(Vector2(0,0))
-	
+
+	for character in current_level.characters:
+		add_child(character)
+
+	for character1 in current_level.characters:
+		for character2 in current_level.characters:
+			PS2D.body_add_collision_exception(character1.get_rid(), character2.get_rid())
+			
+	var i = 0
+	while i < current_level.characters.size():
+		var character = current_level.characters[i]
+		var pos = current_level.character_positions[i]
+		character.set_pos(pos)
+		i = i + 1
+
+func cleanup_level():
+	for character in current_level.characters:
+		remove_child(character)
+		
 	get_node("/root/Game/boat/top").set_rot(0)
-	
 	
 	get_node("status_label").set_text("")
 	get_node("status_sprite").hide()
+	

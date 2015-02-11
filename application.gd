@@ -31,3 +31,19 @@ func opposite_direction(direction):
 		return DIRECTION_LEFT
 	print("Unable to get opposite direction: " + direction)
 	return null
+
+func create_character(ai, velocity, mass, is_player):
+	var character_scene = preload("res://character.xml")
+	var character = character_scene.instance()
+	
+	character.set_ai(ai)
+	character.set_velocity(velocity)
+	character.set_is_player(is_player)
+	# TODO set mass
+	return character
+
+func create_player():
+	return create_character(preload("res://ai.gd").PlayerAI.new(), PLAYER_SPEED, 0, true)
+	
+func create_swinging_opponent():
+	return create_character(preload("res://ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
