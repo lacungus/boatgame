@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://assets/CubanoFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://assets/you_won.png" type="Texture"></ext_resource>
 	<ext_resource path="res://main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
 	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -70,9 +71,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 6 </int>
 			<string> "variants" </string>
-			<array  len="31" shared="false">
+			<array  len="33" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -87,7 +88,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 4 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://application.gd" </string>
@@ -103,11 +104,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.735092 </real>
+							<real> 0.735093 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -370.896, -33.8591 </vector2>
+							<vector2> 155.901, 10.342 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -212,21 +213,19 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<vector2> 0.108032, -13.6482 </vector2>
-				<vector2> 1.3, 1.3 </vector2>
+				<vector2> -2.67002, -10.4937 </vector2>
+				<vector2> 1.3, 0.9 </vector2>
 				<resource  resource_type="Texture" path="res://assets/sky.png">  </resource>
 				<int> 1 </int>
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
 				<resource  resource_type="PackedScene" path="res://boat.xml">  </resource>
-				<vector2> 390.028, 440.997 </vector2>
+				<vector2> 386.352, 351.828 </vector2>
 				<vector2> 2.5, 1 </vector2>
 				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -317,22 +316,22 @@
 							<real> 0.628319 </real>
 							<string> "fov" </string>
 							<real> 45 </real>
-							<string> "default_light" </string>
-							<bool> True </bool>
 							<string> "viewport_mode" </string>
 							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 							<string> "default_srgb" </string>
 							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
@@ -358,9 +357,11 @@
 				<vector2> 400.082, 163.903 </vector2>
 				<vector2> 1.21733, 1.26562 </vector2>
 				<resource  resource_type="Texture" path="res://assets/you_won.png">  </resource>
+				<vector2> -2.38315, 260.199 </vector2>
+				<resource  resource_type="Texture" path="res://assets/sea.png">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="201"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 1, 25, 16, 4, 2, 0, 7, 17, 9, 18, 11, 19, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 20, 29, 21, 30, 22, 31, 23, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 25, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 12, 50, 13, 51, 3, 52, 3, 53, 27, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 28, 8, 5, 9, 29, 14, 30, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0 </int_array>
+			<int_array  len="246"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 1, 25, 16, 4, 2, 0, 7, 17, 9, 18, 11, 19, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 20, 29, 21, 30, 22, 31, 23, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 25, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 12, 50, 13, 51, 3, 52, 3, 53, 27, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 28, 8, 5, 9, 29, 14, 30, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 13, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 31, 8, 5, 9, 10, 14, 32, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
