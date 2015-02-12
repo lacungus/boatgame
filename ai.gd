@@ -1,4 +1,12 @@
+class BaseAI:
+	var character
+	
+	func set_character(character):
+		self.character = character
+
 class PlayerAI:
+	extends BaseAI
+	
 	func make_decision():
 		if (Input.is_action_pressed("ui_left")):
 			return "left"
@@ -9,7 +17,9 @@ class PlayerAI:
 		return null
 
 class SwingingAI:
-	# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
+	extends BaseAI
+
+		# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
 	const DECISION_INTERVAL_MILLISECONDS = 2000
 	
 	var current_direction
@@ -32,3 +42,22 @@ class SwingingAI:
 
 		last_decision_timestamp = current_timestamp
 		return current_direction
+
+class FollowingAI:
+	extends BaseAI
+
+	var application
+	
+	func _init(application):
+		self.application = application
+		
+	func make_decision():
+		var player = application.get_player()
+
+		if (player.get_pos().x < character.get_pos().x):
+			return application.DIRECTION_LEFT
+		
+		if (player.get_pos().x > character.get_pos().x):
+			return application.DIRECTION_RIGHT
+		
+		return null

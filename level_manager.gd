@@ -8,8 +8,8 @@ func _init(application):
 func get_next_level():
 	count = count + 1
 	if count == 1:
-		var characters = [application.create_player(), application.create_swinging_opponent()]
-		var positions = [Vector2(100, 100), Vector2(400, 400)]
+		var characters = [application.create_player(), application.create_following_opponent()]
+		var positions = [Vector2(100, 100), Vector2(400, 300)]
 		return preload("level.gd").new(count, characters, positions)
 
 	if count == 2:

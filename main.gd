@@ -15,6 +15,7 @@ func _ready():
 
 	var level_manager_class = preload("res://level_manager.gd")
 	level_manager = level_manager_class.new(application)
+	application.set_level_manager(level_manager)
 	
 	current_level = level_manager.get_next_level()
 	start_level()
@@ -93,6 +94,8 @@ func start_level():
 		i = i + 1
 	
 	level_started_timestamp = OS.get_ticks_msec()
+	
+	application.set_current_level(current_level)
 
 func cleanup_level():
 	for character in current_level.characters:

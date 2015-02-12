@@ -8,11 +8,24 @@ const AI_SPEED = 1
 const DIRECTION_LEFT = "left"
 const DIRECTION_RIGHT = "right"
 
-func get_player():
-	return get_node("/root/Game/player")
+var level_manager
+
+var current_level
+
+func set_level_manager(level_manager):
+	self.level_manager = level_manager
+
+func get_level_manager():
+	return level_manager
+
+func set_current_level(current_level):
+	self.current_level = current_level
 	
-func get_opponent():
-	return get_node("/root/Game/ai_1")
+func get_player():
+	for character in current_level.get_characters():
+		if character.get_is_player():
+			return character
+	return null
 	
 func get_boat():
 	return get_node("/root/Game/boat")
@@ -47,6 +60,9 @@ func create_player():
 	
 func create_swinging_opponent():
 	return create_character(preload("res://ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
+
+func create_following_opponent():
+	return create_character(preload("res://ai.gd").FollowingAI.new(self), AI_SPEED, 0, false)
 
 func set_x(node, x):
 	var node_pos = node.get_pos()
