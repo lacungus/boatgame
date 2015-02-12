@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://boat.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/seesaw_top.png" type="Texture"></ext_resource>
+	<ext_resource path="res://boat.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/seesaw_base.png" type="Texture"></ext_resource>
 	<resource type="ConcavePolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
@@ -79,7 +79,7 @@
 			<string> "node_count" </string>
 			<int> 8 </int>
 			<string> "variants" </string>
-			<array  len="31" shared="false">
+			<array  len="30" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -94,7 +94,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="2" shared="false">
 								<string> "res://boat.gd" </string>
@@ -215,7 +215,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://assets/seesaw_base.png">  </resource>
 				<int> 1 </int>
@@ -229,8 +229,7 @@
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
 				<vector2_array  len="3"> 					-32.6231, 32.0838, -1.28218, -31.1383, 33.8412, 33.1645 </vector2_array>
-				<vector2> 1.19748, -29.9368 </vector2>
-				<real> 0.6 </real>
+				<vector2> 0, -29.9368 </vector2>
 				<resource  resource_type="Shape2D" path="local://2">  </resource>
 				<matrix32> 2.5, -0, 0, 1, 0, 0 </matrix32>
 				<real> 100 </real>
@@ -247,7 +246,7 @@
 				<node_path> "../Sprite/StaticBody2D" </node_path>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="302"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 20, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 14, 9, 15, 1, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 11, 14, 0, 1, 0, 25, 25, -1, 17, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 26, 10, 27, 15, 28, 16, 29, 3, 30, 10, 31, 4, 32, 5, 33, 2, 34, 5, 0, 2, 0, 35, 35, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 36, 11, 37, 17, 0, 0, 0, 39, 38, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 18, 8, 19, 9, 6, 26, 10, 27, 20, 28, 21, 29, 3, 30, 10, 40, 11, 41, 22, 33, 2, 34, 5, 42, 3, 43, 11, 44, 11, 45, 3, 46, 3, 47, 1, 48, 4, 49, 5, 11, 23, 0, 4, 0, 13, 13, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 24, 14, 25, 15, 1, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 0, 4, 0, 35, 35, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 26, 36, 11, 37, 27, 0, 0, 0, 50, 50, -1, 11, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 28, 8, 5, 9, 6, 51, 29, 52, 30, 53, 5, 0 </int_array>
+			<int_array  len="302"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 20, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 14, 9, 15, 1, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 11, 14, 0, 1, 0, 25, 25, -1, 17, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 26, 10, 27, 15, 28, 16, 29, 3, 30, 10, 31, 4, 32, 5, 33, 2, 34, 5, 0, 2, 0, 35, 35, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 36, 11, 37, 17, 0, 0, 0, 39, 38, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 18, 8, 5, 9, 6, 26, 10, 27, 19, 28, 20, 29, 3, 30, 10, 40, 11, 41, 21, 33, 2, 34, 5, 42, 3, 43, 11, 44, 11, 45, 3, 46, 3, 47, 1, 48, 4, 49, 5, 11, 22, 0, 4, 0, 13, 13, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 23, 14, 24, 15, 1, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 0, 4, 0, 35, 35, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 25, 36, 11, 37, 26, 0, 0, 0, 50, 50, -1, 11, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 27, 8, 5, 9, 6, 51, 28, 52, 29, 53, 5, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
