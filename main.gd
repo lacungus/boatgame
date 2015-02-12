@@ -48,7 +48,6 @@ func run(delta):
 		return	
 	if is_won():
 		is_game_running = false
-		#get_node("status_sprite").show()
 		get_node("status_label").set_text("You won! \n Press Space or Enter \n to start next level.")
 		last_result = "won"
 		return
@@ -104,5 +103,4 @@ func cleanup_level():
 	get_node("/root/Game/boat/top").set_rot(0)
 	
 	get_node("status_label").set_text("")
-	#get_node("status_sprite").hide()
 	
