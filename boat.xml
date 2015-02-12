@@ -96,9 +96,10 @@
 							<string> "current" </string>
 							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="2" shared="false">
+							<array  len="3" shared="false">
 								<string> "res://boat.gd" </string>
 								<string> "res://main.gd" </string>
+								<string> "res://ai.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
