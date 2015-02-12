@@ -47,3 +47,8 @@ func create_player():
 	
 func create_swinging_opponent():
 	return create_character(preload("res://ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
+
+func set_x(node, x):
+	var node_pos = node.get_pos()
+	node_pos.x = x
+	node.set_pos(node_pos)
