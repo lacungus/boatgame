@@ -9,6 +9,8 @@ var current_level
 var last_result
 
 var level_started_timestamp = null
+var seconds_total = 0
+
 
 func _ready():	
 	application = get_node("/root/application")
@@ -93,7 +95,7 @@ func start_level():
 		i = i + 1
 	
 	level_started_timestamp = OS.get_ticks_msec()
-	
+
 	application.set_current_level(current_level)
 
 func cleanup_level():
@@ -104,3 +106,8 @@ func cleanup_level():
 	
 	get_node("status_label").set_text("")
 	
+func _on_Timer_timeout():
+	
+	seconds_total = seconds_total + 1
+	get_node("total_time").set_text("It's been " + str(seconds_total) + " seconds since the start of the game.")
+
