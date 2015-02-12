@@ -8,6 +8,8 @@ var current_level
 
 var last_result
 
+var level_started_timestamp = null
+
 func _ready():	
 	application = get_node("/root/application")
 
@@ -36,6 +38,8 @@ func _process(delta):
 				start_level()
 
 func run(delta):
+	update_timer()
+	
 	if is_lost():
 		is_game_running = false
 		get_node("status_label").set_text("You lost! \n Press Space or Enter \n to restart.")		
@@ -47,6 +51,15 @@ func run(delta):
 		get_node("status_label").set_text("You won! \n Press Space or Enter \n to start next level.")
 		last_result = "won"
 		return
+
+func update_timer():
+	var current_timestamp = OS.get_ticks_msec()
+	var time_passed = current_timestamp - level_started_timestamp
+	
+	var text = str(time_passed / 1000) + ":" + str((time_passed % 1000) / 10)
+	
+	get_node("timer_label").set_text(text)
+	pass
 
 func is_lost():
 	for character in current_level.characters:
@@ -78,6 +91,8 @@ func start_level():
 		var pos = current_level.character_positions[i]
 		character.set_pos(pos)
 		i = i + 1
+	
+	level_started_timestamp = OS.get_ticks_msec()
 
 func cleanup_level():
 	for character in current_level.characters:
