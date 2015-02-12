@@ -38,13 +38,13 @@ func _process(delta):
 func run(delta):
 	if is_lost():
 		is_game_running = false
-		get_node("status_label").set_text("You lost! \n Press Space or Enter to restart.")		
+		get_node("status_label").set_text("You lost! \n Press Space or Enter \n to restart.")		
 		last_result = "lost"	
 		return	
 	if is_won():
 		is_game_running = false
-		get_node("status_sprite").show()
-		get_node("status_label").set_text("You won! \n Press Space or Enter to start next level.")
+		#get_node("status_sprite").show()
+		get_node("status_label").set_text("You won! \n Press Space or Enter \n to start next level.")
 		last_result = "won"
 		return
 
@@ -84,5 +84,5 @@ func cleanup_level():
 	get_node("/root/Game/boat/top").set_rot(0)
 	
 	get_node("status_label").set_text("")
-	get_node("status_sprite").hide()
+	#get_node("status_sprite").hide()
 	
