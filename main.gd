@@ -63,6 +63,8 @@ func is_won():
 func start_level():
 	is_game_running = true
 
+	get_node("current_level_label").set_text("Level " + str(current_level.get_index()))
+	
 	for character in current_level.characters:
 		add_child(character)
 
