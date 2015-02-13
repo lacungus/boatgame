@@ -36,9 +36,9 @@ func run_right():
 func _ready():
 	application = get_node("/root/application")
 	ai.set_character(self)
-	set_process(true)
+	set_fixed_process(true)
 	
-func _process(delta):
+func _fixed_process(delta):
 	var decision = ai.make_decision()
 	run(decision)
 	

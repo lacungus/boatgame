@@ -22,9 +22,9 @@ func _ready():
 	current_level = level_manager.get_next_level()
 	start_level()
 	
-	set_process(true)
+	set_fixed_process(true)
 
-func _process(delta):
+func _fixed_process(delta):
 	if is_game_running:
 		run(delta)
 	else:
