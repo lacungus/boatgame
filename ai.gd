@@ -1,3 +1,4 @@
+#TODO set application here
 class BaseAI:
 	var character
 	
@@ -7,11 +8,15 @@ class BaseAI:
 class PlayerAI:
 	extends BaseAI
 	
+	var application
+	func _init(application):
+		self.application = application
+	
 	func make_decision():
-		if (Input.is_action_pressed("ui_left")):
+		if (application.is_left_active()):
 			return "left"
 	
-		if (Input.is_action_pressed("ui_right")):
+		if (application.is_right_active()):
 			return "right"
 			
 		return null

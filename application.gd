@@ -36,6 +36,12 @@ func get_width():
 func get_height():
 	return self.get_parent().get_rect().size.height
 
+func is_left_active():
+	return Input.is_action_pressed("ui_left") || get_node("/root/Game/button_left").is_pressed()
+	
+func is_right_active():
+	return Input.is_action_pressed("ui_right") || get_node("/root/Game/button_right").is_pressed()
+
 # TODO consider moving all direction logic into a separate class
 func opposite_direction(direction):
 	if direction == DIRECTION_LEFT:
@@ -56,7 +62,7 @@ func create_character(ai, velocity, mass, is_player):
 	return character
 
 func create_player():
-	return create_character(preload("res://ai.gd").PlayerAI.new(), PLAYER_SPEED, 0, true)
+	return create_character(preload("res://ai.gd").PlayerAI.new(self), PLAYER_SPEED, 0, true)
 	
 func create_swinging_opponent():
 	return create_character(preload("res://ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
