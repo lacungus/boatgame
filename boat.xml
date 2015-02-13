@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/boat.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/seesaw_base.png" type="Texture"></ext_resource>
 	<ext_resource path="res://boat.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/boat.png" type="Texture"></ext_resource>
 	<resource type="ConcavePolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="segments" len="6"> 			-32.6231, 32.0838, -1.28218, -31.1383, -1.28218, -31.1383, 33.8412, 33.1645, 33.8412, 33.1645, -32.6231, 32.0838 </vector2_array>
@@ -234,7 +234,7 @@
 				<resource  resource_type="Shape2D" path="local://2">  </resource>
 				<matrix32> 2.5, -0, 0, 1, 0, 0 </matrix32>
 				<real> 100 </real>
-				<vector2> -2.37778, -153.39 </vector2>
+				<vector2> -3.84793, -118.841 </vector2>
 				<resource  resource_type="Texture" path="res://assets/boat.png">  </resource>
 				<vector2> 2.5, 1 </vector2>
 				<vector2_array  len="4"> 					-122.156, -7.42996, 118.66, -8.16505, 99.2248, 7.22723, -99.0874, 7.76759 </vector2_array>
