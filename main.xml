@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
-	<ext_resource path="res://main.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/button_blue_stop.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/CubanoFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://assets/CubanoFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://main.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/button_blue_stop.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -120,7 +120,7 @@
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -736.078, -294.654 </vector2>
+							<vector2> -883.625, -294.654 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -254,6 +254,10 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "zfar" </string>
+							<real> 500 </real>
 							<string> "viewports" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -321,28 +325,24 @@
 									<vector3> 0, 0, 0 </vector3>
 								</dictionary>
 							</array>
-							<string> "zfar" </string>
-							<real> 500 </real>
 							<string> "deflight_rot_y" </string>
 							<real> 0.628319 </real>
-							<string> "fov" </string>
-							<real> 45 </real>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
@@ -379,7 +379,7 @@
 				<real> 55 </real>
 				<vector2> -1.67023, 91.8599 </vector2>
 				<resource  resource_type="Texture" path="res://assets/button_blue_stop.png">  </resource>
-				<resource name=""></resource>				<vector2> 572.872, 95.2003 </vector2>
+				<resource name=""></resource>				<vector2> 669.742, 91.8599 </vector2>
 			</array>
 			<string> "nodes" </string>
 			<int_array  len="452"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 1, 25, 16, 3, 2, 0, 7, 17, 11, 18, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 19, 29, 20, 30, 21, 31, 22, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 12, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 27, 8, 5, 9, 10, 14, 28, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 55, -1, 19, 2, 0, 3, 1, 4, 29, 5, 2, 6, 3, 7, 30, 8, 5, 9, 10, 14, 28, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 27, 56, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 31, 29, 32, 30, 33, 31, 34, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 13, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 27, 57, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 35, 29, 36, 30, 37, 31, 38, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 13, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 59, 58, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 39, 8, 5, 9, 6, 60, 40, 61, 40, 62, 41, 63, 3, 64, 25, 65, 13, 0, 0, 0, 59, 66, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 42, 8, 5, 9, 6, 60, 40, 61, 40, 62, 41, 63, 3, 64, 25, 65, 13, 0 </int_array>
