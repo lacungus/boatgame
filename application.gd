@@ -10,13 +10,14 @@ const DIRECTION_RIGHT = "right"
 
 var level_manager
 
-var current_level
-
 var scene_manager
 
 func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
-
+	
+	var level_manager_class = preload("res://level_manager.gd")
+	level_manager = level_manager_class.new(self)
+	
 func get_scene_manager():
 	return scene_manager
 
@@ -30,7 +31,10 @@ func set_current_level(current_level):
 	self.current_level = current_level
 	
 func get_player():
-	for character in current_level.get_characters():
+	print(level_manager.get_current_level())
+	print(level_manager.get_current_level().get_characters())
+	
+	for character in level_manager.get_current_level().get_characters():
 		if character.get_is_player():
 			return character
 	return null
@@ -82,3 +86,20 @@ func set_x(node, x):
 	var node_pos = node.get_pos()
 	node_pos.x = x
 	node.set_pos(node_pos)
+
+func _fixed_process(delta):
+	pass
+	#if is_game_running:
+	#	run(delta)
+	#else:
+	#	if Input.is_action_pressed("ui_accept"):
+	#		if last_result == "won":
+	#			cleanup_level()
+	#			current_level = level_manager.get_next_level()
+	#			if current_level == null:
+	#				get_node("status_label").set_text("No more levels!")
+	#			else:
+	#				start_level()
+	#		else:
+	#			cleanup_level()
+	#			start_level()

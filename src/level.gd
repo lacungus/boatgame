@@ -1,44 +1,37 @@
 extends Node2D
 
+var characters
+
+var character_positions
+
+var index
+
 var application
+
 var is_game_running = true
 
 var level_manager
-var current_level
 
 var last_result
 
 var level_started_timestamp = null
+
 var seconds_total = 0
 
-
+func init(application, index, characters, character_positions):
+	self.application = application
+	self.characters = characters
+	self.character_positions = character_positions
+	self.index = index
+	
+	level_manager = application.get_level_manager()
+	
 func _ready():	
-	application = get_node("/root/application")
-
-	var level_manager_class = preload("res://level_manager.gd")
-	level_manager = level_manager_class.new(application)
-	application.set_level_manager(level_manager)
-	
-	current_level = level_manager.get_next_level()
-	start_level()
-	
-	set_fixed_process(true)
+	start()
 
 func _fixed_process(delta):
 	if is_game_running:
 		run(delta)
-	else:
-		if Input.is_action_pressed("ui_accept"):
-			if last_result == "won":
-				cleanup_level()
-				current_level = level_manager.get_next_level()
-				if current_level == null:
-					get_node("status_label").set_text("No more levels!")
-				else:
-					start_level()
-			else:
-				cleanup_level()
-				start_level()
 
 func run(delta):
 	update_timer()
@@ -64,42 +57,42 @@ func update_timer():
 	pass
 
 func is_lost():
-	for character in current_level.characters:
+	for character in characters:
 		if character.get_is_player() && character.is_dead():
 			return true
 	return false
 	
 func is_won():
-	for character in current_level.characters:
+	for character in characters:
 		if !character.get_is_player() && !character.is_dead():
 			return false
 	return true
 	
-func start_level():
+func start():
 	is_game_running = true
 
-	get_node("current_level_label").set_text("Level " + str(current_level.get_index()))
+	get_node("current_level_label").set_text("Level " + str(index))
 	
-	for character in current_level.characters:
+	for character in characters:
 		add_child(character)
 
-	for character1 in current_level.characters:
-		for character2 in current_level.characters:
+	for character1 in characters:
+		for character2 in characters:
 			PS2D.body_add_collision_exception(character1.get_rid(), character2.get_rid())
 			
 	var i = 0
-	while i < current_level.characters.size():
-		var character = current_level.characters[i]
-		var pos = current_level.character_positions[i]
+	while i < characters.size():
+		var character = characters[i]
+		var pos = character_positions[i]
 		character.set_pos(pos)
 		i = i + 1
 	
 	level_started_timestamp = OS.get_ticks_msec()
 
-	application.set_current_level(current_level)
+	set_fixed_process(true)
 
-func cleanup_level():
-	for character in current_level.characters:
+func cleanup():
+	for character in characters:
 		remove_child(character)
 		
 	get_node("/root/Game/boat/top").set_rot(0)
@@ -111,3 +104,5 @@ func _on_Timer_timeout():
 	seconds_total = seconds_total + 1
 	get_node("total_time").set_text("It's been " + str(seconds_total) + " seconds since the start of the game.")
 
+func get_characters():
+	return characters

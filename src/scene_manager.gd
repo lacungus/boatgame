@@ -19,3 +19,7 @@ func goto_scene(scene):
 	
 func goto_main():
 	goto_scene("res://main.xml")
+
+func goto_next_level():
+	current_scene = application.get_level_manager().get_next_level()
+	application.get_tree().get_root().add_child(current_scene)

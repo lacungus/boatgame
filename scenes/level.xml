@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
-	<ext_resource path="res://main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://assets/FarmFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
 	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -104,22 +104,25 @@
 				<vector2> 0, -1 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
-				<resource  resource_type="Script" path="res://main.gd">  </resource>
+				<resource  resource_type="Script" path="res://src/level.gd">  </resource>
 				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 6 </int>
 							<string> "sources" </string>
-							<array  len="6" shared="false">
+							<array  len="7" shared="false">
 								<string> "res://application.gd" </string>
-								<string> "res://main.gd" </string>
 								<string> "res://character.gd" </string>
 								<string> "res://ai.gd" </string>
 								<string> "res://level_manager.gd" </string>
-								<string> "res://level.gd" </string>
+								<string> "res://src/scene_manager.gd" </string>
+								<string> "res://src/ui/main_menu/play.gd" </string>
+								<string> "res://src/level.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -127,11 +130,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1.227739 </real>
+							<real> 0.663421 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -337.43, 169.741 </vector2>
+							<vector2> -751.612, -38.6741 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -236,7 +239,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 0.670434, -2.14278 </vector2>
 				<vector2> 1.3, 0.9 </vector2>
@@ -249,6 +252,8 @@
 				<resource  resource_type="PackedScene" path="res://boat.xml">  </resource>
 				<vector2> 403.97, 423.929 </vector2>
 				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "2D" </string>
@@ -339,22 +344,22 @@
 							<real> 0.628319 </real>
 							<string> "fov" </string>
 							<real> 45 </real>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
