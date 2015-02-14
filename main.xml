@@ -3,17 +3,17 @@
 	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
 	<ext_resource path="res://main.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://assets/FarmFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="70">
+			<string_array  len="74">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -72,18 +72,22 @@
 				<string> "sea_2" </string>
 				<string> "current_level_label" </string>
 				<string> "timer_label" </string>
-				<string> "button_left" </string>
-				<string> "TouchScreenButton" </string>
-				<string> "normal" </string>
-				<string> "pressed" </string>
-				<string> "bitmask" </string>
-				<string> "passby_press" </string>
-				<string> "action" </string>
-				<string> "visibility_mode" </string>
-				<string> "button_right" </string>
 				<string> "label_button_left" </string>
 				<string> "rect/min_size" </string>
 				<string> "label_button_right" </string>
+				<string> "button_left" </string>
+				<string> "TextureButton" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "disabled" </string>
+				<string> "toggle_mode" </string>
+				<string> "click_on_press" </string>
+				<string> "textures/normal" </string>
+				<string> "textures/pressed" </string>
+				<string> "textures/hover" </string>
+				<string> "textures/disabled" </string>
+				<string> "textures/focused" </string>
+				<string> "textures/click_mask" </string>
+				<string> "button_right" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
@@ -92,12 +96,12 @@
 			<string> "node_count" </string>
 			<int> 12 </int>
 			<string> "variants" </string>
-			<array  len="58" shared="false">
+			<array  len="64" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
 				<bool> False </bool>
-				<vector2> 0, 0 </vector2>
+				<vector2> 0, -1 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
 				<resource  resource_type="Script" path="res://main.gd">  </resource>
@@ -123,11 +127,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1.507342 </real>
+							<real> 1.227739 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> 94.6872, 353.258 </vector2>
+							<vector2> -337.43, 169.741 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -237,6 +241,7 @@
 				<vector2> 0.670434, -2.14278 </vector2>
 				<vector2> 1.3, 0.9 </vector2>
 				<resource  resource_type="Texture" path="res://assets/sky.png">  </resource>
+				<vector2> 0, 0 </vector2>
 				<int> 1 </int>
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
@@ -261,12 +266,6 @@
 						</dictionary>
 						<string> "3D" </string>
 						<dictionary  shared="false">
-							<string> "deflight_rot_y" </string>
-							<real> 0.628319 </real>
-							<string> "zfar" </string>
-							<real> 500 </real>
-							<string> "fov" </string>
-							<real> 45 </real>
 							<string> "viewports" </string>
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
@@ -334,22 +333,28 @@
 									<vector3> 0, 0, 0 </vector3>
 								</dictionary>
 							</array>
-							<string> "default_light" </string>
-							<bool> True </bool>
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "deflight_rot_y" </string>
+							<real> 0.628319 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
 							<string> "viewport_mode" </string>
 							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 							<string> "default_srgb" </string>
 							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
@@ -385,13 +390,6 @@
 				<real> 11 </real>
 				<real> 751 </real>
 				<real> 55 </real>
-				<vector2> 7.332, 494.457 </vector2>
-				<vector2> 0.6, 0.6 </vector2>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL2.png">  </resource>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL.png">  </resource>
-				<resource name=""></resource>				<vector2> 605.903, 494.903 </vector2>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR2.png">  </resource>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR.png">  </resource>
 				<real> 120 </real>
 				<real> 525 </real>
 				<real> 156 </real>
@@ -402,9 +400,21 @@
 				<real> 675 </real>
 				<real> 569 </real>
 				<string> "R" </string>
+				<real> 2 </real>
+				<real> 435 </real>
+				<real> 303 </real>
+				<real> 603 </real>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL2.png">  </resource>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL.png">  </resource>
+				<resource name=""></resource>				<real> 500 </real>
+				<real> 434 </real>
+				<real> 801 </real>
+				<real> 602 </real>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR2.png">  </resource>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR.png">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="592"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 1, 25, 16, 3, 2, 0, 7, 17, 11, 18, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 19, 29, 20, 30, 21, 31, 22, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 24, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 12, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 27, 8, 5, 9, 10, 14, 28, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 55, -1, 19, 2, 0, 3, 1, 4, 29, 5, 2, 6, 3, 7, 30, 8, 5, 9, 10, 14, 28, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 27, 56, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 31, 29, 32, 30, 33, 31, 34, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 35, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 13, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 27, 57, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 36, 29, 37, 30, 38, 31, 39, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 35, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 25, 49, 13, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 59, 58, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 40, 8, 5, 9, 41, 60, 42, 61, 43, 62, 44, 63, 3, 64, 25, 65, 13, 0, 0, 0, 59, 66, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 45, 8, 5, 9, 41, 60, 46, 61, 47, 62, 44, 63, 3, 64, 25, 65, 13, 0, 0, 0, 27, 67, -1, 32, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 48, 29, 49, 30, 50, 31, 51, 68, 6, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 35, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 52, 49, 12, 50, 13, 51, 3, 52, 3, 53, 26, 0, 0, 0, 27, 69, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 53, 29, 54, 30, 55, 31, 56, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 23, 39, 2, 40, 35, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 57, 49, 12, 50, 13, 51, 3, 52, 3, 53, 26, 0 </int_array>
+			<int_array  len="644"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 1, 25, 17, 3, 2, 0, 7, 18, 11, 19, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 20, 29, 21, 30, 22, 31, 23, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 25, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 28, 8, 5, 9, 10, 14, 29, 15, 3, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 13, 55, -1, 19, 2, 0, 3, 1, 4, 30, 5, 2, 6, 3, 7, 31, 8, 5, 9, 10, 14, 29, 15, 1, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 27, 56, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 32, 29, 33, 30, 34, 31, 35, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 14, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 57, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 37, 29, 38, 30, 39, 31, 40, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 14, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 58, -1, 32, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 41, 29, 42, 30, 43, 31, 44, 59, 6, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 45, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 60, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 46, 29, 47, 30, 48, 31, 49, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 50, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 62, 61, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 51, 29, 52, 30, 53, 31, 54, 32, 0, 33, 0, 34, 0, 35, 0, 36, 3, 37, 1, 38, 24, 63, 24, 39, 2, 64, 3, 65, 3, 66, 3, 67, 55, 68, 56, 69, 57, 70, 57, 71, 57, 72, 57, 0, 0, 0, 62, 73, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 58, 29, 59, 30, 60, 31, 61, 32, 0, 33, 0, 34, 0, 35, 0, 36, 3, 37, 1, 38, 24, 63, 24, 39, 2, 64, 3, 65, 3, 66, 3, 67, 62, 68, 63, 69, 57, 70, 57, 71, 57, 72, 57, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
