@@ -87,23 +87,6 @@ func set_x(node, x):
 	node_pos.x = x
 	node.set_pos(node_pos)
 
-func _fixed_process(delta):
-	pass
-	#if is_game_running:
-	#	run(delta)
-	#else:
-	#	if Input.is_action_pressed("ui_accept"):
-	#		if last_result == "won":
-	#			cleanup_level()
-	#			current_level = level_manager.get_next_level()
-	#			if current_level == null:
-	#				get_node("status_label").set_text("No more levels!")
-	#			else:
-	#				start_level()
-	#		else:
-	#			cleanup_level()
-	#			start_level()
-
 func on_level_won():
 	scene_manager.goto_you_won()
 	

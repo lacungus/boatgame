@@ -8,8 +8,6 @@ var index
 
 var application
 
-var is_game_running = true
-
 var level_manager
 
 var last_result
@@ -30,8 +28,7 @@ func _ready():
 	start()
 
 func _fixed_process(delta):
-	if is_game_running:
-		run(delta)
+	run(delta)
 
 func run(delta):
 	update_timer()
@@ -70,8 +67,6 @@ func is_won():
 	return true
 	
 func start():
-	is_game_running = true
-
 	get_node("current_level_label").set_text("Level " + str(index))
 	
 	for character in characters:
@@ -91,14 +86,6 @@ func start():
 	level_started_timestamp = OS.get_ticks_msec()
 
 	set_fixed_process(true)
-
-func cleanup():
-	for character in characters:
-		remove_child(character)
-		
-	get_node("/root/Game/boat/top").set_rot(0)
-	
-	get_node("status_label").set_text("")
 	
 func _on_Timer_timeout():
 	
