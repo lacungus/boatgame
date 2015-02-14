@@ -107,3 +107,6 @@ func _on_Timer_timeout():
 
 func get_characters():
 	return characters
+
+func get_index():
+	return index

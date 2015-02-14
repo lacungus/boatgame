@@ -79,15 +79,18 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 5 </int>
+							<int> 8 </int>
 							<string> "sources" </string>
-							<array  len="6" shared="false">
+							<array  len="9" shared="false">
 								<string> "res://src/ui/main_menu/play.gd" </string>
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://application.gd" </string>
 								<string> "res://boat.gd" </string>
 								<string> "res://src/level.gd" </string>
 								<string> "res://level_manager.gd" </string>
+								<string> "res://src/ui/common/quit.gd" </string>
+								<string> "res://src/ui/common/restart_level.gd" </string>
+								<string> "res://src/ui/common/next_level.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -95,11 +98,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.814507 </real>
+							<real> 0.735093 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -691.14, -20.5468 </vector2>
+							<vector2> -776.647, -33.8582 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -204,7 +207,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<real> 285 </real>
 				<real> 183 </real>
