@@ -103,3 +103,9 @@ func _fixed_process(delta):
 	#		else:
 	#			cleanup_level()
 	#			start_level()
+
+func on_level_won():
+	scene_manager.goto_you_won()
+	
+func on_level_lost():
+	scene_manager.goto_you_lost()

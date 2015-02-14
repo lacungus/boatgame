@@ -37,14 +37,10 @@ func run(delta):
 	update_timer()
 	
 	if is_lost():
-		is_game_running = false
-		get_node("status_label").set_text("You lost! \n Press Space or Enter \n to restart.")		
-		last_result = "lost"	
+		application.on_level_lost()
 		return	
 	if is_won():
-		is_game_running = false
-		get_node("status_label").set_text("You won! \n Press Space or Enter \n to start next level.")
-		last_result = "won"
+		application.on_level_won()
 		return
 
 func update_timer():
