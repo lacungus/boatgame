@@ -12,6 +12,14 @@ var level_manager
 
 var current_level
 
+var scene_manager
+
+func _ready():
+	scene_manager = preload("res://src/scene_manager.gd").new(self)
+
+func get_scene_manager():
+	return scene_manager
+
 func set_level_manager(level_manager):
 	self.level_manager = level_manager
 
