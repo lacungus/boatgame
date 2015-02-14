@@ -14,31 +14,14 @@ var scene_manager
 
 func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
-	
-	var level_manager_class = preload("res://src/level_manager.gd")
-	level_manager = level_manager_class.new(self)
+	level_manager = preload("res://src/level_manager.gd").new(self)
 	
 func get_scene_manager():
 	return scene_manager
 
-func set_level_manager(level_manager):
-	self.level_manager = level_manager
-
 func get_level_manager():
 	return level_manager
 
-func set_current_level(current_level):
-	self.current_level = current_level
-	
-func get_player():
-	print(level_manager.get_current_level())
-	print(level_manager.get_current_level().get_characters())
-	
-	for character in level_manager.get_current_level().get_characters():
-		if character.get_is_player():
-			return character
-	return null
-	
 func get_boat():
 	return get_node("/root/Game/boat")
 

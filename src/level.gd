@@ -32,6 +32,12 @@ func _fixed_process(delta):
 func _ready():
 	start()
 
+func get_player():
+	for character in characters:
+		if character.get_is_player():
+			return character
+	return null
+
 # PRIVATE
 
 func update_timer():
@@ -47,11 +53,7 @@ func update_timer():
 func is_lost():
 	if Input.is_action_pressed("lose"):
 		return true
-	
-	for character in characters:
-		if character.get_is_player() && character.is_dead():
-			return true
-	return false
+	return get_player().is_dead()
 	
 # Won when all non-players are dead
 func is_won():
