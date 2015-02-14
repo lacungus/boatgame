@@ -79,12 +79,11 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 10 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="11" shared="false">
+							<array  len="10" shared="false">
 								<string> "res://src/ui/main_menu/play.gd" </string>
 								<string> "res://src/scene_manager.gd" </string>
-								<string> "res://application.gd" </string>
 								<string> "res://boat.gd" </string>
 								<string> "res://src/level.gd" </string>
 								<string> "res://src/ui/common/quit.gd" </string>
