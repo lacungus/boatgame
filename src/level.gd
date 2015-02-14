@@ -53,12 +53,17 @@ func update_timer():
 	pass
 
 func is_lost():
+	if Input.is_action_pressed("lose"):
+		return true
+	
 	for character in characters:
 		if character.get_is_player() && character.is_dead():
 			return true
 	return false
 	
 func is_won():
+	if Input.is_action_pressed("win"):
+		return true
 	for character in characters:
 		if !character.get_is_player() && !character.is_dead():
 			return false
