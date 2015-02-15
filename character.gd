@@ -35,12 +35,6 @@ func run(direction):
 func get_is_player():
 	return is_player
 	
-func run_left():
-	run(application.DIRECTION_LEFT)
-
-func run_right():
-	run(application.DIRECTION_RIGHT)
-
 func _ready():
 	animation_player = get_node("AnimSprite").get_node("AnimationPlayer")
 	animation_player.stop_all()
