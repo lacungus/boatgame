@@ -47,7 +47,7 @@ func opposite_direction(direction):
 	return null
 
 func create_character(ai, velocity, mass, is_player):
-	var character_scene = preload("res://character.xml")
+	var character_scene = preload("res://scenes/character.xml")
 	var character = character_scene.instance()
 	
 	character.set_ai(ai)
@@ -57,13 +57,13 @@ func create_character(ai, velocity, mass, is_player):
 	return character
 
 func create_player():
-	return create_character(preload("res://ai.gd").PlayerAI.new(self), PLAYER_SPEED, 0, true)
+	return create_character(preload("res://src/ai.gd").PlayerAI.new(self), PLAYER_SPEED, 0, true)
 	
 func create_swinging_opponent():
-	return create_character(preload("res://ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
+	return create_character(preload("res://src/ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
 
 func create_following_opponent():
-	return create_character(preload("res://ai.gd").FollowingAI.new(self), AI_SPEED, 0, false)
+	return create_character(preload("res://src/ai.gd").FollowingAI.new(self), AI_SPEED, 0, false)
 
 func set_x(node, x):
 	var node_pos = node.get_pos()

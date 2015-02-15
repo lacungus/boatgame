@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/boat.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/seesaw_base.png" type="Texture"></ext_resource>
-	<ext_resource path="res://boat.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/boat.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/boat.gd" type="Script"></ext_resource>
 	<resource type="ConcavePolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="segments" len="6"> 			-32.6231, 32.0838, -1.28218, -31.1383, -1.28218, -31.1383, 33.8412, 33.1645, 33.8412, 33.1645, -32.6231, 32.0838 </vector2_array>
@@ -87,21 +87,10 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
-				<resource  resource_type="Script" path="res://boat.gd">  </resource>
+				<resource  resource_type="Script" path="res://src/boat.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
-						<string> "Script" </string>
-						<dictionary  shared="false">
-							<string> "current" </string>
-							<int> 0 </int>
-							<string> "sources" </string>
-							<array  len="3" shared="false">
-								<string> "res://boat.gd" </string>
-								<string> "res://main.gd" </string>
-								<string> "res://ai.gd" </string>
-							</array>
-						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>

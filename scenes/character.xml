@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
-	<ext_resource path="res://character.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -121,7 +121,7 @@
 				<int> 2 </int>
 				<real> 0.5 </real>
 				<int> 0 </int>
-				<resource  resource_type="Script" path="res://character.gd">  </resource>
+				<resource  resource_type="Script" path="res://src/character.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
@@ -131,7 +131,7 @@
 							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="1" shared="false">
-								<string> "res://character.gd" </string>
+								<string> "res://src/application.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -248,7 +248,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://assets/bowling_ball.png">  </resource>
 				<color> 1, 1, 1, 1 </color>

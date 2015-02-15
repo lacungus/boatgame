@@ -3,7 +3,7 @@
 	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
-	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://scenes/boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
@@ -253,7 +253,7 @@
 					<string> "_editor_collapsed" </string>
 					<bool> True </bool>
 				</dictionary>
-				<resource  resource_type="PackedScene" path="res://boat.xml">  </resource>
+				<resource  resource_type="PackedScene" path="res://scenes/boat.xml">  </resource>
 				<vector2> 403.97, 423.929 </vector2>
 				<dictionary  shared="false">
 					<string> "_editor_collapsed" </string>
