@@ -50,8 +50,6 @@ func create_character(ai, velocity, mass, is_player):
 	var character_scene = preload("res://character.xml")
 	var character = character_scene.instance()
 	
-	character.set_draw_behind_parent(true)
-	
 	character.set_ai(ai)
 	character.set_velocity(velocity)
 	character.set_is_player(is_player)
