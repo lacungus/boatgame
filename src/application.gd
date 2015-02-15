@@ -4,6 +4,10 @@ const PLAYER_SPEED = 3
 
 const AI_SPEED = 1
 
+const PLAYER_MASS = 10
+
+const AI_MASS = 1
+
 # TODO enum?
 const DIRECTION_LEFT = "left"
 const DIRECTION_RIGHT = "right"
@@ -53,17 +57,17 @@ func create_character(ai, velocity, mass, is_player):
 	character.set_ai(ai)
 	character.set_velocity(velocity)
 	character.set_is_player(is_player)
-	# TODO set mass
+	character.set_mass(mass)
 	return character
 
 func create_player():
-	return create_character(preload("res://src/ai.gd").PlayerAI.new(self), PLAYER_SPEED, 0, true)
+	return create_character(preload("res://src/ai.gd").PlayerAI.new(self), PLAYER_SPEED, PLAYER_MASS, true)
 	
 func create_swinging_opponent():
-	return create_character(preload("res://src/ai.gd").SwingingAI.new(self), AI_SPEED, 0, false)
+	return create_character(preload("res://src/ai.gd").SwingingAI.new(self), AI_SPEED, AI_MASS, false)
 
 func create_following_opponent():
-	return create_character(preload("res://src/ai.gd").FollowingAI.new(self), AI_SPEED, 0, false)
+	return create_character(preload("res://src/ai.gd").FollowingAI.new(self), AI_SPEED, AI_MASS, false)
 
 func set_x(node, x):
 	var node_pos = node.get_pos()

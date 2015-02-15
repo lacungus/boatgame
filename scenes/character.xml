@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
-	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -128,10 +128,11 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
-							<array  len="1" shared="false">
+							<array  len="2" shared="false">
 								<string> "res://src/application.gd" </string>
+								<string> "res://src/character.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
