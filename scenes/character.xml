@@ -128,11 +128,12 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="2" shared="false">
+							<array  len="3" shared="false">
 								<string> "res://src/application.gd" </string>
 								<string> "res://src/character.gd" </string>
+								<string> "res://src/level_manager.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
