@@ -8,6 +8,6 @@ func _ready():
 	center()
 
 func center():
-	application.set_x(get_node("/root/Game/boat"), application.get_width() / 2)
-	application.set_x(get_node("/root/Game/boat/top"), 0)
-	application.set_x(get_node("/root/Game/boat/bottom"), 0)
+	application.set_x(get_node("/root/Game/main_layer/boat"), application.get_width() / 2)
+	application.set_x(get_node("/root/Game/main_layer/boat/top"), 0)
+	application.set_x(get_node("/root/Game/main_layer/boat/bottom"), 0)

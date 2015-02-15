@@ -32,10 +32,10 @@ func get_height():
 	return self.get_parent().get_rect().size.height
 
 func is_left_active():
-	return Input.is_action_pressed("ui_left") || get_node("/root/Game/button_left").is_pressed()
+	return Input.is_action_pressed("ui_left") || get_node("/root/Game/ui_layer/button_left").is_pressed()
 	
 func is_right_active():
-	return Input.is_action_pressed("ui_right") || get_node("/root/Game/button_right").is_pressed()
+	return Input.is_action_pressed("ui_right") || get_node("/root/Game/ui_layer/button_right").is_pressed()
 
 # TODO consider moving all direction logic into a separate class
 func opposite_direction(direction):

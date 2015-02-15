@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
+	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
-	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/FarmFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://src/level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/FarmFont.fnt" type="Font"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="74">
+			<string_array  len="82">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -26,22 +26,16 @@
 				<string> "transform/scale" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "sky" </string>
-				<string> "Sprite" </string>
-				<string> "texture" </string>
-				<string> "centered" </string>
+				<string> "main_layer" </string>
+				<string> "CanvasLayer" </string>
+				<string> "layer" </string>
 				<string> "offset" </string>
-				<string> "flip_h" </string>
-				<string> "flip_v" </string>
-				<string> "vframes" </string>
-				<string> "hframes" </string>
-				<string> "frame" </string>
-				<string> "modulate" </string>
-				<string> "region" </string>
-				<string> "region_rect" </string>
+				<string> "rotation" </string>
+				<string> "scale" </string>
 				<string> "boat" </string>
-				<string> "status_label" </string>
-				<string> "Label" </string>
+				<string> "ui_layer" </string>
+				<string> "button_right" </string>
+				<string> "TextureButton" </string>
 				<string> "margin/left" </string>
 				<string> "margin/top" </string>
 				<string> "margin/right" </string>
@@ -53,7 +47,21 @@
 				<string> "focus/ignore_mouse" </string>
 				<string> "focus/stop_mouse" </string>
 				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
 				<string> "size_flags/stretch_ratio" </string>
+				<string> "disabled" </string>
+				<string> "toggle_mode" </string>
+				<string> "click_on_press" </string>
+				<string> "textures/normal" </string>
+				<string> "textures/pressed" </string>
+				<string> "textures/hover" </string>
+				<string> "textures/disabled" </string>
+				<string> "textures/focused" </string>
+				<string> "textures/click_mask" </string>
+				<string> "button_left" </string>
+				<string> "label_button_left" </string>
+				<string> "Label" </string>
+				<string> "rect/min_size" </string>
 				<string> "custom_fonts/font" </string>
 				<string> "range/min" </string>
 				<string> "range/max" </string>
@@ -68,35 +76,35 @@
 				<string> "autowrap" </string>
 				<string> "uppercase" </string>
 				<string> "percent_visible" </string>
-				<string> "sea_1" </string>
-				<string> "sea_2" </string>
-				<string> "current_level_label" </string>
-				<string> "timer_label" </string>
-				<string> "label_button_left" </string>
-				<string> "rect/min_size" </string>
 				<string> "label_button_right" </string>
-				<string> "button_left" </string>
-				<string> "TextureButton" </string>
-				<string> "size_flags/vertical" </string>
-				<string> "disabled" </string>
-				<string> "toggle_mode" </string>
-				<string> "click_on_press" </string>
-				<string> "textures/normal" </string>
-				<string> "textures/pressed" </string>
-				<string> "textures/hover" </string>
-				<string> "textures/disabled" </string>
-				<string> "textures/focused" </string>
-				<string> "textures/click_mask" </string>
-				<string> "button_right" </string>
+				<string> "timer_label" </string>
+				<string> "current_level_label" </string>
+				<string> "status_label" </string>
+				<string> "sea_layer" </string>
+				<string> "sea_2" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
+				<string> "background_layer" </string>
+				<string> "sky" </string>
+				<string> "sea_1" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 12 </int>
+			<int> 16 </int>
 			<string> "variants" </string>
-			<array  len="64" shared="false">
+			<array  len="69" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -106,23 +114,21 @@
 				<vector2> 1, 1 </vector2>
 				<resource  resource_type="Script" path="res://src/level.gd">  </resource>
 				<dictionary  shared="false">
-					<string> "_editor_collapsed" </string>
-					<bool> True </bool>
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 6 </int>
 							<string> "sources" </string>
 							<array  len="7" shared="false">
-								<string> "res://application.gd" </string>
 								<string> "res://character.gd" </string>
 								<string> "res://ai.gd" </string>
-								<string> "res://level_manager.gd" </string>
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://src/ui/main_menu/play.gd" </string>
 								<string> "res://src/level.gd" </string>
+								<string> "res://src/application.gd" </string>
+								<string> "res://boat.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -241,14 +247,12 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "Script" </string>
 				</dictionary>
-				<vector2> 0.670434, -2.14278 </vector2>
-				<vector2> 1.3, 0.9 </vector2>
-				<resource  resource_type="Texture" path="res://assets/sky.png">  </resource>
-				<vector2> 0, 0 </vector2>
 				<int> 1 </int>
-				<int> 0 </int>
-				<color> 1, 1, 1, 1 </color>
-				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 0, 0 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
 				<resource  resource_type="PackedScene" path="res://boat.xml">  </resource>
 				<vector2> 403.97, 423.929 </vector2>
 				<dictionary  shared="false">
@@ -344,22 +348,22 @@
 									<vector3> 0, 0, 0 </vector3>
 								</dictionary>
 							</array>
-							<string> "default_light" </string>
-							<bool> True </bool>
 							<string> "viewport_mode" </string>
 							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 							<string> "default_srgb" </string>
 							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_show_subtree" </string>
@@ -374,52 +378,68 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<real> 130 </real>
-				<real> 119 </real>
-				<real> 279 </real>
-				<real> 163 </real>
+				<int> 128 </int>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 500 </real>
+				<real> 434 </real>
+				<real> 801 </real>
+				<real> 602 </real>
 				<int> 2 </int>
-				<resource  resource_type="Font" path="res://assets/FarmFont.fnt">  </resource>
-				<string> "" </string>
-				<real> -1 </real>
-				<vector2> 1.31801, 306.464 </vector2>
-				<resource  resource_type="Texture" path="res://assets/sea.png">  </resource>
-				<real> 0.5 </real>
-				<vector2> 389.546, 549.482 </vector2>
-				<real> 12 </real>
-				<real> 10 </real>
-				<real> 110 </real>
-				<real> 54 </real>
-				<resource  resource_type="Font" path="res://assets/FeenaFont.fnt">  </resource>
-				<real> 679 </real>
-				<real> 11 </real>
-				<real> 751 </real>
-				<real> 55 </real>
-				<real> 120 </real>
-				<real> 525 </real>
-				<real> 156 </real>
-				<real> 566 </real>
-				<string> "L" </string>
-				<real> 637 </real>
-				<real> 529 </real>
-				<real> 675 </real>
-				<real> 569 </real>
-				<string> "R" </string>
-				<real> 2 </real>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR2.png">  </resource>
+				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR.png">  </resource>
+				<resource name=""></resource>				<real> 2 </real>
 				<real> 435 </real>
 				<real> 303 </real>
 				<real> 603 </real>
 				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL2.png">  </resource>
 				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorL.png">  </resource>
-				<resource name=""></resource>				<real> 500 </real>
-				<real> 434 </real>
-				<real> 801 </real>
-				<real> 602 </real>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR2.png">  </resource>
-				<resource  resource_type="Texture" path="res://assets/lifebuoy+anchorR.png">  </resource>
+				<real> 120 </real>
+				<real> 525 </real>
+				<real> 156 </real>
+				<real> 566 </real>
+				<resource  resource_type="Font" path="res://assets/FeenaFont.fnt">  </resource>
+				<string> "L" </string>
+				<int> 0 </int>
+				<real> -1 </real>
+				<real> 637 </real>
+				<real> 529 </real>
+				<real> 675 </real>
+				<real> 569 </real>
+				<string> "R" </string>
+				<real> 679 </real>
+				<real> 11 </real>
+				<real> 751 </real>
+				<real> 55 </real>
+				<string> "" </string>
+				<real> 12 </real>
+				<real> 10 </real>
+				<real> 110 </real>
+				<real> 54 </real>
+				<real> 130 </real>
+				<real> 119 </real>
+				<real> 279 </real>
+				<real> 163 </real>
+				<resource  resource_type="Font" path="res://assets/FarmFont.fnt">  </resource>
+				<int> 3 </int>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
+				<real> 0.5 </real>
+				<vector2> 389.546, 549.482 </vector2>
+				<vector2> 1.3, 0.9 </vector2>
+				<resource  resource_type="Texture" path="res://assets/sea.png">  </resource>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 0.670434, -2.14278 </vector2>
+				<resource  resource_type="Texture" path="res://assets/sky.png">  </resource>
+				<vector2> 1.31801, 306.464 </vector2>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="644"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 1, 25, 17, 3, 2, 0, 7, 18, 11, 19, 0, 0, 0, 27, 26, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 20, 29, 21, 30, 22, 31, 23, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 25, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 13, 54, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 28, 8, 5, 9, 10, 14, 29, 15, 3, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 13, 55, -1, 19, 2, 0, 3, 1, 4, 30, 5, 2, 6, 3, 7, 31, 8, 5, 9, 10, 14, 29, 15, 1, 16, 12, 17, 3, 18, 3, 19, 13, 20, 13, 21, 14, 22, 15, 23, 3, 24, 16, 0, 0, 0, 27, 56, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 32, 29, 33, 30, 34, 31, 35, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 14, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 57, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 37, 29, 38, 30, 39, 31, 40, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 26, 49, 14, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 58, -1, 32, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 41, 29, 42, 30, 43, 31, 44, 59, 6, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 45, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 27, 60, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 46, 29, 47, 30, 48, 31, 49, 32, 0, 33, 0, 34, 0, 35, 0, 36, 1, 37, 1, 38, 24, 39, 2, 40, 36, 41, 5, 42, 2, 43, 2, 44, 2, 45, 5, 46, 3, 47, 3, 48, 50, 49, 13, 50, 14, 51, 3, 52, 3, 53, 27, 0, 0, 0, 62, 61, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 51, 29, 52, 30, 53, 31, 54, 32, 0, 33, 0, 34, 0, 35, 0, 36, 3, 37, 1, 38, 24, 63, 24, 39, 2, 64, 3, 65, 3, 66, 3, 67, 55, 68, 56, 69, 57, 70, 57, 71, 57, 72, 57, 0, 0, 0, 62, 73, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 58, 29, 59, 30, 60, 31, 61, 32, 0, 33, 0, 34, 0, 35, 0, 36, 3, 37, 1, 38, 24, 63, 24, 39, 2, 64, 3, 65, 3, 66, 3, 67, 62, 68, 63, 69, 57, 70, 57, 71, 57, 72, 57, 0 </int_array>
+			<int_array  len="718"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 6, 2, 0, 14, 9, 15, 10, 16, 5, 17, 6, 11, 11, 0, 1, 0, 1, 18, 12, 3, 2, 0, 7, 13, 11, 14, 0, 0, 0, 13, 19, -1, 6, 2, 0, 14, 15, 15, 10, 16, 5, 17, 6, 11, 16, 0, 3, 0, 21, 20, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 17, 23, 18, 24, 19, 25, 20, 26, 0, 27, 0, 28, 0, 29, 0, 30, 3, 31, 1, 32, 21, 33, 21, 34, 2, 35, 3, 36, 3, 37, 3, 38, 22, 39, 23, 40, 24, 41, 24, 42, 24, 43, 24, 0, 3, 0, 21, 44, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 25, 23, 26, 24, 27, 25, 28, 26, 0, 27, 0, 28, 0, 29, 0, 30, 3, 31, 1, 32, 21, 33, 21, 34, 2, 35, 3, 36, 3, 37, 3, 38, 29, 39, 30, 40, 24, 41, 24, 42, 24, 43, 24, 0, 3, 0, 46, 45, -1, 32, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 31, 23, 32, 24, 33, 25, 34, 47, 6, 26, 0, 27, 0, 28, 0, 29, 0, 30, 1, 31, 1, 32, 21, 34, 2, 48, 35, 49, 5, 50, 2, 51, 2, 52, 2, 53, 5, 54, 3, 55, 3, 56, 36, 57, 9, 58, 37, 59, 3, 60, 3, 61, 38, 0, 3, 0, 46, 62, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 39, 23, 40, 24, 41, 25, 42, 26, 0, 27, 0, 28, 0, 29, 0, 30, 1, 31, 1, 32, 21, 34, 2, 48, 35, 49, 5, 50, 2, 51, 2, 52, 2, 53, 5, 54, 3, 55, 3, 56, 43, 57, 9, 58, 37, 59, 3, 60, 3, 61, 38, 0, 3, 0, 46, 63, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 44, 23, 45, 24, 46, 25, 47, 26, 0, 27, 0, 28, 0, 29, 0, 30, 1, 31, 1, 32, 21, 34, 2, 48, 35, 49, 5, 50, 2, 51, 2, 52, 2, 53, 5, 54, 3, 55, 3, 56, 48, 57, 37, 58, 37, 59, 3, 60, 3, 61, 38, 0, 3, 0, 46, 64, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 49, 23, 50, 24, 51, 25, 52, 26, 0, 27, 0, 28, 0, 29, 0, 30, 1, 31, 1, 32, 21, 34, 2, 48, 35, 49, 5, 50, 2, 51, 2, 52, 2, 53, 5, 54, 3, 55, 3, 56, 48, 57, 37, 58, 37, 59, 3, 60, 3, 61, 38, 0, 3, 0, 46, 65, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 22, 53, 23, 54, 24, 55, 25, 56, 26, 0, 27, 0, 28, 0, 29, 0, 30, 1, 31, 1, 32, 21, 34, 2, 48, 57, 49, 5, 50, 2, 51, 2, 52, 2, 53, 5, 54, 3, 55, 3, 56, 48, 57, 9, 58, 37, 59, 3, 60, 3, 61, 38, 0, 0, 0, 13, 66, -1, 6, 2, 0, 14, 58, 15, 10, 16, 5, 17, 6, 11, 59, 0, 11, 0, 68, 67, -1, 19, 2, 0, 3, 1, 4, 60, 5, 2, 6, 3, 7, 61, 8, 5, 9, 62, 69, 63, 70, 1, 15, 10, 71, 3, 72, 3, 73, 9, 74, 9, 75, 37, 76, 64, 77, 3, 78, 65, 0, 0, 0, 13, 79, -1, 5, 2, 0, 14, 37, 15, 10, 16, 5, 17, 6, 0, 13, 0, 68, 80, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 66, 8, 5, 9, 62, 69, 67, 70, 3, 15, 10, 71, 3, 72, 3, 73, 9, 74, 9, 75, 37, 76, 64, 77, 3, 78, 65, 0, 13, 0, 68, 81, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 68, 8, 5, 9, 62, 69, 63, 70, 3, 15, 10, 71, 3, 72, 3, 73, 9, 74, 9, 75, 37, 76, 64, 77, 3, 78, 65, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

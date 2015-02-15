@@ -46,7 +46,7 @@ func update_timer():
 	
 	var text = str(time_passed / 1000) + ":" + str((time_passed % 1000) / 10)
 	
-	get_node("timer_label").set_text(text)
+	get_node("ui_layer/timer_label").set_text(text)
 	pass
 
 # Lost when the player is dead
@@ -73,11 +73,11 @@ func start():
 	set_fixed_process(true)
 
 func set_level_label():
-	get_node("current_level_label").set_text("Level " + str(index))
+	get_node("ui_layer/current_level_label").set_text("Level " + str(index))
 	
 func add_characters():
 	for character in characters:
-		add_child(character)
+		get_node("main_layer").add_child(character)
 	var i = 0
 	while i < characters.size():
 		var character = characters[i]
