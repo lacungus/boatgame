@@ -3,9 +3,9 @@
 	<ext_resource path="res://assets/lifebuoy+anchorL.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sky.png" type="Texture"></ext_resource>
+	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorL2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/sea.png" type="Texture"></ext_resource>
-	<ext_resource path="res://boat.xml" type="PackedScene"></ext_resource>
 	<ext_resource path="res://assets/lifebuoy+anchorR.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://src/level.gd" type="Script"></ext_resource>
@@ -119,7 +119,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 6 </int>
+							<int> 5 </int>
 							<string> "sources" </string>
 							<array  len="7" shared="false">
 								<string> "res://character.gd" </string>
