@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
 	<ext_resource path="res://character.gd" type="Script"></ext_resource>
-	<resource type="CircleShape2D" path="local://1">
+	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
+	<resource type="ConvexPolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
-		<real name="radius"> 30 </real>
+		<vector2_array name="points" len="3"> 			0, -10, 8.66025, 5, -8.66025, 5 </vector2_array>
+
+	</resource>
+	<resource type="SpriteFrames" path="local://2">
+		<array name="frames" len="2" shared="false">
+			<resource  resource_type="Texture" path="res://assets/going_left.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/going_left2.png">  </resource>
+		</array>
+
+	</resource>
+	<resource type="Animation" path="local://3">
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
 
 	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="44">
+			<string_array  len="56">
 				<string> "character" </string>
 				<string> "RigidBody2D" </string>
 				<string> "_import_path" </string>
@@ -55,15 +86,27 @@
 				<string> "CollisionShape2D" </string>
 				<string> "shape" </string>
 				<string> "trigger" </string>
+				<string> "AnimSprite" </string>
+				<string> "AnimatedSprite" </string>
+				<string> "frames" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/going_left" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 3 </int>
+			<int> 5 </int>
 			<string> "variants" </string>
-			<array  len="17" shared="false">
+			<array  len="25" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -73,7 +116,7 @@
 				<vector2> 1, 1 </vector2>
 				<int> 1 </int>
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
-				<matrix32> 1, -0, 0, 1, 0, 0 </matrix32>
+				<matrix32> 4.11127, -0, 0, 0.204074, 0.766916, -14.608 </matrix32>
 				<int> 3 </int>
 				<int> 0 </int>
 				<resource  resource_type="Script" path="res://character.gd">  </resource>
@@ -85,8 +128,9 @@
 							<string> "current" </string>
 							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="1" shared="false">
+							<array  len="2" shared="false">
 								<string> "res://character.gd" </string>
+								<string> "res://application.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -94,11 +138,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1.50734 </real>
+							<real> 3.090868 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -80.5995, -149.825 </vector2>
+							<vector2> -101.723, -101.207 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -208,9 +252,18 @@
 				<resource  resource_type="Texture" path="res://assets/bowling_ball.png">  </resource>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 0.766916, -14.608 </vector2>
+				<vector2> 4.11127, 0.204074 </vector2>
+				<vector2> -4.41417, -57.2359 </vector2>
+				<resource  resource_type="SpriteFrames" path="local://2">  </resource>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://3">  </resource>
+				<array  len="0" shared="false">
+				</array>
+				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="133"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 2, 18, 5, 19, 3, 20, 11, 21, 11, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 12, 28, 13, 0, 0, 0, 29, 29, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 30, 14, 31, 1, 32, 4, 33, 3, 34, 3, 35, 7, 36, 7, 37, 11, 38, 15, 39, 3, 40, 16, 0, 0, 0, 41, 41, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 42, 8, 43, 3, 0 </int_array>
+			<int_array  len="191"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 2, 18, 5, 19, 3, 20, 11, 21, 11, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 12, 28, 13, 0, 0, 0, 29, 29, -1, 19, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 30, 14, 31, 1, 32, 4, 33, 3, 34, 3, 35, 7, 36, 7, 37, 11, 38, 15, 39, 3, 40, 16, 0, 0, 0, 41, 41, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 18, 42, 8, 43, 3, 0, 0, 0, 45, 44, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 19, 8, 5, 9, 6, 46, 20, 31, 1, 33, 3, 34, 3, 38, 15, 0, 3, 0, 47, 47, -1, 9, 2, 0, 48, 7, 49, 5, 50, 21, 51, 22, 52, 1, 53, 2, 54, 23, 55, 24, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

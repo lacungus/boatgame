@@ -13,16 +13,24 @@ var application
 
 var is_player
 
-func run(direction):
+var previous_direction = null
+
+var animation_player
+
+func run(direction):	
 	if direction == null:
-		return
+		animation_player.stop_all();
 	if direction == application.DIRECTION_LEFT:
+		if previous_direction != direction:
+			animation_player.play("going_left")
 		apply_impulse(VECTOR_LEFT, Vector2(-self.velocity, 0))
-		return
 	if direction == application.DIRECTION_RIGHT:
+		if previous_direction != direction:
+			pass
+			#animation_player.play("going_right")
 		apply_impulse(VECTOR_RIGHT, Vector2(self.velocity, 0))
-		return
-	print("Unknown direction: " + direction)
+
+	previous_direction = direction
 	
 func get_is_player():
 	return is_player
@@ -34,6 +42,9 @@ func run_right():
 	run(application.DIRECTION_RIGHT)
 
 func _ready():
+	animation_player = get_node("AnimSprite").get_node("AnimationPlayer")
+	animation_player.stop_all()
+	
 	application = get_node("/root/application")
 	ai.set_character(self)
 	set_fixed_process(true)
