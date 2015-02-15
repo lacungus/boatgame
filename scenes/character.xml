@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/bowling_ball.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -41,7 +40,7 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="56">
+			<string_array  len="48">
 				<string> "character" </string>
 				<string> "RigidBody2D" </string>
 				<string> "_import_path" </string>
@@ -71,24 +70,16 @@
 				<string> "velocity/angular" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
-				<string> "Sprite" </string>
-				<string> "texture" </string>
-				<string> "centered" </string>
-				<string> "offset" </string>
-				<string> "flip_h" </string>
-				<string> "flip_v" </string>
-				<string> "vframes" </string>
-				<string> "hframes" </string>
-				<string> "frame" </string>
-				<string> "modulate" </string>
-				<string> "region" </string>
-				<string> "region_rect" </string>
 				<string> "CollisionShape2D" </string>
 				<string> "shape" </string>
 				<string> "trigger" </string>
 				<string> "AnimSprite" </string>
 				<string> "AnimatedSprite" </string>
 				<string> "frames" </string>
+				<string> "centered" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "modulate" </string>
 				<string> "AnimationPlayer" </string>
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
@@ -104,9 +95,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 4 </int>
 			<string> "variants" </string>
-			<array  len="26" shared="false">
+			<array  len="24" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -250,14 +241,12 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<resource  resource_type="Texture" path="res://assets/bowling_ball.png">  </resource>
-				<color> 1, 1, 1, 1 </color>
-				<rect2> 0, 0, 0, 0 </rect2>
 				<vector2> 0.226729, 0.204074 </vector2>
 				<vector2> -1.8259, -46.5593 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://2">  </resource>
+				<color> 1, 1, 1, 1 </color>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://3">  </resource>
 				<array  len="0" shared="false">
@@ -265,7 +254,7 @@
 				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="191"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 19, 2, 0, 3, 3, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 30, 16, 31, 1, 32, 4, 33, 3, 34, 3, 35, 7, 36, 7, 37, 13, 38, 17, 39, 3, 40, 18, 0, 0, 0, 41, 41, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 19, 42, 8, 43, 3, 0, 0, 0, 45, 44, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 6, 46, 21, 31, 1, 33, 3, 34, 3, 38, 17, 0, 3, 0, 47, 47, -1, 9, 2, 0, 48, 7, 49, 5, 50, 22, 51, 23, 52, 1, 53, 2, 54, 24, 55, 25, 0 </int_array>
+			<int_array  len="146"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 16, 30, 8, 31, 3, 0, 0, 0, 33, 32, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 6, 34, 18, 35, 1, 36, 3, 37, 3, 38, 19, 0, 2, 0, 39, 39, -1, 9, 2, 0, 40, 7, 41, 5, 42, 20, 43, 21, 44, 1, 45, 2, 46, 22, 47, 23, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
