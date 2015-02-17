@@ -4,9 +4,14 @@ var application
 
 var current_level
 
+var middle_x
+var start_y
+
 # PUBLIC
 func _init(application):
 	self.application = application
+	middle_x = application.get_width() / 2
+	start_y = 350
 	
 func get_current_level():
 	return current_level
@@ -22,21 +27,21 @@ func clone_current_level():
 
 # TODO maybe keep this all in a config file?
 func get_level(index):
-	var character_factory = application.get_character_factory()
+	var character_factory = application.get_character_factory() 
 	
 	if index == 1:
 		var characters = [character_factory.create_player(), character_factory.create_following_opponent()]
-		var positions = [Vector2(100, 100), Vector2(400, 300)]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y)]
 		return create_level(characters, positions)
 
 	if index == 2:
 		var characters = [character_factory.create_player(), character_factory.create_swinging_opponent(), character_factory.create_swinging_opponent()]
-		var positions = [Vector2(100, 100), Vector2(300, 300), Vector2(400, 300)]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
 		return create_level(characters, positions)
 
 	if index == 3:
 		var characters = [character_factory.create_player(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent()]
-		var positions = [Vector2(100, 100), Vector2(300, 300), Vector2(400, 300), Vector2(500, 300)]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
 		return create_level(characters, positions)
 
 	return null
