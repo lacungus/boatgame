@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="19" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/captain_right3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/captain_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_right3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/captain_left3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/captain_left2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/captain_right2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/captain_right.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/captain_front2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_right2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/captain_front.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_front2.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -369,7 +369,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="3" shared="false">
 								<string> "res://src/application.gd" </string>
@@ -382,11 +382,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1.360373 </real>
+							<real> 0.440126 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -439.067, -191.529 </vector2>
+							<vector2> -854.411, -466.57 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -497,7 +497,7 @@
 				<vector2> 3.68724, -75.2279 </vector2>
 				<vector2> 0.8, 0.8 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://2">  </resource>
-				<int> 7 </int>
+				<int> 5 </int>
 				<color> 1, 1, 1, 1 </color>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://3">  </resource>
