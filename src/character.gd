@@ -19,15 +19,17 @@ var animation_player
 
 func run(direction):	
 	if direction == null:
-		animation_player.stop_all();
+		if previous_direction != direction:
+		#animation_player.stop_all();
+			animation_player.play("captain_front")
 	if direction == application.DIRECTION_LEFT:
 		if previous_direction != direction:
 			animation_player.play("going_left")
 		apply_impulse(VECTOR_LEFT, Vector2(-self.velocity * self.mass, 0))
 	if direction == application.DIRECTION_RIGHT:
 		if previous_direction != direction:
-			pass
-			#animation_player.play("going_right")
+			#pass
+			animation_player.play("going_right")
 		apply_impulse(VECTOR_RIGHT, Vector2(self.velocity * self.mass, 0))
 
 	previous_direction = direction

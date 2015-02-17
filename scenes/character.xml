@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="17" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/captain_right2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/going_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_right3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_right.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/going_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_front.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_left2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/captain_left3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/captain_front2.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
 
 	</resource>
 	<resource type="SpriteFrames" path="local://2">
-		<array name="frames" len="2" shared="false">
+		<array name="frames" len="10" shared="false">
 			<resource  resource_type="Texture" path="res://assets/going_left.png">  </resource>
 			<resource  resource_type="Texture" path="res://assets/going_left2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_front.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_front2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_left.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_left2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_left3.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_right.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_right2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/captain_right3.png">  </resource>
 		</array>
 
 	</resource>
 	<resource type="Animation" path="local://3">
-		<real name="length"> 1 </real>
+		<real name="length"> 2 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<int> 4 </int>
+				<int> 5 </int>
+				<int> 6 </int>
+				<int> 5 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/scale" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/pos" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://4">
+		<string name="resource/name"> "captain_front" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 1 </real>
 		<string name="tracks/0/type"> "value" </string>
 		<node_path name="tracks/0/path"> ".:frame" </node_path>
 		<int name="tracks/0/interp"> 1 </int>
@@ -29,18 +106,126 @@
 			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
 			<array  len="2" shared="false">
-				<int> 0 </int>
-				<int> 1 </int>
+				<int> 2 </int>
+				<int> 3 </int>
 			</array>
 			<string> "times" </string>
 			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/scale" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/pos" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<vector2> -2.9286, -74.4928 </vector2>
+				<vector2> -2.9286, -74.4928 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> "AnimationPlayer:playback/speed" </node_path>
+		<int name="tracks/3/interp"> 1 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<real> 2 </real>
+			</array>
+			<string> "times" </string>
+			<real_array  len="1"> 				0 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://5">
+		<string name="resource/name"> "going_right" </string>
+		<real name="length"> 2 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<int> 7 </int>
+				<int> 8 </int>
+				<int> 9 </int>
+				<int> 8 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
 		</dictionary>
 
 	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="48">
+			<string_array  len="51">
 				<string> "character" </string>
 				<string> "RigidBody2D" </string>
 				<string> "_import_path" </string>
@@ -76,6 +261,7 @@
 				<string> "AnimSprite" </string>
 				<string> "AnimatedSprite" </string>
 				<string> "frames" </string>
+				<string> "frame" </string>
 				<string> "centered" </string>
 				<string> "flip_h" </string>
 				<string> "flip_v" </string>
@@ -85,6 +271,8 @@
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
 				<string> "anims/going_left" </string>
+				<string> "anims/captain_front" </string>
+				<string> "anims/going_right" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -97,7 +285,7 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "variants" </string>
-			<array  len="24" shared="false">
+			<array  len="29" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -119,7 +307,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="3" shared="false">
 								<string> "res://src/application.gd" </string>
@@ -132,11 +320,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 3.090868 </real>
+							<real> 1.360373 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -101.723, -101.207 </vector2>
+							<vector2> -439.067, -191.529 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -241,20 +429,25 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 0.226729, 0.204074 </vector2>
-				<vector2> -1.8259, -46.5593 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://2">  </resource>
+				<int> 7 </int>
 				<color> 1, 1, 1, 1 </color>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://4">  </resource>
+				<resource  resource_type="Animation" path="local://5">  </resource>
+				<real> 2 </real>
 				<array  len="0" shared="false">
 				</array>
 				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="146"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 16, 30, 8, 31, 3, 0, 0, 0, 33, 32, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 6, 34, 18, 35, 1, 36, 3, 37, 3, 38, 19, 0, 2, 0, 39, 39, -1, 9, 2, 0, 40, 7, 41, 5, 42, 20, 43, 21, 44, 1, 45, 2, 46, 22, 47, 23, 0 </int_array>
+			<int_array  len="152"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 16, 30, 8, 31, 3, 0, 0, 0, 33, 32, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 18, 34, 19, 35, 20, 36, 1, 37, 3, 38, 3, 39, 21, 0, 2, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 23, 45, 24, 46, 25, 47, 1, 48, 26, 49, 27, 50, 28, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
