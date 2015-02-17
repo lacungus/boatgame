@@ -1,6 +1,6 @@
 const PLAYER_SPEED = 3
 
-const AI_SPEED = 3
+const AI_SPEED = 2
 
 const PLAYER_MASS = 10
 
