@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -82,12 +82,11 @@
 							<string> "current" </string>
 							<int> 2 </int>
 							<string> "sources" </string>
-							<array  len="6" shared="false">
+							<array  len="5" shared="false">
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://application.gd" </string>
 								<string> "res://src/level.gd" </string>
 								<string> "res://src/ui/common/next_level.gd" </string>
-								<string> "res://level_manager.gd" </string>
 								<string> "res://src/ui/common/restart_level.gd" </string>
 							</array>
 						</dictionary>
@@ -205,14 +204,14 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<real> 324 </real>
 				<real> 54 </real>
 				<real> 489 </real>
 				<real> 114 </real>
 				<int> 2 </int>
-				<resource  resource_type="Font" path="res://assets/FeenaFont.fnt">  </resource>
+				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 				<string> "You won!" </string>
 				<int> 0 </int>
 				<real> -1 </real>
