@@ -1,10 +1,10 @@
 const PLAYER_SPEED = 3
 
-const AI_SPEED = 1
+const AI_SPEED = 3
 
-const PLAYER_MASS = 1
+const PLAYER_MASS = 10
 
-const AI_MASS = 1
+const AI_MASS = 10
 
 var application
 
