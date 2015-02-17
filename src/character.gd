@@ -21,7 +21,7 @@ func run(direction):
 	if direction == null:
 		if previous_direction != direction:
 		#animation_player.stop_all();
-			animation_player.play("captain_front")
+			animation_player.play("front")
 	if direction == application.DIRECTION_LEFT:
 		if previous_direction != direction:
 			animation_player.play("going_left")
@@ -38,7 +38,7 @@ func get_is_player():
 	return is_player
 	
 func _ready():
-	animation_player = get_node("AnimSprite").get_node("AnimationPlayer")
+	animation_player = get_node("enemy_01").get_node("AnimationPlayer")
 	animation_player.stop_all()
 	
 	application = get_node("/root/application")
