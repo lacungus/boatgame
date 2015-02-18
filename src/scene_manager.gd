@@ -7,11 +7,12 @@ func _init(application):
 	var root = application.get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
 
-func goto_scene(scene):
-	# remove current scene from root and enqueue it for deletion
-	# (when deleted, it will be removed)
+func goto_scene(scene, destroy_previous_scene):
 	current_scene.queue_free()
-	current_scene.remove_and_skip()
+	if destroy_previous_scene:
+		# remove current scene from root and enqueue it for deletion
+		# (when deleted, it will be removed)
+		current_scene.remove_and_skip()
 
 	# load and add new scene to root
 	var s = ResourceLoader.load(scene)
@@ -30,7 +31,10 @@ func restart_level():
 	application.get_tree().get_root().add_child(current_scene)
 
 func goto_you_won():
-	goto_scene("res://scenes/ui/you_won.xml")
+	goto_scene("res://scenes/ui/you_won.xml", true)
 
 func goto_you_lost():
-	goto_scene("res://scenes/ui/you_lost.xml")
+	goto_scene("res://scenes/ui/you_lost.xml", true)
+
+func goto_in_level_menu():
+	goto_scene("res://scenes/ui/in_level_menu.xml", false)
