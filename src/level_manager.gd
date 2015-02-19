@@ -30,7 +30,7 @@ func get_level(index):
 	var character_factory = application.get_character_factory() 
 	
 	if index == 1:
-		var characters = [character_factory.create_player(), character_factory.create_following_opponent()]
+		var characters = [character_factory.create_player(), character_factory.create_balancing_opponent()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y)]
 		return create_level(characters, positions)
 

@@ -1,16 +1,37 @@
 #TODO set application here
 class BaseAI:
 	var character
-	
+	var application
+
+	func init(application):
+		self.application = application
+		
 	func set_character(character):
 		self.character = character
+		
+	func get_center_of_mass():
+		var level = application.get_level_manager().get_current_level()
+		
+		var sum_x = 0
+		var sum_y = 0
+		var sum_mass = 0
+		var i = 0
+		var characters = level.get_characters()
+		
+		while i < characters.size():
+			var character = characters[i]
+			i = i + 1			
+			sum_x = sum_x + character.mass * character.get_pos().x
+			sum_y = sum_x + character.mass * character.get_pos().y
+			sum_mass = sum_mass + character.mass
+		
+		return Vector2(sum_x / sum_mass, sum_y / sum_mass)
 
 class PlayerAI:
 	extends BaseAI
 	
-	var application
 	func _init(application):
-		self.application = application
+		init(application)
 	
 	func make_decision():
 		if (application.is_left_active()):
@@ -30,10 +51,8 @@ class SwingingAI:
 	var current_direction
 	var last_decision_timestamp
 	
-	var application
-	
 	func _init(application):
-		self.application = application
+		init(application)
 	
 	func make_decision():
 		var current_timestamp = OS.get_ticks_msec()
@@ -51,11 +70,9 @@ class SwingingAI:
 class FollowingAI:
 	extends BaseAI
 
-	var application
-	
 	func _init(application):
-		self.application = application
-		
+		init(application)
+	
 	func make_decision():
 		var player = application.get_level_manager().get_current_level().get_player()
 
@@ -66,3 +83,21 @@ class FollowingAI:
 			return application.DIRECTION_RIGHT
 		
 		return null
+
+class BalancingAI:
+	extends BaseAI
+
+	func _init(application):
+		init(application)
+	
+	func make_decision():
+		var center_of_mass = get_center_of_mass()
+
+		if (center_of_mass.x < application.get_width() / 2):
+			return application.DIRECTION_RIGHT
+		
+		if (center_of_mass.x > application.get_width() / 2):
+			return application.DIRECTION_LEFT
+		
+		return null
+
