@@ -2,9 +2,12 @@
 class BaseAI:
 	var character
 	var application
+	var delta
+	
 
 	func init(application):
 		self.application = application
+		delta = application.get_width()/100
 		
 	func set_character(character):
 		self.character = character
@@ -76,10 +79,10 @@ class FollowingAI:
 	func make_decision():
 		var player = application.get_level_manager().get_current_level().get_player()
 
-		if (player.get_pos().x < character.get_pos().x):
+		if ((player.get_pos().x + delta) < character.get_pos().x):
 			return application.DIRECTION_LEFT
 		
-		if (player.get_pos().x > character.get_pos().x):
+		if ((player.get_pos().x - delta) > character.get_pos().x):
 			return application.DIRECTION_RIGHT
 		
 		return null
@@ -90,13 +93,15 @@ class BalancingAI:
 	func _init(application):
 		init(application)
 	
+	
 	func make_decision():
 		var center_of_mass = get_center_of_mass()
+		
 
-		if (center_of_mass.x < application.get_width() / 2):
+		if (center_of_mass.x < (application.get_width() / 2 - delta)):
 			return application.DIRECTION_RIGHT
 		
-		if (center_of_mass.x > application.get_width() / 2):
+		if (center_of_mass.x > (application.get_width() / 2 + delta)):
 			return application.DIRECTION_LEFT
 		
 		return null
