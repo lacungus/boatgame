@@ -66,9 +66,19 @@ class SwingingAI:
 			return current_direction
 
 		if current_direction == null:
-			current_direction = application.DIRECTION_LEFT
+			if character.get_pos().x > boat_delta:
+				current_direction = application.DIRECTION_LEFT
+			else: 
+				current_direction = application.DIRECTION_RIGHT
 		else:
-			current_direction = application.opposite_direction(current_direction)
+			if (character.get_pos().x > boat_delta && character.get_pos().x < application.get_width()-boat_delta):
+				current_direction = application.opposite_direction(current_direction)
+			else:
+				if character.get_pos().x > boat_delta:
+					current_direction = application.DIRECTION_LEFT
+				else:
+					current_direction = application.DIRECTION_RIGHT
+				
 
 		last_decision_timestamp = current_timestamp
 		return current_direction
