@@ -3,11 +3,14 @@ class BaseAI:
 	var character
 	var application
 	var delta
+	var boat_delta
 	
-
 	func init(application):
 		self.application = application
+		
 		delta = application.get_width()/100
+		boat_delta = application.get_width()/3
+		
 		
 	func set_character(character):
 		self.character = character
@@ -98,10 +101,10 @@ class BalancingAI:
 		var center_of_mass = get_center_of_mass()
 		
 
-		if (center_of_mass.x < (application.get_width() / 2 - delta)):
+		if (center_of_mass.x < (application.get_width() / 2 - delta) && character.get_pos().x < (application.get_width() - boat_delta)):
 			return application.DIRECTION_RIGHT
 		
-		if (center_of_mass.x > (application.get_width() / 2 + delta)):
+		if (center_of_mass.x > (application.get_width() / 2 + delta) && character.get_pos().x > boat_delta) :
 			return application.DIRECTION_LEFT
 		
 		return null
