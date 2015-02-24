@@ -92,10 +92,10 @@ class FollowingAI:
 	func make_decision():
 		var player = application.get_level_manager().get_current_level().get_player()
 
-		if ((player.get_pos().x + delta) < character.get_pos().x):
+		if (player.get_pos().x + delta < character.get_pos().x && character.get_pos().x > boat_delta):
 			return application.DIRECTION_LEFT
 		
-		if ((player.get_pos().x - delta) > character.get_pos().x):
+		if (player.get_pos().x - delta > character.get_pos().x && character.get_pos().x < application.get_width() - boat_delta):
 			return application.DIRECTION_RIGHT
 		
 		return null
