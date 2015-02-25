@@ -127,9 +127,11 @@ class OpposingAI:
 		
 	func make_decision():
 		if (application.is_left_active()):
-			return application.DIRECTION_RIGHT
+			if character.get_pos().x < application.get_width() - boat_delta:
+				return application.DIRECTION_RIGHT
 		
 		if (application.is_right_active()):
-			return application.DIRECTION_LEFT
+			if character.get_pos().x > boat_delta:
+				return application.DIRECTION_LEFT
 		
 		return null
