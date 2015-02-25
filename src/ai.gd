@@ -9,6 +9,8 @@ class BaseAI:
 		self.application = application
 		
 		delta = application.get_width()/100
+		
+		# !!! HARD-CODE !!!
 		boat_delta = application.get_width()/3
 		
 		
