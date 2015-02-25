@@ -91,7 +91,7 @@ class FollowingAI:
 	
 	func make_decision():
 		var player = application.get_level_manager().get_current_level().get_player()
-
+		
 		if (player.get_pos().x + delta < character.get_pos().x && character.get_pos().x > boat_delta):
 			return application.DIRECTION_LEFT
 		
@@ -119,3 +119,17 @@ class BalancingAI:
 		
 		return null
 
+class OpposingAI:
+	extends BaseAI
+
+	func _init(application):
+		init(application)
+		
+	func make_decision():
+		if (application.is_left_active()):
+			return application.DIRECTION_RIGHT
+		
+		if (application.is_right_active()):
+			return application.DIRECTION_LEFT
+		
+		return null
