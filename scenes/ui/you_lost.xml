@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
+<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="50">
+			<string_array  len="58">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -57,15 +58,23 @@
 				<string> "clip_text" </string>
 				<string> "script/script" </string>
 				<string> "quit" </string>
+				<string> "bg_music_light" </string>
+				<string> "StreamPlayer" </string>
+				<string> "stream/stream" </string>
+				<string> "stream/play" </string>
+				<string> "stream/loop" </string>
+				<string> "stream/volume_db" </string>
+				<string> "stream/autoplay" </string>
+				<string> "stream/paused" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 5 </int>
 			<string> "variants" </string>
-			<array  len="31" shared="false">
+			<array  len="33" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -214,9 +223,11 @@
 				<real> 502 </real>
 				<string> "Exit" </string>
 				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
+				<resource  resource_type="AudioStream" path="res://assets/music/Sea_light.ogg">  </resource>
+				<real> 10 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="220"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 8, 14, 9, 15, 10, 16, 11, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 12, 24, 2, 25, 13, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 14, 34, 15, 35, 15, 36, 3, 37, 3, 38, 16, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 17, 14, 18, 15, 19, 16, 20, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 21, 45, 22, 46, 3, 47, 3, 34, 23, 48, 24, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 25, 14, 26, 15, 27, 16, 28, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 29, 45, 22, 46, 3, 47, 3, 34, 23, 48, 30, 0 </int_array>
+			<int_array  len="241"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 8, 14, 9, 15, 10, 16, 11, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 12, 24, 2, 25, 13, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 14, 34, 15, 35, 15, 36, 3, 37, 3, 38, 16, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 17, 14, 18, 15, 19, 16, 20, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 21, 45, 22, 46, 3, 47, 3, 34, 23, 48, 24, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 25, 14, 26, 15, 27, 16, 28, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 29, 45, 22, 46, 3, 47, 3, 34, 23, 48, 30, 0, 0, 0, 51, 50, -1, 7, 2, 0, 52, 31, 53, 3, 54, 1, 55, 32, 56, 1, 57, 3, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
