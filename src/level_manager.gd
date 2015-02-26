@@ -46,7 +46,7 @@ func get_level(index):
 
 	if index == 4:
 		var characters = [character_factory.create_opposing_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y)]
 		return create_level(characters, positions)
 	
 	return null
