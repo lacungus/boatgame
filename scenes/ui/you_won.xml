@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="58">
+			<string_array  len="59">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -19,6 +20,7 @@
 				<string> "transform/pos" </string>
 				<string> "transform/rot" </string>
 				<string> "transform/scale" </string>
+				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Label" </string>
 				<string> "margin/left" </string>
@@ -56,7 +58,6 @@
 				<string> "icon" </string>
 				<string> "flat" </string>
 				<string> "clip_text" </string>
-				<string> "script/script" </string>
 				<string> "restart_level" </string>
 				<string> "quit" </string>
 				<string> "bg_music_light" </string>
@@ -67,15 +68,16 @@
 				<string> "stream/volume_db" </string>
 				<string> "stream/autoplay" </string>
 				<string> "stream/paused" </string>
+				<string> "stars_label" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 6 </int>
+			<int> 7 </int>
 			<string> "variants" </string>
-			<array  len="39" shared="false">
+			<array  len="44" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -83,20 +85,22 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
+				<resource  resource_type="Script" path="res://src/ui/you_won/you_won.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 5 </int>
 							<string> "sources" </string>
-							<array  len="5" shared="false">
+							<array  len="6" shared="false">
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://application.gd" </string>
 								<string> "res://src/level.gd" </string>
 								<string> "res://src/ui/common/next_level.gd" </string>
 								<string> "res://src/ui/common/restart_level.gd" </string>
+								<string> "res://src/ui/you_won/you_won.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -222,6 +226,7 @@
 				<int> 2 </int>
 				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 				<string> "You won!" </string>
+				<int> 1 </int>
 				<int> 0 </int>
 				<real> -1 </real>
 				<real> 321 </real>
@@ -229,8 +234,7 @@
 				<real> 484 </real>
 				<real> 244 </real>
 				<string> "Next level" </string>
-				<resource name=""></resource>				<int> 1 </int>
-				<resource  resource_type="Script" path="res://src/ui/common/next_level.gd">  </resource>
+				<resource name=""></resource>				<resource  resource_type="Script" path="res://src/ui/common/next_level.gd">  </resource>
 				<real> 310 </real>
 				<real> 303 </real>
 				<real> 506 </real>
@@ -245,9 +249,13 @@
 				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
 				<resource  resource_type="AudioStream" path="res://assets/music/Sea_light.ogg">  </resource>
 				<real> 10 </real>
+				<real> 116 </real>
+				<real> 512 </real>
+				<real> 156 </real>
+				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="304"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 11, 11, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 12, 8, 13, 9, 14, 10, 15, 11, 16, 0, 17, 0, 18, 0, 19, 0, 20, 1, 21, 1, 22, 12, 23, 2, 24, 13, 25, 5, 26, 2, 27, 2, 28, 2, 29, 5, 30, 3, 31, 3, 32, 14, 33, 15, 34, 15, 35, 3, 36, 3, 37, 16, 0, 0, 0, 39, 38, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 12, 17, 13, 18, 14, 19, 15, 20, 16, 0, 17, 0, 18, 0, 19, 0, 20, 3, 21, 1, 22, 12, 40, 12, 23, 2, 24, 13, 41, 3, 42, 3, 43, 3, 32, 21, 44, 22, 45, 3, 46, 3, 33, 23, 47, 24, 0, 0, 0, 39, 48, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 12, 25, 13, 26, 14, 27, 15, 28, 16, 0, 17, 0, 18, 0, 19, 0, 20, 3, 21, 1, 22, 12, 40, 12, 23, 2, 24, 13, 41, 3, 42, 3, 43, 3, 32, 29, 44, 22, 45, 3, 46, 3, 33, 23, 47, 30, 0, 0, 0, 39, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 12, 31, 13, 32, 14, 33, 15, 34, 16, 0, 17, 0, 18, 0, 19, 0, 20, 3, 21, 1, 22, 12, 40, 12, 23, 2, 24, 13, 41, 3, 42, 3, 43, 3, 32, 35, 44, 22, 45, 3, 46, 3, 33, 23, 47, 36, 0, 0, 0, 51, 50, -1, 7, 2, 0, 52, 37, 53, 3, 54, 1, 55, 38, 56, 1, 57, 3, 0 </int_array>
+			<int_array  len="375"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 12, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 9, 14, 10, 15, 11, 16, 12, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 13, 24, 2, 25, 14, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 15, 34, 16, 35, 17, 36, 3, 37, 3, 38, 18, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 19, 14, 20, 15, 21, 16, 22, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 23, 45, 24, 46, 3, 47, 3, 34, 16, 10, 25, 0, 0, 0, 40, 48, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 26, 14, 27, 15, 28, 16, 29, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 30, 45, 24, 46, 3, 47, 3, 34, 16, 10, 31, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 32, 14, 33, 15, 34, 16, 35, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 36, 45, 24, 46, 3, 47, 3, 34, 16, 10, 37, 0, 0, 0, 51, 50, -1, 7, 2, 0, 52, 38, 53, 3, 54, 1, 55, 39, 56, 1, 57, 3, 0, 0, 0, 12, 58, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 27, 14, 40, 15, 41, 16, 42, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 13, 24, 2, 25, 14, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 43, 34, 16, 35, 17, 36, 3, 37, 3, 38, 18, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>

@@ -32,28 +32,32 @@ func get_level(index):
 	if index == 1:
 		var characters = [character_factory.create_balancing_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y)]
-		return create_level(characters, positions)
+		var seconds_for_stars = [100, 50, 25]
+		return create_level(characters, positions, seconds_for_stars)
 
 	if index == 2:
 		var characters = [character_factory.create_swinging_opponent(), character_factory.create_swinging_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
-		return create_level(characters, positions)
+		var seconds_for_stars = [100, 50, 25]
+		return create_level(characters, positions, seconds_for_stars)
 
 	if index == 3:
 		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
-		return create_level(characters, positions)
+		var seconds_for_stars = [100, 50, 25]
+		return create_level(characters, positions, seconds_for_stars)
 
 	if index == 4:
 		var characters = [character_factory.create_opposing_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y)]
-		return create_level(characters, positions)
+		var seconds_for_stars = [100, 50, 25]
+		return create_level(characters, positions, seconds_for_stars)
 	
 	return null
 
-func create_level(characters, positions):
+func create_level(characters, positions, seconds_for_stars):
 	var scene_class = ResourceLoader.load("res://scenes/level.xml")
 	var scene_instance = scene_class.instance()
-	scene_instance.init(application, count, characters, positions)
+	scene_instance.init(application, count, characters, positions, seconds_for_stars)
 	current_level = scene_instance
 	return scene_instance

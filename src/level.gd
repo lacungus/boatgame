@@ -12,12 +12,18 @@ var level_started_timestamp = null
 
 var seconds_total = 0
 
+# To get X stars, a player has to complete the level in seconds_for_stars[X - 1] seconds of faster
+var seconds_for_stars
+
+var stars = null
+
 # PUBLIC
-func init(application, index, characters, character_positions):
+func init(application, index, characters, character_positions, seconds_for_stars):
 	self.application = application
 	self.characters = characters
 	self.character_positions = character_positions
 	self.index = index
+	self.seconds_for_stars = seconds_for_stars
 	
 func _fixed_process(delta):
 	update_timer()
@@ -26,6 +32,7 @@ func _fixed_process(delta):
 		application.on_level_lost()
 		return	
 	if is_won():
+		calculate_stars()
 		application.on_level_won()
 		return
 
@@ -38,8 +45,25 @@ func get_player():
 			return character
 	return null
 
+func get_stars():
+	return stars
+	
 # PRIVATE
 
+func calculate_stars():
+	var current_timestamp = OS.get_ticks_msec()
+	var time_passed = current_timestamp - level_started_timestamp
+	if time_passed <= seconds_for_stars[2] * 1000:
+		stars = 3
+		return
+	if time_passed <= seconds_for_stars[1] * 1000:
+		stars = 2
+		return
+	if time_passed <= seconds_for_stars[0] * 1000:
+		stars = 1
+		return
+	stars = 0
+	
 func update_timer():
 	var current_timestamp = OS.get_ticks_msec()
 	var time_passed = current_timestamp - level_started_timestamp
