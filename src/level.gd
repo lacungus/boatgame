@@ -115,9 +115,5 @@ func add_collision_exceptions():
 		for character2 in characters:
 			PS2D.body_add_collision_exception(character1.get_rid(), character2.get_rid())
 
-func _on_Timer_timeout():
-	seconds_total = seconds_total + 1
-	get_node("total_time").set_text("It's been " + str(seconds_total) + " seconds since the start of the game.")
-
 func get_characters():
 	return characters
