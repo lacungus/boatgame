@@ -137,3 +137,18 @@ class OpposingAI:
 				return application.DIRECTION_LEFT
 		
 		return null
+
+# Sticks to the center
+class StickingAI:
+	extends BaseAI
+	func _init(application):
+		init(application)
+		
+	func make_decision():
+		if character.get_pos().x > application.get_width()/2 + delta:
+			return application.DIRECTION_LEFT
+		if character.get_pos().x < application.get_width()/2 - delta:
+			return application.DIRECTION_RIGHT
+		
+		return null
+	
