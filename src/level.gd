@@ -17,13 +17,20 @@ var seconds_for_stars
 
 var stars = null
 
+var wind = null
+
+# TODO move somewhere
+const VECTOR_LEFT = Vector2(-1, 0)
+const VECTOR_RIGHT = Vector2(1, 0)
+
 # PUBLIC
-func init(application, index, characters, character_positions, seconds_for_stars):
+func init(application, index, characters, character_positions, seconds_for_stars, wind):
 	self.application = application
 	self.characters = characters
 	self.character_positions = character_positions
 	self.index = index
 	self.seconds_for_stars = seconds_for_stars
+	self.wind = wind
 	
 func _fixed_process(delta):
 	update_timer()
@@ -35,6 +42,7 @@ func _fixed_process(delta):
 		calculate_stars()
 		application.on_level_won()
 		return
+	apply_wind()
 
 func _ready():
 	start()
@@ -49,6 +57,14 @@ func get_stars():
 	return stars
 	
 # PRIVATE
+
+func apply_wind():
+	var wind_strength = wind.get_strength(get_time_passed())
+	
+	get_node("ui_layer/wind_label").set_text(str(ceil(wind_strength)))
+	
+	for character in characters:
+		character.apply_impulse(VECTOR_LEFT, Vector2(wind_strength, 0))
 
 func calculate_stars():
 	var current_timestamp = OS.get_ticks_msec()
@@ -65,13 +81,16 @@ func calculate_stars():
 	stars = 0
 	
 func update_timer():
-	var current_timestamp = OS.get_ticks_msec()
-	var time_passed = current_timestamp - level_started_timestamp
+	var time_passed = get_time_passed()
 	
 	var text = str(time_passed / 1000) + ":" + str((time_passed % 1000) / 10)
 	
 	get_node("ui_layer/timer_label").set_text(text)
 	pass
+
+func get_time_passed():
+	var current_timestamp = OS.get_ticks_msec()
+	return current_timestamp - level_started_timestamp
 
 # Lost when the player is dead
 func is_lost():
