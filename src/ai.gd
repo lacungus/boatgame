@@ -152,3 +152,20 @@ class StickingAI:
 		
 		return null
 	
+# Runs to the center of mass
+class EvilAI:
+	extends BaseAI
+	func _init(application):
+		init(application)
+		
+	func make_decision():
+		var center_of_mass = get_center_of_mass()
+		
+		
+		if (center_of_mass.x < (application.get_width() / 2 - delta) && character.get_pos().x > boat_delta) :
+			return application.DIRECTION_LEFT
+		
+		if (center_of_mass.x > (application.get_width() / 2 + delta) && character.get_pos().x < (application.get_width() - boat_delta)):
+			return application.DIRECTION_RIGHT
+		
+		return null

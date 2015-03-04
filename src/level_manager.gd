@@ -37,13 +37,13 @@ func get_level(index):
 		return create_level(characters, positions, seconds_for_stars, wind)
 
 	if index == 2:
-		var characters = [character_factory.create_balancing_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y)]
+		var characters = [character_factory.create_evil_opponent(), character_factory.create_evil_opponent(), character_factory.create_player()]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y)]
 		var seconds_for_stars = [100, 50, 25]
 		return create_level(characters, positions, seconds_for_stars, wind)
 
 	if index == 3:
-		var characters = [character_factory.create_swinging_opponent(), character_factory.create_swinging_opponent(), character_factory.create_player()]
+		var characters = [character_factory.create_balancing_opponent(), character_factory.create_swinging_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
 		var seconds_for_stars = [100, 50, 25]
 		return create_level(characters, positions, seconds_for_stars, wind)

@@ -35,6 +35,9 @@ func create_opposing_opponent():
 
 func create_sticking_opponent():
 	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
+	
+func create_evil_opponent():
+	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
 
 # PRIVATE 
 func create_character(ai, velocity, mass, is_player, sprite_name):
