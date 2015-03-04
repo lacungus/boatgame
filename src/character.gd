@@ -40,7 +40,7 @@ func _fixed_process(delta):
 	run(decision)
 	
 func is_dead():
-	return get_pos().y > application.get_height()
+	return (get_pos().y > application.get_height() || get_pos().x > application.get_width() || get_pos().x < 0)
 
 func get_is_player():
 	return is_player
