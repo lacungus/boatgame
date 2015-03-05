@@ -60,7 +60,32 @@ func get_stars():
 
 func apply_wind():
 	var wind_strength = wind.get_strength(get_time_passed())
+	var res
 	
+	if wind_strength < -10:
+		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 5/6)
+		res = load("res://assets/wind/wind_left.png")
+		
+	if wind_strength < -3 && wind_strength > -10:
+		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 2/3)
+		res = load("res://assets/wind/wind_left2.png")
+	
+	if wind_strength > -3 && wind_strength < 3:
+		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/2)
+		res = load("res://assets/wind/center.png")
+		
+
+	if wind_strength > 3 && wind_strength < 10:
+		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/3)
+		res = load("res://assets/wind/wind_right2.png")
+		
+	if wind_strength > 10:
+		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/6)
+		res = load("res://assets/wind/wind_right.png")
+		
+	
+	
+	get_node("main_layer/wind_asset").set_texture(res)
 	get_node("ui_layer/wind_label").set_text(str(ceil(wind_strength)))
 	
 	for character in characters:
