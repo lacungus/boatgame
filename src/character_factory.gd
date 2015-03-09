@@ -8,7 +8,7 @@ const AI_MASS = 10
 const AI_BALAN_MASS = 20
 
 
-const PLAYER_SPRITE_NAME = "captain"
+const PLAYER_SPRITE_NAME = "pope"
 
 const AI_SPRITE_NAME = "enemy_01"
 
@@ -16,6 +16,7 @@ var application
 
 # PUBLIC
 func _init(application):
+
 	self.application = application
 
 func create_player():
