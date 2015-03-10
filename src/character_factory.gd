@@ -6,7 +6,7 @@ const PLAYER_MASS = 10
 
 const AI_MASS = 10
 const AI_BALAN_MASS = 20
-
+const AI_CHAOTIC_MASS = 1
 
 const PLAYER_SPRITE_NAME = "pope"
 
@@ -39,6 +39,9 @@ func create_sticking_opponent():
 	
 func create_evil_opponent():
 	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
+
+func create_chaotic_opponent():
+	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_SPEED, AI_CHAOTIC_MASS, false, AI_SPRITE_NAME)
 
 # PRIVATE 
 func create_character(ai, velocity, mass, is_player, sprite_name):
