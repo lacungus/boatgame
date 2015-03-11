@@ -23,7 +23,7 @@ func get_next_level():
 func clone_current_level():
 	return get_level(count)
 
-# PRIVATE
+# PRIVATEq
 
 # TODO maybe keep this all in a config file?
 func get_level(index):
@@ -31,21 +31,30 @@ func get_level(index):
 	var wind = preload("res://src/wind.gd").new(0.001, 0.0001)
 	
 	if index == 1:
-		var characters = [character_factory.create_sticking_opponent(), character_factory.create_player()]
+		# No wind
+		# One Chaotic Opponent
+		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x, start_y)]
-		var seconds_for_stars = [100, 50, 25]
+		wind = preload("res://src/wind.gd").new(0, 1)
+		var seconds_for_stars = [120, 60, 30]
 		return create_level(characters, positions, seconds_for_stars, wind)
 
 	if index == 2:
-		var characters = [character_factory.create_evil_opponent(), character_factory.create_evil_opponent(), character_factory.create_player()]
+		# No wind
+		# Two Chaotic Opponents
+		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y)]
-		var seconds_for_stars = [100, 50, 25]
+		wind = preload("res://src/wind.gd").new(0, 1)
+		var seconds_for_stars = [120, 60, 30]
 		return create_level(characters, positions, seconds_for_stars, wind)
 
 	if index == 3:
-		var characters = [character_factory.create_balancing_opponent(), character_factory.create_swinging_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
-		var seconds_for_stars = [100, 50, 25]
+		# Weak wind
+		# Four ghosts
+		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
+		wind = preload("res://src/wind.gd").new(0.0001, 0.0001)
+		var seconds_for_stars = [120, 60, 30]
 		return create_level(characters, positions, seconds_for_stars, wind)
 
 	if index == 4:

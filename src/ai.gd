@@ -85,6 +85,39 @@ class SwingingAI:
 		last_decision_timestamp = current_timestamp
 		return current_direction
 
+# Makes desicions randomly
+class ChaoticAI:
+	extends BaseAI
+
+	# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
+	const DECISION_INTERVAL_MILLISECONDS = 1000
+	
+	var current_direction
+	var last_decision_timestamp
+	
+	func _init(application):
+		init(application)
+	
+	func make_decision():
+		var current_timestamp = OS.get_ticks_msec()
+		if last_decision_timestamp != null && current_timestamp < last_decision_timestamp + DECISION_INTERVAL_MILLISECONDS:
+			return current_direction
+
+		var random = randi() % 2
+		if (character.get_pos().x > boat_delta && character.get_pos().x < application.get_width() - boat_delta):
+			if random == 0:
+				current_direction = application.DIRECTION_LEFT
+			else:
+				current_direction = application.DIRECTION_RIGHT
+		else:
+			if character.get_pos().x > boat_delta:
+				current_direction = application.DIRECTION_LEFT
+			else:
+				current_direction = application.DIRECTION_RIGHT
+
+		last_decision_timestamp = current_timestamp
+		return current_direction
+
 class FollowingAI:
 	extends BaseAI
 
