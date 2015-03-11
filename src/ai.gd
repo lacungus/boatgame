@@ -90,7 +90,7 @@ class ChaoticAI:
 	extends BaseAI
 
 	# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
-	const DECISION_INTERVAL_MILLISECONDS = 500
+	const DECISION_INTERVAL_MILLISECONDS = 1000
 	
 	var current_direction
 	var last_decision_timestamp
