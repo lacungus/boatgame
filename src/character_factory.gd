@@ -8,7 +8,7 @@ const AI_SPEED = 2
 
 const AI_MASS = 10
 const AI_BALAN_MASS = 20
-const PLAYER_SPRITE_NAME = "pope"
+const PLAYER_SPRITE_NAME = "priest"
 
 const AI_SPRITE_NAME = "enemy_01"
 
