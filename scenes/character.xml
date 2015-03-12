@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="21" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/characters/priest/captain_right.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest_front_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/captain_right2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_front_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/captain_left.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/captain_left2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/captain_left3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/captain_right3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest_front_2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_front_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_right.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest2_front_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_left.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest2_front_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_left3.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/characters/ghost/ghost_front_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_right2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/captain_right3.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -18,8 +18,8 @@
 	</resource>
 	<resource type="SpriteFrames" path="local://2">
 		<array name="frames" len="8" shared="false">
-			<resource  resource_type="Texture" path="res://assets/characters/priest/priest_front_2.png">  </resource>
-			<resource  resource_type="Texture" path="res://assets/characters/priest/priest_front_1.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/priest/priest2_front_2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/priest/priest2_front_1.png">  </resource>
 			<resource  resource_type="Texture" path="res://assets/characters/priest/captain_left.png">  </resource>
 			<resource  resource_type="Texture" path="res://assets/characters/priest/captain_left2.png">  </resource>
 			<resource  resource_type="Texture" path="res://assets/characters/priest/captain_left3.png">  </resource>
@@ -30,135 +30,6 @@
 
 	</resource>
 	<resource type="Animation" path="local://3">
-		<real name="length"> 2 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> ".:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> False </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<int> 5 </int>
-				<int> 6 </int>
-				<int> 7 </int>
-				<int> 6 </int>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
-		</dictionary>
-		<string name="tracks/1/type"> "value" </string>
-		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
-		<int name="tracks/1/interp"> 1 </int>
-		<dictionary name="tracks/1/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<vector2> 3.68724, -75.2279 </vector2>
-				<vector2> 3.68724, -75.2279 </vector2>
-				<vector2> 3.68724, -75.2279 </vector2>
-				<vector2> 3.68724, -75.2279 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
-		</dictionary>
-		<string name="tracks/2/type"> "value" </string>
-		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
-		<int name="tracks/2/interp"> 1 </int>
-		<dictionary name="tracks/2/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<vector2> 0.8, 0.8 </vector2>
-				<vector2> 0.8, 0.8 </vector2>
-				<vector2> 0.8, 0.8 </vector2>
-				<vector2> 0.8, 0.8 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://4">
-		<real name="length"> 1 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> ".:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="2" shared="false">
-				<int> 0 </int>
-				<int> 1 </int>
-			</array>
-			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
-		</dictionary>
-		<string name="tracks/1/type"> "value" </string>
-		<node_path name="tracks/1/path"> "AnimationPlayer:playback/speed" </node_path>
-		<int name="tracks/1/interp"> 1 </int>
-		<dictionary name="tracks/1/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="2" shared="false">
-				<real> 1 </real>
-				<real> 1 </real>
-			</array>
-			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
-		</dictionary>
-		<string name="tracks/2/type"> "value" </string>
-		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
-		<int name="tracks/2/interp"> 1 </int>
-		<dictionary name="tracks/2/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="1"> 				1 </real_array>
-			<string> "values" </string>
-			<array  len="1" shared="false">
-				<vector2> 0.5, 0.5 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="1"> 				1 </real_array>
-		</dictionary>
-		<string name="tracks/3/type"> "value" </string>
-		<node_path name="tracks/3/path"> ".:transform/pos" </node_path>
-		<int name="tracks/3/interp"> 1 </int>
-		<dictionary name="tracks/3/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="2" shared="false">
-				<vector2> 0, -90 </vector2>
-				<vector2> 0, -90 </vector2>
-			</array>
-			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://5">
 		<real name="length"> 2 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
@@ -218,6 +89,135 @@
 		</dictionary>
 
 	</resource>
+	<resource type="Animation" path="local://4">
+		<real name="length"> 2 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> False </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<int> 5 </int>
+				<int> 6 </int>
+				<int> 7 </int>
+				<int> 6 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> ".:transform/pos" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+				<vector2> 3.68724, -75.2279 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+				<vector2> 0.8, 0.8 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1, 1.5 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://5">
+		<real name="length"> 5 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 5 </real_array>
+		</dictionary>
+		<string name="tracks/1/type"> "value" </string>
+		<node_path name="tracks/1/path"> "AnimationPlayer:playback/speed" </node_path>
+		<int name="tracks/1/interp"> 1 </int>
+		<dictionary name="tracks/1/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<real> 1 </real>
+				<real> 1 </real>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 5 </real_array>
+		</dictionary>
+		<string name="tracks/2/type"> "value" </string>
+		<node_path name="tracks/2/path"> ".:transform/scale" </node_path>
+		<int name="tracks/2/interp"> 1 </int>
+		<dictionary name="tracks/2/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="1"> 				1 </real_array>
+			<string> "values" </string>
+			<array  len="1" shared="false">
+				<vector2> 0.5, 0.5 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="1"> 				1 </real_array>
+		</dictionary>
+		<string name="tracks/3/type"> "value" </string>
+		<node_path name="tracks/3/path"> ".:transform/pos" </node_path>
+		<int name="tracks/3/interp"> 1 </int>
+		<dictionary name="tracks/3/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<vector2> 0, -90 </vector2>
+				<vector2> 0, -90 </vector2>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
+
+	</resource>
 	<resource type="SpriteFrames" path="local://6">
 		<array name="frames" len="2" shared="false">
 			<resource  resource_type="Texture" path="res://assets/characters/ghost/ghost_front_1.png">  </resource>
@@ -226,6 +226,29 @@
 
 	</resource>
 	<resource type="Animation" path="local://7">
+		<string name="resource/name"> "going_left" </string>
+		<real name="length"> 1 </real>
+		<bool name="loop"> True </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> ".:frame" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="2"> 				1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="2" shared="false">
+				<int> 0 </int>
+				<int> 1 </int>
+			</array>
+			<string> "times" </string>
+			<real_array  len="2"> 				0, 1 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://8">
 		<real name="length"> 1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
@@ -277,7 +300,7 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://8">
+	<resource type="Animation" path="local://9">
 		<real name="length"> 1 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.1 </real>
@@ -346,29 +369,6 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://9">
-		<string name="resource/name"> "going_left" </string>
-		<real name="length"> 1 </real>
-		<bool name="loop"> True </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> ".:frame" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="2"> 				1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="2" shared="false">
-				<int> 0 </int>
-				<int> 1 </int>
-			</array>
-			<string> "times" </string>
-			<real_array  len="2"> 				0, 1 </real_array>
-		</dictionary>
-
-	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -416,9 +416,9 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
+				<string> "anims/going_left" </string>
 				<string> "anims/going_right" </string>
 				<string> "anims/front" </string>
-				<string> "anims/going_left" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
