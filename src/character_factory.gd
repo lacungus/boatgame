@@ -9,8 +9,10 @@ const AI_SPEED = 2
 const AI_MASS = 10
 const AI_BALAN_MASS = 20
 const PLAYER_SPRITE_NAME = "priest"
+const AI_SPRITE_NAME = "ghost"
 
-const AI_SPRITE_NAME = "enemy_01"
+const GHOST_SPRITE_NAME = "ghost"
+const SCELETON_SPRITE_NAME = "sceleton"
 
 var application
 
@@ -29,7 +31,7 @@ func create_following_opponent():
 	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
 
 func create_balancing_opponent():
-	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, AI_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, SCELETON_SPRITE_NAME)
 	
 func create_opposing_opponent():
 	return create_character(preload("res://src/ai.gd").OpposingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
@@ -41,7 +43,7 @@ func create_evil_opponent():
 	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
 
 func create_chaotic_opponent():
-	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, AI_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, GHOST_SPRITE_NAME)
 
 # PRIVATE 
 func create_character(ai, velocity, mass, is_player, sprite_name):

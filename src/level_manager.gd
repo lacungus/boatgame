@@ -33,7 +33,7 @@ func get_level(index):
 	if index == 1:
 		# No wind
 		# One Chaotic Opponent
-		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
+		var characters = [character_factory.create_balancing_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x, start_y)]
 		wind = preload("res://src/wind.gd").new(0, 1)
 		var seconds_for_stars = [120, 60, 30]
@@ -42,7 +42,7 @@ func get_level(index):
 	if index == 2:
 		# No wind
 		# Two Chaotic Opponents
-		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
+		var characters = [character_factory.create_swinging_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y)]
 		wind = preload("res://src/wind.gd").new(0, 1)
 		var seconds_for_stars = [120, 60, 30]
