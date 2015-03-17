@@ -19,18 +19,23 @@ var stars = null
 
 var wind = null
 
+var pre_level_messages = []
+
+var current_dialog_index = 0
+
 # TODO move somewhere
 const VECTOR_LEFT = Vector2(-1, 0)
 const VECTOR_RIGHT = Vector2(1, 0)
 
 # PUBLIC
-func init(application, index, characters, character_positions, seconds_for_stars, wind):
+func init(application, index, characters, character_positions, seconds_for_stars, wind, pre_level_messages):
 	self.application = application
 	self.characters = characters
 	self.character_positions = character_positions
 	self.index = index
 	self.seconds_for_stars = seconds_for_stars
 	self.wind = wind
+	self.pre_level_messages = pre_level_messages
 	
 func _fixed_process(delta):
 	update_timer()
@@ -45,7 +50,7 @@ func _fixed_process(delta):
 	apply_wind()
 
 func _ready():
-	start()
+	show_pre_level_dialogs()
 
 func get_player():
 	for character in characters:
@@ -57,6 +62,24 @@ func get_stars():
 	return stars
 	
 # PRIVATE
+
+func show_pre_level_dialogs():
+	if current_dialog_index >= pre_level_messages.size():
+		start()
+		return
+		
+	var dialog = AcceptDialog.new()
+	get_node("ui_layer").add_child(dialog)
+	dialog.set_size(Vector2(200, 100))
+	dialog.set_title("")
+	dialog.set_text(pre_level_messages[current_dialog_index])
+	dialog.get_ok().set_text("Next")
+	dialog.get_ok().connect("pressed", self, "on_next_clicked")
+	dialog.popup_centered()
+
+func on_next_clicked():
+	current_dialog_index = current_dialog_index + 1
+	show_pre_level_dialogs()
 
 func apply_wind():
 	var wind_strength = wind.get_strength(get_time_passed())
