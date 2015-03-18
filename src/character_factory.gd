@@ -13,6 +13,7 @@ const AI_SPRITE_NAME = "ghost"
 
 const GHOST_SPRITE_NAME = "ghost"
 const SCELETON_SPRITE_NAME = "sceleton"
+const DEMON_SPRITE_NAME = "demon"
 
 var application
 
@@ -40,7 +41,7 @@ func create_sticking_opponent():
 	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
 	
 func create_evil_opponent():
-	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, DEMON_SPRITE_NAME)
 
 func create_chaotic_opponent():
 	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, GHOST_SPRITE_NAME)
