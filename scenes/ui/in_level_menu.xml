@@ -2,12 +2,12 @@
 <resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="60">
+			<string_array  len="61">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -68,15 +68,16 @@
 				<string> "stream/volume_db" </string>
 				<string> "stream/autoplay" </string>
 				<string> "stream/paused" </string>
+				<string> "levels" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 7 </int>
+			<int> 8 </int>
 			<string> "variants" </string>
-			<array  len="42" shared="false">
+			<array  len="47" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -90,7 +91,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="5" shared="false">
 								<string> "res://src/ui/level/pause.gd" </string>
@@ -105,11 +106,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.902501 </real>
+							<real> 1.000001 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -479.703, 42.4972 </vector2>
+							<vector2> -382.696, -119.113 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -214,7 +215,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<real> 376 </real>
 				<real> 38 </real>
@@ -233,14 +234,15 @@
 				<resource name=""></resource>				<int> 1 </int>
 				<resource  resource_type="Script" path="res://src/ui/common/restart_level.gd">  </resource>
 				<real> 285 </real>
-				<real> 443 </real>
+				<real> 476 </real>
 				<real> 557 </real>
 				<real> 538 </real>
 				<string> "Exit" </string>
 				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
-				<real> 342 </real>
-				<real> 560 </real>
-				<real> 417 </real>
+				<real> 284 </real>
+				<real> 395 </real>
+				<real> 556 </real>
+				<real> 470 </real>
 				<string> "Main menu" </string>
 				<real> 287 </real>
 				<real> 117 </real>
@@ -249,9 +251,13 @@
 				<string> "Resume" </string>
 				<resource  resource_type="AudioStream" path="res://assets/music/Sea_light.ogg">  </resource>
 				<real> 10 </real>
+				<real> 317 </real>
+				<real> 559 </real>
+				<real> 386 </real>
+				<string> "Levels" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="363"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 8, 14, 9, 15, 10, 16, 11, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 12, 24, 2, 25, 13, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 14, 34, 15, 35, 15, 36, 3, 37, 3, 38, 16, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 17, 14, 18, 15, 19, 16, 20, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 21, 45, 22, 46, 3, 47, 3, 34, 23, 48, 24, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 25, 14, 26, 15, 27, 16, 28, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 29, 45, 22, 46, 3, 47, 3, 34, 23, 48, 30, 0, 0, 0, 40, 50, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 17, 14, 31, 15, 32, 16, 33, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 34, 45, 22, 46, 3, 47, 3, 34, 23, 0, 0, 0, 40, 51, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 35, 14, 36, 15, 37, 16, 38, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 39, 45, 22, 46, 3, 47, 3, 34, 23, 0, 0, 0, 53, 52, -1, 7, 2, 0, 54, 40, 55, 3, 56, 1, 57, 41, 58, 1, 59, 3, 0 </int_array>
+			<int_array  len="424"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 8, 14, 9, 15, 10, 16, 11, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 12, 24, 2, 25, 13, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 14, 34, 15, 35, 15, 36, 3, 37, 3, 38, 16, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 17, 14, 18, 15, 19, 16, 20, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 21, 45, 22, 46, 3, 47, 3, 34, 23, 48, 24, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 25, 14, 26, 15, 27, 16, 28, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 29, 45, 22, 46, 3, 47, 3, 34, 23, 48, 30, 0, 0, 0, 40, 50, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 31, 14, 32, 15, 33, 16, 34, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 35, 45, 22, 46, 3, 47, 3, 34, 23, 0, 0, 0, 40, 51, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 36, 14, 37, 15, 38, 16, 39, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 40, 45, 22, 46, 3, 47, 3, 34, 23, 0, 0, 0, 53, 52, -1, 7, 2, 0, 54, 41, 55, 3, 56, 1, 57, 42, 58, 1, 59, 3, 0, 0, 0, 40, 60, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 36, 14, 43, 15, 44, 16, 45, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 41, 12, 24, 2, 25, 13, 42, 3, 43, 3, 44, 3, 33, 46, 45, 22, 46, 3, 47, 3, 34, 23, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
