@@ -47,7 +47,6 @@ func _fixed_process(delta):
 		calculate_stars()
 		application.on_level_won()
 		return
-	apply_wind()
 
 func _ready():
 	show_pre_level_dialogs()
@@ -80,39 +79,6 @@ func show_pre_level_dialogs():
 func on_next_clicked():
 	current_dialog_index = current_dialog_index + 1
 	show_pre_level_dialogs()
-
-func apply_wind():
-	var wind_strength = wind.get_strength(get_time_passed())
-	var res
-	
-	if wind_strength < -10:
-		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 5/6)
-		res = load("res://assets/wind/wind_left.png")
-		
-	if wind_strength < -3 && wind_strength > -10:
-		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 2/3)
-		res = load("res://assets/wind/wind_left2.png")
-	
-	if wind_strength > -3 && wind_strength < 3:
-		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/2)
-		res = load("res://assets/wind/center.png")
-		
-
-	if wind_strength > 3 && wind_strength < 10:
-		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/3)
-		res = load("res://assets/wind/wind_right2.png")
-		
-	if wind_strength > 10:
-		application.set_x(get_node("main_layer/wind_asset"), application.get_width() * 1/6)
-		res = load("res://assets/wind/wind_right.png")
-		
-	
-	
-	get_node("main_layer/wind_asset").set_texture(res)
-	get_node("ui_layer/wind_label").set_text(str(ceil(wind_strength)))
-	
-	for character in characters:
-		character.apply_impulse(VECTOR_LEFT, Vector2(wind_strength, 0))
 
 func calculate_stars():
 	var current_timestamp = OS.get_ticks_msec()
@@ -159,6 +125,7 @@ func start():
 	set_level_label()
 	add_characters()
 	add_collision_exceptions()
+	add_wind()
 	
 	level_started_timestamp = OS.get_ticks_msec()
 	set_fixed_process(true)
@@ -175,6 +142,9 @@ func add_characters():
 		var pos = character_positions[i]
 		character.set_pos(pos)
 		i = i + 1
+
+func add_wind():
+	get_node("main_layer").add_child(wind)
 
 # Add collision exceptions for each pair of characters
 func add_collision_exceptions():
