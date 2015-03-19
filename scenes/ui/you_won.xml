@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -60,7 +60,7 @@
 				<string> "clip_text" </string>
 				<string> "restart_level" </string>
 				<string> "quit" </string>
-				<string> "bg_music_light" </string>
+				<string> "bg_music" </string>
 				<string> "StreamPlayer" </string>
 				<string> "stream/stream" </string>
 				<string> "stream/play" </string>
@@ -247,8 +247,8 @@
 				<real> 543 </real>
 				<string> "Exit" </string>
 				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
-				<resource  resource_type="AudioStream" path="res://assets/music/Sea_light.ogg">  </resource>
-				<real> 10 </real>
+				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
+				<real> 5 </real>
 				<real> 116 </real>
 				<real> 512 </real>
 				<real> 156 </real>

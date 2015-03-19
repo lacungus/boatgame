@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://assets/music/Sea_light.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -61,7 +61,7 @@
 				<string> "quit" </string>
 				<string> "main_menu" </string>
 				<string> "resume" </string>
-				<string> "bg_music_light" </string>
+				<string> "bg_music" </string>
 				<string> "StreamPlayer" </string>
 				<string> "stream/stream" </string>
 				<string> "stream/play" </string>
@@ -92,7 +92,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 5 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://src/ui/level/pause.gd" </string>
@@ -217,7 +217,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
 				<real> 376 </real>
 				<real> 38 </real>
@@ -251,8 +251,8 @@
 				<real> 564 </real>
 				<real> 193 </real>
 				<string> "Resume" </string>
-				<resource  resource_type="AudioStream" path="res://assets/music/Sea_light.ogg">  </resource>
-				<real> 10 </real>
+				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
+				<real> 5 </real>
 				<real> 317 </real>
 				<real> 559 </real>
 				<real> 386 </real>
