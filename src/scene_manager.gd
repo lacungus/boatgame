@@ -38,3 +38,6 @@ func goto_you_lost():
 
 func goto_in_level_menu():
 	goto_scene("res://scenes/ui/in_level_menu.xml", false)
+
+func goto_levels_menu():
+	goto_scene("res://scenes/ui/levels_menu.xml", false)
