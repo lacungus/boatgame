@@ -15,6 +15,7 @@ const GHOST_SPRITE_NAME = "ghost"
 const SCELETON_SPRITE_NAME = "sceleton"
 const DEMON_SPRITE_NAME = "demon"
 const ZOMBIE_SPRITE_NAME = "zombie"
+const HELLHOUND_SPRITE_NAME = "hellhound"
 
 var application
 
@@ -27,7 +28,7 @@ func create_player():
 	return create_character(preload("res://src/ai.gd").PlayerAI.new(application), PLAYER_SPEED, PLAYER_MASS, true, PLAYER_SPRITE_NAME)
 	
 func create_swinging_opponent():
-	return create_character(preload("res://src/ai.gd").SwingingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").SwingingAI.new(application), AI_SPEED, AI_MASS, false, HELLHOUND_SPRITE_NAME)
 
 func create_following_opponent():
 	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_SPEED, AI_MASS, false, ZOMBIE_SPRITE_NAME)
