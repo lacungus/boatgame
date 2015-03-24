@@ -26,7 +26,10 @@ func clone_current_level():
 # PRIVATE
 
 # TODO maybe keep this all in a config file?
-func get_level(index):
+func get_level(index, set_current = false):
+	if set_current:
+		count = index
+		
 	var character_factory = application.get_character_factory() 
 	var wind = preload("res://src/wind.gd").new(application, 0.001, 0.0001)
 	
