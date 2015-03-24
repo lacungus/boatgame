@@ -82,3 +82,6 @@ func create_level(characters, positions, seconds_for_stars, wind, pre_level_mess
 	scene_instance.init(application, count, characters, positions, seconds_for_stars, wind, pre_level_messages)
 	current_level = scene_instance
 	return scene_instance
+
+func get_level_count():
+	return 5

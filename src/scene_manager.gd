@@ -25,6 +25,12 @@ func goto_next_level():
 	current_scene = application.get_level_manager().get_next_level()
 	application.get_tree().get_root().add_child(current_scene)
 
+func goto_level(index):
+	current_scene.queue_free()
+	
+	current_scene = application.get_level_manager().get_level(index)
+	application.get_tree().get_root().add_child(current_scene)
+
 func restart_level():
 	current_scene.queue_free()
 	current_scene = application.get_level_manager().clone_current_level()
