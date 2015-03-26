@@ -4,6 +4,8 @@ extends Node
 const DIRECTION_LEFT = "left"
 const DIRECTION_RIGHT = "right"
 
+const SAVE_FILE_NAME = 'gamestate.txt'
+
 var level_manager
 
 var scene_manager
@@ -14,6 +16,9 @@ func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
 	level_manager = preload("res://src/level_manager.gd").new(self)
 	character_factory = preload("res://src/character_factory.gd").new(self)
+	
+	load_game_state()
+	
 	set_process_input(true)
 	
 func get_scene_manager():
@@ -55,6 +60,8 @@ func set_x(node, x):
 	node.set_pos(node_pos)
 
 func on_level_won():
+	var current_level = level_manager.get_current_level()
+	level_manager.set_stars_per_level(current_level.get_index(), current_level.get_stars())
 	scene_manager.goto_you_won()
 	
 func on_level_lost():
@@ -68,14 +75,40 @@ func _input(event):
 	
 
 func load_game_state():
+	var file = File.new()
+	if !file.file_exists(SAVE_FILE_NAME):
+		print("Save file not found")
+		return
+	
+	file.open(SAVE_FILE_NAME, File.READ)
+	
+	var level_number = file.get_64()
+	level_manager.set_count(level_number)
+	
+	file.close()
+	
+	print("Game was loaded")
+
+func save_game_state():
+	var file = File.new()
+	file.open(SAVE_FILE_NAME, File.WRITE)
+	
+	file.store_64(level_manager.get_current_level().get_index())
+	
+	file.close()
+	print("Game was saved")
+
+func write_level_to_file(file, index):
 	pass
 	
-func save_game_state():
+func read_index_to_file():
 	pass
 
 func reset_game_state():
-	pass
+	delete_game_state()
+	load_game_state()
 	
 func delete_game_state():
-	pass
+	Directory.new().remove(SAVE_FILE_NAME)
+	print("Save file deleted")
 	

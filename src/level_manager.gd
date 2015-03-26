@@ -1,4 +1,4 @@
-var count = 0
+var count = 1
 
 var application
 
@@ -7,11 +7,17 @@ var current_level
 var middle_x
 var start_y
 
+var stars_per_level 
+
 # PUBLIC
 func _init(application):
 	self.application = application
 	middle_x = application.get_width() / 2
 	start_y = 350
+	
+	stars_per_level = []
+	for i in range(get_level_count() + 1):
+		stars_per_level.append(null)
 	
 func get_current_level():
 	return current_level
@@ -22,6 +28,18 @@ func get_next_level():
 
 func clone_current_level():
 	return get_level(count)
+
+func set_stars_per_level(level, stars):
+	stars_per_level[level] = stars
+
+func get_stars_per_level(level):
+	return stars_per_level[level]
+	
+func set_count(count):
+	self.count = count
+	
+func get_current_index():
+	return count
 
 # PRIVATE
 

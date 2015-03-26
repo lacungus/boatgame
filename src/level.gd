@@ -60,6 +60,9 @@ func get_player():
 func get_stars():
 	return stars
 	
+func get_index():
+	return index
+	
 # PRIVATE
 
 func show_pre_level_dialogs():
