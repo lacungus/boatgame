@@ -14,6 +14,7 @@ func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
 	level_manager = preload("res://src/level_manager.gd").new(self)
 	character_factory = preload("res://src/character_factory.gd").new(self)
+	set_process_input(true)
 	
 func get_scene_manager():
 	return scene_manager
@@ -58,3 +59,23 @@ func on_level_won():
 	
 func on_level_lost():
 	scene_manager.goto_you_lost()
+
+func _input(event):
+	if event.is_action("save") && !event.is_echo() && event.is_pressed():
+		save_game_state()
+	if event.is_action("reset") && !event.is_echo() && event.is_pressed():
+		reset_game_state()
+	
+
+func load_game_state():
+	pass
+	
+func save_game_state():
+	pass
+
+func reset_game_state():
+	pass
+	
+func delete_game_state():
+	pass
+	
