@@ -84,6 +84,13 @@ func load_game_state():
 	
 	var level_number = file.get_64()
 	level_manager.set_count(level_number)
+	var level_count = file.get_64()
+	
+	for i in range(level_count):
+		var stars = file.get_64()
+		if stars == -1:
+			stars = null
+		level_manager.set_stars_per_level(i + 1, stars)
 	
 	file.close()
 	
@@ -94,6 +101,13 @@ func save_game_state():
 	file.open(SAVE_FILE_NAME, File.WRITE)
 	
 	file.store_64(level_manager.get_current_level().get_index())
+	file.store_64(level_manager.get_level_count())
+	
+	for i in range(level_manager.get_level_count()):
+		var stars = level_manager.get_stars_per_level(i + 1)
+		if stars == null:
+			stars = -1
+		file.store_64(stars)
 	
 	file.close()
 	print("Game was saved")
