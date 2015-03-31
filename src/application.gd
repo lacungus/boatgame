@@ -63,6 +63,7 @@ func on_level_won():
 	var current_level = level_manager.get_current_level()
 	level_manager.set_stars_per_level(current_level.get_index(), current_level.get_stars())
 	scene_manager.goto_you_won()
+	save_game_state(level_manager.get_current_index() + 1)
 	
 func on_level_lost():
 	scene_manager.goto_you_lost()
@@ -96,11 +97,16 @@ func load_game_state():
 	
 	print("Game was loaded")
 
-func save_game_state():
+func save_game_state(current_level_index = null):
 	var file = File.new()
 	file.open(SAVE_FILE_NAME, File.WRITE)
 	
-	file.store_64(level_manager.get_current_level().get_index())
+	print(current_level_index)
+	if current_level_index == null:
+		current_level_index = level_manager.get_current_index()
+	print(current_level_index)
+		
+	file.store_64(current_level_index)
 	file.store_64(level_manager.get_level_count())
 	
 	for i in range(level_manager.get_level_count()):
