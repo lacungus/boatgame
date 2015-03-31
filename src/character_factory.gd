@@ -12,7 +12,7 @@ const PLAYER_SPRITE_NAME = "priest"
 const AI_SPRITE_NAME = "ghost"
 
 const GHOST_SPRITE_NAME = "ghost"
-const SCELETON_SPRITE_NAME = "sceleton"
+const SKELETON_SPRITE_NAME = "skeleton"
 const DEMON_SPRITE_NAME = "demon"
 const ZOMBIE_SPRITE_NAME = "zombie"
 const HELLHOUND_SPRITE_NAME = "hellhound"
@@ -34,7 +34,7 @@ func create_following_opponent():
 	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_SPEED, AI_MASS, false, ZOMBIE_SPRITE_NAME)
 
 func create_balancing_opponent():
-	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, SCELETON_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, SKELETON_SPRITE_NAME)
 	
 func create_opposing_opponent():
 	return create_character(preload("res://src/ai.gd").OpposingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
