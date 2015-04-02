@@ -92,10 +92,8 @@ func save_game_state(current_level_index = null):
 	var file = File.new()
 	file.open(SAVE_FILE_NAME, File.WRITE)
 	
-	print(current_level_index)
 	if current_level_index == null:
 		current_level_index = level_manager.get_current_index()
-	print(current_level_index)
 		
 	file.store_64(current_level_index)
 	file.store_64(level_manager.get_level_count())
