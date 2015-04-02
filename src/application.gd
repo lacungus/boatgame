@@ -1,9 +1,5 @@
 extends Node
 
-# TODO enum?
-const DIRECTION_LEFT = "left"
-const DIRECTION_RIGHT = "right"
-
 const SAVE_FILE_NAME = 'gamestate.txt'
 
 var level_manager
@@ -12,10 +8,14 @@ var scene_manager
 
 var character_factory
 
+var direction
+
 func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
 	level_manager = preload("res://src/level_manager.gd").new(self)
 	character_factory = preload("res://src/character_factory.gd").new(self)
+	
+	direction = preload("res://src/direction.gd").new()
 	
 	load_game_state()
 	
@@ -44,15 +44,6 @@ func is_left_active():
 	
 func is_right_active():
 	return Input.is_action_pressed("ui_right") || get_node("/root/Game/ui_layer/button_right").is_pressed()
-
-# TODO consider moving all direction logic into a separate class
-func opposite_direction(direction):
-	if direction == DIRECTION_LEFT:
-		return DIRECTION_RIGHT
-	if direction == DIRECTION_RIGHT:
-		return DIRECTION_LEFT
-	print("Unable to get opposite direction: " + direction)
-	return null
 
 func set_x(node, x):
 	var node_pos = node.get_pos()

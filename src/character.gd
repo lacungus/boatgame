@@ -1,8 +1,5 @@
 extends RigidBody2D
 
-const VECTOR_LEFT = Vector2(-1, 0)
-const VECTOR_RIGHT = Vector2(1, 0)
-
 var velocity
 
 var ai
@@ -53,14 +50,14 @@ func run(direction):
 				animation_player.play("front")
 			else:
 				animation_player.stop_all()
-	if direction == application.DIRECTION_LEFT:
+	if direction == application.direction.LEFT:
 		if previous_direction != direction:
 			animation_player.play("going_left")
-		apply_impulse(VECTOR_LEFT, Vector2(-self.velocity * self.mass, 0))
-	if direction == application.DIRECTION_RIGHT:
+		apply_impulse(application.direction.VECTOR_LEFT, Vector2(-self.velocity * self.mass, 0))
+	if direction == application.direction.RIGHT:
 		if previous_direction != direction:
 			animation_player.play("going_right")
-		apply_impulse(VECTOR_RIGHT, Vector2(self.velocity * self.mass, 0))
+		apply_impulse(application.direction.VECTOR_RIGHT, Vector2(self.velocity * self.mass, 0))
 
 	previous_direction = direction
 	

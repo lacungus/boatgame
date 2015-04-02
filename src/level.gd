@@ -23,10 +23,6 @@ var pre_level_messages = []
 
 var current_dialog_index = 0
 
-# TODO move somewhere
-const VECTOR_LEFT = Vector2(-1, 0)
-const VECTOR_RIGHT = Vector2(1, 0)
-
 # PUBLIC
 func init(application, index, characters, character_positions, seconds_for_stars, wind, pre_level_messages):
 	self.application = application

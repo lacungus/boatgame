@@ -5,10 +5,6 @@ var period
 
 var application
 
-# TODO move somewhere
-const VECTOR_LEFT = Vector2(-1, 0)
-const VECTOR_RIGHT = Vector2(1, 0)
-
 func _init(application, amplitude, period):
 	self.amplitude = amplitude
 	self.period = period
@@ -46,7 +42,7 @@ func _fixed_process(delta):
 	get_node("/root/Game/ui_layer/wind_label").set_text(str(ceil(wind_strength)))
 	
 	for character in level.get_characters():
-		character.apply_impulse(VECTOR_LEFT, Vector2(wind_strength, 0))
+		character.apply_impulse(application.direction.VECTOR_LEFT, Vector2(wind_strength, 0))
 
 # PRIVATE
 

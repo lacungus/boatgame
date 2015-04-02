@@ -69,17 +69,17 @@ class SwingingAI:
 
 		if current_direction == null:
 			if character.get_pos().x > boat_delta:
-				current_direction = application.DIRECTION_LEFT
+				current_direction = application.direction.LEFT
 			else: 
-				current_direction = application.DIRECTION_RIGHT
+				current_direction = application.direction.RIGHT
 		else:
 			if (character.get_pos().x > boat_delta && character.get_pos().x < application.get_width()-boat_delta):
-				current_direction = application.opposite_direction(current_direction)
+				current_direction = application.direction.opposite(current_direction)
 			else:
 				if character.get_pos().x > boat_delta:
-					current_direction = application.DIRECTION_LEFT
+					current_direction = application.direction.LEFT
 				else:
-					current_direction = application.DIRECTION_RIGHT
+					current_direction = application.direction.RIGHT
 				
 
 		last_decision_timestamp = current_timestamp
@@ -106,14 +106,14 @@ class ChaoticAI:
 		var random = randi() % 2
 		if (character.get_pos().x > boat_delta && character.get_pos().x < application.get_width() - boat_delta):
 			if random == 0:
-				current_direction = application.DIRECTION_LEFT
+				current_direction = application.direction.LEFT
 			else:
-				current_direction = application.DIRECTION_RIGHT
+				current_direction = application.direction.RIGHT
 		else:
 			if character.get_pos().x > boat_delta:
-				current_direction = application.DIRECTION_LEFT
+				current_direction = application.direction.LEFT
 			else:
-				current_direction = application.DIRECTION_RIGHT
+				current_direction = application.direction.RIGHT
 
 		last_decision_timestamp = current_timestamp
 		return current_direction
@@ -128,10 +128,10 @@ class FollowingAI:
 		var player = application.get_level_manager().get_current_level().get_player()
 		
 		if (player.get_pos().x + delta < character.get_pos().x && character.get_pos().x > boat_delta):
-			return application.DIRECTION_LEFT
+			return application.direction.LEFT
 		
 		if (player.get_pos().x - delta > character.get_pos().x && character.get_pos().x < application.get_width() - boat_delta):
-			return application.DIRECTION_RIGHT
+			return application.direction.RIGHT
 		
 		return null
 
@@ -147,10 +147,10 @@ class BalancingAI:
 		
 
 		if (center_of_mass.x < (application.get_width() / 2 - delta) && character.get_pos().x < (application.get_width() - boat_delta)):
-			return application.DIRECTION_RIGHT
+			return application.direction.RIGHT
 		
 		if (center_of_mass.x > (application.get_width() / 2 + delta) && character.get_pos().x > boat_delta) :
-			return application.DIRECTION_LEFT
+			return application.direction.LEFT
 		
 		return null
 
@@ -163,11 +163,11 @@ class OpposingAI:
 	func make_decision():
 		if (application.is_left_active()):
 			if character.get_pos().x < application.get_width() - boat_delta:
-				return application.DIRECTION_RIGHT
+				return application.direction.RIGHT
 		
 		if (application.is_right_active()):
 			if character.get_pos().x > boat_delta:
-				return application.DIRECTION_LEFT
+				return application.direction.LEFT
 		
 		return null
 
@@ -179,9 +179,9 @@ class StickingAI:
 		
 	func make_decision():
 		if character.get_pos().x > application.get_width()/2 + delta:
-			return application.DIRECTION_LEFT
+			return application.direction.LEFT
 		if character.get_pos().x < application.get_width()/2 - delta:
-			return application.DIRECTION_RIGHT
+			return application.direction.RIGHT
 		
 		return null
 	
@@ -196,9 +196,9 @@ class EvilAI:
 		
 		
 		if (center_of_mass.x < (application.get_width() / 2 - delta) && character.get_pos().x > boat_delta) :
-			return application.DIRECTION_LEFT
+			return application.direction.LEFT
 		
 		if (center_of_mass.x > (application.get_width() / 2 + delta) && character.get_pos().x < (application.get_width() - boat_delta)):
-			return application.DIRECTION_RIGHT
+			return application.direction.RIGHT
 		
 		return null
