@@ -88,9 +88,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 7 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
-							<array  len="13" shared="false">
+							<array  len="15" shared="false">
 								<string> "res://src/ui/main_menu/play.gd" </string>
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://src/level.gd" </string>
@@ -104,6 +104,8 @@
 								<string> "res://src/ai.gd" </string>
 								<string> "res://src/boat.gd" </string>
 								<string> "res://src/ui/common/to_levels_menu.gd" </string>
+								<string> "res://src/direction.gd" </string>
+								<string> "res://src/wind.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
