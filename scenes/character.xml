@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="54" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/characters/skeleton/skeleton_front2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/hellhound/hellhound_left2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_right_2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/demon/demon2_front1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_front_2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/skeleton/skeleton_right2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/hellhound/hellhound_left1.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="58" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://assets/characters/demon/demon2_front2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/zombie/zombie_front1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/hellhound/hellhound_right2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/zombie/zombie_front2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_front_+4.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_right_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/hellhound/hellhound_right1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_front_+3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_left_2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_right_2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/skeleton/skeleton_front1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/skeleton/skeleton_left1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_front_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/demon/demon2_front1.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/characters/ghost/ghost_left_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_front_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_right_2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/characters/priest/priest3_front_+2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_front_+1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_left1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_front_+3.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/hellhound/hellhound_left1.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/characters/priest/priest3_left_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/ghost/ghost_left_2.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/priest/priest3_right_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/skeleton/skeleton_right1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/characters/skeleton/skeleton_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/demon/demon2_right1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/demon/demon2_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/demon/demon2_right2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/hellhound/hellhound_left2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://src/character.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_right_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_front1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_right2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/hellhound/hellhound_right2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_left2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_left_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_front_+4.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/zombie/zombie_front1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_left_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_front_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_right_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/priest/priest3_front_+1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/zombie/zombie_front2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_right1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/demon/demon2_left1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/hellhound/hellhound_right1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/skeleton/skeleton_front2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/characters/ghost/ghost_right_1.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 1 </real>
@@ -478,9 +482,13 @@
 
 	</resource>
 	<resource type="SpriteFrames" path="local://14">
-		<array name="frames" len="2" shared="false">
+		<array name="frames" len="6" shared="false">
 			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_front1.png">  </resource>
 			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_front2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_left1.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_left2.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_right1.png">  </resource>
+			<resource  resource_type="Texture" path="res://assets/characters/demon/demon2_right2.png">  </resource>
 		</array>
 
 	</resource>
@@ -520,8 +528,8 @@
 			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
 			<array  len="2" shared="false">
-				<int> 1 </int>
 				<int> 2 </int>
+				<int> 3 </int>
 			</array>
 			<string> "times" </string>
 			<real_array  len="2"> 				0, 1 </real_array>
@@ -542,8 +550,8 @@
 			<real_array  len="2"> 				1, 1 </real_array>
 			<string> "values" </string>
 			<array  len="2" shared="false">
-				<int> 1 </int>
-				<int> 2 </int>
+				<int> 4 </int>
+				<int> 5 </int>
 			</array>
 			<string> "times" </string>
 			<real_array  len="2"> 				0, 1 </real_array>
@@ -744,7 +752,7 @@
 			<string> "node_count" </string>
 			<int> 14 </int>
 			<string> "variants" </string>
-			<array  len="53" shared="false">
+			<array  len="54" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -766,7 +774,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
 							<array  len="6" shared="false">
 								<string> "res://src/application.gd" </string>
@@ -920,6 +928,7 @@
 				<vector2> 0, -95 </vector2>
 				<vector2> 0.4, 0.4 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://14">  </resource>
+				<int> 4 </int>
 				<resource  resource_type="Animation" path="local://15">  </resource>
 				<resource  resource_type="Animation" path="local://16">  </resource>
 				<resource  resource_type="Animation" path="local://17">  </resource>
@@ -933,7 +942,7 @@
 				<resource  resource_type="Animation" path="local://24">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="464"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 16, 30, 8, 31, 3, 0, 0, 0, 33, 32, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 18, 34, 19, 35, 20, 36, 1, 37, 3, 38, 3, 39, 21, 0, 2, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 23, 45, 24, 46, 25, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 51, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 28, 8, 5, 9, 18, 34, 29, 35, 11, 36, 1, 37, 3, 38, 3, 39, 21, 0, 4, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 30, 45, 31, 46, 32, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 52, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 33, 8, 5, 9, 34, 34, 35, 36, 1, 37, 3, 38, 3, 39, 21, 0, 6, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 36, 45, 37, 46, 38, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 53, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 39, 8, 5, 9, 40, 34, 41, 36, 1, 37, 3, 38, 3, 39, 21, 0, 8, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 42, 45, 43, 46, 44, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 54, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 33, 8, 5, 9, 18, 34, 45, 36, 1, 37, 3, 38, 3, 39, 21, 0, 10, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 46, 45, 47, 46, 48, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 55, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 49, 8, 5, 9, 40, 34, 50, 35, 11, 36, 1, 37, 3, 38, 3, 39, 21, 0, 12, 0, 40, 40, -1, 10, 2, 0, 41, 7, 42, 5, 43, 22, 45, 51, 46, 52, 47, 1, 48, 2, 49, 26, 50, 27, 0 </int_array>
+			<int_array  len="466"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 10, 15, 11, 16, 2, 17, 12, 18, 5, 19, 3, 20, 13, 21, 13, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 14, 28, 15, 0, 0, 0, 29, 29, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 16, 30, 8, 31, 3, 0, 0, 0, 33, 32, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 17, 8, 5, 9, 18, 34, 19, 35, 20, 36, 1, 37, 3, 38, 3, 39, 21, 0, 2, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 23, 45, 24, 46, 25, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 51, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 1, 7, 28, 8, 5, 9, 18, 34, 29, 35, 11, 36, 1, 37, 3, 38, 3, 39, 21, 0, 4, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 30, 45, 31, 46, 32, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 52, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 33, 8, 5, 9, 34, 34, 35, 36, 1, 37, 3, 38, 3, 39, 21, 0, 6, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 36, 45, 37, 46, 38, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 53, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 39, 8, 5, 9, 40, 34, 41, 35, 42, 36, 1, 37, 3, 38, 3, 39, 21, 0, 8, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 43, 45, 44, 46, 45, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 54, -1, 13, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 33, 8, 5, 9, 18, 34, 46, 36, 1, 37, 3, 38, 3, 39, 21, 0, 10, 0, 40, 40, -1, 11, 2, 0, 41, 7, 42, 5, 43, 22, 44, 47, 45, 48, 46, 49, 47, 1, 48, 2, 49, 26, 50, 27, 0, 0, 0, 33, 55, -1, 14, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 50, 8, 5, 9, 40, 34, 51, 35, 11, 36, 1, 37, 3, 38, 3, 39, 21, 0, 12, 0, 40, 40, -1, 10, 2, 0, 41, 7, 42, 5, 43, 22, 45, 52, 46, 53, 47, 1, 48, 2, 49, 26, 50, 27, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
