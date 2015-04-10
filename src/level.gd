@@ -19,9 +19,7 @@ var stars = null
 
 var wind = null
 
-var pre_level_messages = []
-
-var current_dialog_index = 0
+var pre_level
 
 # PUBLIC
 func init(application, index, characters, character_positions, seconds_for_stars, wind, pre_level_messages):
@@ -31,7 +29,7 @@ func init(application, index, characters, character_positions, seconds_for_stars
 	self.index = index
 	self.seconds_for_stars = seconds_for_stars
 	self.wind = wind
-	self.pre_level_messages = pre_level_messages
+	self.pre_level = preload("res://src/pre_level.gd").new(application, self, pre_level_messages)
 	
 func _fixed_process(delta):
 	update_timer()
@@ -45,7 +43,7 @@ func _fixed_process(delta):
 		return
 
 func _ready():
-	show_pre_level_dialogs()
+	pre_level.start()
 
 func get_player():
 	for character in characters:
@@ -60,24 +58,6 @@ func get_index():
 	return index
 	
 # PRIVATE
-
-func show_pre_level_dialogs():
-	if current_dialog_index >= pre_level_messages.size():
-		start()
-		return
-		
-	var dialog = AcceptDialog.new()
-	get_node("ui_layer").add_child(dialog)
-	dialog.set_size(Vector2(200, 100))
-	dialog.set_title("")
-	dialog.set_text(pre_level_messages[current_dialog_index])
-	dialog.get_ok().set_text("Next")
-	dialog.get_ok().connect("pressed", self, "on_next_clicked")
-	dialog.popup_centered()
-
-func on_next_clicked():
-	current_dialog_index = current_dialog_index + 1
-	show_pre_level_dialogs()
 
 func calculate_stars():
 	var current_timestamp = OS.get_ticks_msec()
