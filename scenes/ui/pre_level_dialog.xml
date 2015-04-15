@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/main_menu/play.gd" type="Script"></ext_resource>
+<resource_file type="PackedScene" subresource_count="2" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="58">
+			<string_array  len="45">
 				<string> "root" </string>
-				<string> "Node2D" </string>
+				<string> "PopupDialog" </string>
 				<string> "_import_path" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
 				<string> "visibility/self_opacity" </string>
 				<string> "visibility/behind_parent" </string>
-				<string> "transform/pos" </string>
-				<string> "transform/rot" </string>
-				<string> "transform/scale" </string>
-				<string> "__meta__" </string>
-				<string> "play" </string>
-				<string> "Button" </string>
-				<string> "margin/left" </string>
-				<string> "margin/top" </string>
 				<string> "margin/right" </string>
 				<string> "margin/bottom" </string>
 				<string> "focus_neighbour/left" </string>
@@ -34,7 +23,12 @@
 				<string> "size_flags/horizontal" </string>
 				<string> "size_flags/vertical" </string>
 				<string> "size_flags/stretch_ratio" </string>
-				<string> "custom_fonts/font" </string>
+				<string> "theme/theme" </string>
+				<string> "popup/exclusive" </string>
+				<string> "__meta__" </string>
+				<string> "button" </string>
+				<string> "Button" </string>
+				<string> "margin/top" </string>
 				<string> "disabled" </string>
 				<string> "toggle_mode" </string>
 				<string> "click_on_press" </string>
@@ -43,9 +37,7 @@
 				<string> "flat" </string>
 				<string> "clip_text" </string>
 				<string> "align" </string>
-				<string> "script/script" </string>
-				<string> "quit" </string>
-				<string> "header" </string>
+				<string> "label" </string>
 				<string> "Label" </string>
 				<string> "range/min" </string>
 				<string> "range/max" </string>
@@ -58,55 +50,36 @@
 				<string> "autowrap" </string>
 				<string> "uppercase" </string>
 				<string> "percent_visible" </string>
-				<string> "bg_music" </string>
-				<string> "StreamPlayer" </string>
-				<string> "stream/stream" </string>
-				<string> "stream/play" </string>
-				<string> "stream/loop" </string>
-				<string> "stream/volume_db" </string>
-				<string> "stream/autoplay" </string>
-				<string> "stream/paused" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 3 </int>
 			<string> "variants" </string>
-			<array  len="33" shared="false">
+			<array  len="16" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
 				<bool> False </bool>
-				<vector2> 0, 0 </vector2>
-				<real> 0 </real>
-				<vector2> 1, 1 </vector2>
+				<real> 400 </real>
+				<real> 300 </real>
+				<int> 2 </int>
+				<resource  resource_type="Theme" path="res://assets/themes/main_theme.thm">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 15 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="16" shared="false">
-								<string> "res://src/ui/main_menu/play.gd" </string>
-								<string> "res://src/scene_manager.gd" </string>
-								<string> "res://src/level.gd" </string>
-								<string> "res://src/ui/common/quit.gd" </string>
-								<string> "res://src/ui/common/restart_level.gd" </string>
-								<string> "res://src/ui/common/next_level.gd" </string>
-								<string> "res://src/application.gd" </string>
-								<string> "res://src/level_manager.gd" </string>
-								<string> "res://src/character_factory.gd" </string>
-								<string> "res://src/character.gd" </string>
-								<string> "res://src/ai.gd" </string>
-								<string> "res://src/boat.gd" </string>
-								<string> "res://src/ui/common/to_levels_menu.gd" </string>
-								<string> "res://src/direction.gd" </string>
-								<string> "res://src/wind.gd" </string>
+							<array  len="4" shared="false">
 								<string> "res://src/pre_level.gd" </string>
+								<string> "res://src/ui/levels_menu/levels_menu.gd" </string>
+								<string> "res://src/scene_manager.gd" </string>
+								<string> "res://src/application.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -114,11 +87,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.735093 </real>
+							<real> 0.663421 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -776.647, -33.8582 </vector2>
+							<vector2> -800, -167.155 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -223,35 +196,17 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<real> 285 </real>
-				<real> 183 </real>
-				<real> 538 </real>
-				<real> 245 </real>
-				<int> 2 </int>
-				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
-				<string> "Play" </string>
+				<real> 200 </real>
+				<string> "" </string>
 				<resource name=""></resource>				<int> 1 </int>
-				<resource  resource_type="Script" path="res://src/ui/main_menu/play.gd">  </resource>
-				<real> 287 </real>
-				<real> 318 </real>
-				<real> 545 </real>
-				<real> 371 </real>
-				<string> "Exit" </string>
-				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
-				<real> 321 </real>
-				<real> 35 </real>
-				<real> 518 </real>
-				<real> 100 </real>
-				<string> "Main Menu" </string>
-				<int> 0 </int>
+				<real> 0 </real>
+				<real> 15.384615 </real>
 				<real> -1 </real>
-				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
-				<real> 5 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="241"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 8, 14, 9, 15, 10, 16, 11, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 24, 12, 25, 2, 26, 13, 27, 3, 28, 3, 29, 3, 30, 14, 31, 15, 32, 3, 33, 3, 34, 16, 35, 17, 0, 0, 0, 12, 36, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 18, 14, 19, 15, 20, 16, 21, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 12, 24, 12, 25, 2, 26, 13, 27, 3, 28, 3, 29, 3, 30, 22, 31, 15, 32, 3, 33, 3, 34, 16, 35, 23, 0, 0, 0, 38, 37, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 24, 14, 25, 15, 26, 16, 27, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 12, 25, 2, 26, 13, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 30, 28, 34, 29, 46, 29, 47, 3, 48, 3, 49, 30, 0, 0, 0, 51, 50, -1, 7, 2, 0, 52, 31, 53, 3, 54, 1, 55, 32, 56, 1, 57, 3, 0 </int_array>
+			<int_array  len="165"> 				-1, -1, 1, 0, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 18, 7, 19, 3, 20, 8, 0, 0, 0, 22, 21, -1, 25, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 23, 9, 7, 4, 8, 5, 9, 0, 10, 0, 11, 0, 12, 0, 13, 3, 14, 1, 15, 6, 16, 6, 17, 2, 24, 3, 25, 3, 26, 3, 27, 10, 28, 11, 29, 3, 30, 3, 31, 12, 0, 0, 0, 33, 32, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 9, 9, 0, 10, 0, 11, 0, 12, 0, 13, 1, 14, 1, 15, 6, 17, 2, 34, 13, 35, 2, 36, 2, 37, 14, 38, 13, 39, 3, 40, 3, 27, 10, 31, 12, 41, 12, 42, 1, 43, 3, 44, 15, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
