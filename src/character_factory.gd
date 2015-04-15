@@ -34,7 +34,7 @@ func create_following_opponent():
 	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_SPEED, AI_MASS, false, ZOMBIE_SPRITE_NAME)
 
 func create_balancing_opponent():
-	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, SKELETON_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_BALAN_MASS, false, HELLHOUND_SPRITE_NAME)
 	
 func create_opposing_opponent():
 	return create_character(preload("res://src/ai.gd").OpposingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
