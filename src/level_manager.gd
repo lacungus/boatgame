@@ -45,6 +45,7 @@ func get_current_index():
 
 # https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
 # TODO maybe keep this all in a config file?
+# TODO write a function for determining character positions
 func get_level(index, set_current = false):
 	if set_current:
 		count = index
