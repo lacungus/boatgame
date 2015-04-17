@@ -43,6 +43,7 @@ func get_current_index():
 
 # PRIVATE
 
+# https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
 # TODO maybe keep this all in a config file?
 func get_level(index, set_current = false):
 	if set_current:
@@ -54,7 +55,7 @@ func get_level(index, set_current = false):
 	if index == 1:
 		# No wind
 		# One Chaotic Opponent
-		var characters = [character_factory.create_balancing_opponent(), character_factory.create_player()]
+		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x, start_y)]
 		wind = preload("res://src/wind.gd").new(application, 0, 1)
 		var seconds_for_stars = [120, 60, 30]
@@ -64,11 +65,11 @@ func get_level(index, set_current = false):
 	if index == 2:
 		# No wind
 		# Two Chaotic Opponents
-		var characters = [character_factory.create_evil_opponent(), character_factory.create_swinging_opponent(), character_factory.create_player()]
+		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y)]
 		wind = preload("res://src/wind.gd").new(application, 0, 1)
 		var seconds_for_stars = [120, 60, 30]
-		var pre_level_messages = []
+		var pre_level_messages = ["Oh no! Two more ghosts are here! Quick, get rid of them!"]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 3:
@@ -78,7 +79,7 @@ func get_level(index, set_current = false):
 		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
 		wind = preload("res://src/wind.gd").new(application, 0.0001, 0.0001)
 		var seconds_for_stars = [120, 60, 30]
-		var pre_level_messages = []
+		var pre_level_messages = ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 4:
