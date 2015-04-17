@@ -83,8 +83,10 @@ func get_level(index, set_current = false):
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 4:
-		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
+		# Four ghosts,
+		# Two zombies
+		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
+		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 10, start_y), Vector2(middle_x, start_y), Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x, start_y)]
 		var seconds_for_stars = [100, 50, 25]
 		var pre_level_messages = []
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
