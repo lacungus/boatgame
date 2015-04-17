@@ -53,8 +53,8 @@ class PlayerAI:
 class SwingingAI:
 	extends BaseAI
 
-		# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
-	const DECISION_INTERVAL_MILLISECONDS = 2000
+	# Make decision each DECISION_INTERVAL_MILLISECONDS milliseconds
+	const DECISION_INTERVAL_MILLISECONDS = 500
 	
 	var current_direction
 	var last_decision_timestamp
