@@ -7,7 +7,7 @@ const AI_BALAN_MASS = 20
 
 # Chaotic = Ghost
 const AI_CHAOTIC_MASS = PLAYER_MASS * 0.5
-const AI_CHAOTIC_SPEED = PLAYER_SPEED * 0.5
+const AI_CHAOTIC_SPEED = PLAYER_SPEED * 0.2
 const AI_CHAOTIC_SPRITE_NAME = "ghost"
 
 # Following = Zombie
