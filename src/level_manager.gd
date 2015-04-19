@@ -9,6 +9,8 @@ var start_y
 
 var stars_per_level 
 
+const BASE_OFFSET = 10
+
 # PUBLIC
 func _init(application):
 	self.application = application
@@ -57,7 +59,7 @@ func get_level(index, set_current = false):
 		# No wind
 		# One Chaotic Opponent
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x, start_y)]
+		var positions = start_positions(characters)
 		wind = preload("res://src/wind.gd").new(application, 0, 1)
 		var seconds_for_stars = [120, 60, 30]
 		var pre_level_messages = ["Look out! There is a ghost on your boat! You have to get rid of it!", "Push the buttons in the bottom to control your character. You goal is to force the enemy to fall off the board."]
@@ -67,7 +69,7 @@ func get_level(index, set_current = false):
 		# No wind
 		# Two Chaotic Opponents
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y)]
+		var positions = start_positions(characters)
 		wind = preload("res://src/wind.gd").new(application, 0, 1)
 		var seconds_for_stars = [120, 60, 30]
 		var pre_level_messages = ["Oh no! Two more ghosts are here! Quick, get rid of them!"]
@@ -77,7 +79,7 @@ func get_level(index, set_current = false):
 		# Weak wind
 		# Four ghosts
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x + 100, start_y)]
+		var positions = start_positions(characters)
 		wind = preload("res://src/wind.gd").new(application, 0.0001, 0.0001)
 		var seconds_for_stars = [120, 60, 30]
 		var pre_level_messages = ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."]
@@ -87,14 +89,14 @@ func get_level(index, set_current = false):
 		# Four ghosts,
 		# Two zombies
 		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x + 10, start_y), Vector2(middle_x, start_y), Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y), Vector2(middle_x + 50, start_y), Vector2(middle_x, start_y)]
+		var positions = start_positions(characters)
 		var seconds_for_stars = [100, 50, 25]
 		var pre_level_messages = []
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 5:
 		var characters = [character_factory.create_opposing_opponent(), character_factory.create_player()]
-		var positions = [Vector2(middle_x, start_y), Vector2(middle_x - 50, start_y)]
+		var positions = start_positions(characters)
 		var seconds_for_stars = [100, 50, 25]
 		var pre_level_messages = []
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
@@ -107,6 +109,22 @@ func create_level(characters, positions, seconds_for_stars, wind, pre_level_mess
 	scene_instance.init(application, count, characters, positions, seconds_for_stars, wind, pre_level_messages)
 	current_level = scene_instance
 	return scene_instance
+
+func start_positions(characters):
+	var result = []
+	for i in range(characters.size() - 1):
+		# TODO: make sure it's always above the boat
+		result = result + [character_position(i)]
+	# Last one should always be the player
+	result += [Vector2(middle_x, start_y)]
+	return result
+
+func character_position(index):
+	var offset = (index + 1) * BASE_OFFSET
+	if index % 2 == 0:
+		return Vector2(middle_x + offset, start_y)
+	else:
+		return Vector2(middle_x - offset, start_y)
 
 func get_level_count():
 	return 5
