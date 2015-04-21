@@ -95,12 +95,13 @@ func get_level(index, set_current = false):
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 5:
-		var characters = [character_factory.create_opposing_opponent(), character_factory.create_player()]
+		# Six Zombies
+		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [100, 50, 25]
-		var pre_level_messages = []
+		var pre_level_messages = ["How many zombies is too many?"]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-	
+		
 	return null
 
 func create_level(characters, positions, seconds_for_stars, wind, pre_level_messages):
