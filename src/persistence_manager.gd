@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_FILE_NAME = 'gamestate.txt'
+const SAVE_FILE_NAME = 'user://gamestate.txt'
 
 var application
 
