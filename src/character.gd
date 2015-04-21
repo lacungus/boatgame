@@ -53,11 +53,11 @@ func run(direction):
 	if direction == application.direction.LEFT:
 		if previous_direction != direction:
 			animation_player.play("going_left")
-		apply_impulse(application.direction.VECTOR_LEFT, Vector2(-self.velocity * self.mass, 0))
+		apply_impulse(Vector2(0, 0), Vector2(-self.velocity * self.mass, 0))
 	if direction == application.direction.RIGHT:
 		if previous_direction != direction:
 			animation_player.play("going_right")
-		apply_impulse(application.direction.VECTOR_RIGHT, Vector2(self.velocity * self.mass, 0))
+		apply_impulse(Vector2(0, 0), Vector2(self.velocity * self.mass, 0))
 
 	previous_direction = direction
 	
