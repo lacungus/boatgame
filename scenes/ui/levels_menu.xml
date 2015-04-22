@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://src/ui/levels_menu/levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/levels_menu/levels_menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="51">
+			<string_array  len="53">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -57,7 +57,9 @@
 				<string> "stream/paused" </string>
 				<string> "levels_bar" </string>
 				<string> "VBoxContainer" </string>
+				<string> "rect/min_size" </string>
 				<string> "size_flags/vertical" </string>
+				<string> "custom_constants/separation" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
@@ -66,7 +68,7 @@
 			<string> "node_count" </string>
 			<int> 4 </int>
 			<string> "variants" </string>
-			<array  len="25" shared="false">
+			<array  len="27" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -81,7 +83,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 4 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="7" shared="false">
 								<string> "res://src/ui/levels_menu/levels_menu.gd" </string>
@@ -221,13 +223,15 @@
 				<real> -1 </real>
 				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
 				<real> 5 </real>
-				<real> -259 </real>
-				<real> -184 </real>
-				<real> 313 </real>
-				<real> 298 </real>
+				<real> -302 </real>
+				<real> -145 </real>
+				<real> 347 </real>
+				<real> 203 </real>
+				<vector2> 100, 100 </vector2>
+				<int> 10 </int>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="160"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 14, 9, 15, 10, 16, 11, 17, 12, 18, 0, 19, 0, 20, 0, 21, 0, 22, 1, 23, 1, 24, 13, 25, 2, 26, 14, 27, 5, 28, 2, 29, 2, 30, 2, 31, 5, 32, 3, 33, 3, 34, 15, 35, 16, 36, 17, 37, 3, 38, 3, 39, 18, 0, 0, 0, 41, 40, -1, 7, 2, 0, 42, 19, 43, 3, 44, 1, 45, 20, 46, 1, 47, 3, 0, 0, 0, 49, 48, -1, 18, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 14, 21, 15, 22, 16, 23, 17, 24, 18, 0, 19, 0, 20, 0, 21, 0, 22, 3, 23, 3, 24, 13, 50, 13, 25, 2, 0 </int_array>
+			<int_array  len="164"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 14, 9, 15, 10, 16, 11, 17, 12, 18, 0, 19, 0, 20, 0, 21, 0, 22, 1, 23, 1, 24, 13, 25, 2, 26, 14, 27, 5, 28, 2, 29, 2, 30, 2, 31, 5, 32, 3, 33, 3, 34, 15, 35, 16, 36, 17, 37, 3, 38, 3, 39, 18, 0, 0, 0, 41, 40, -1, 7, 2, 0, 42, 19, 43, 3, 44, 1, 45, 20, 46, 1, 47, 3, 0, 0, 0, 49, 48, -1, 20, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 14, 21, 15, 22, 16, 23, 17, 24, 50, 25, 18, 0, 19, 0, 20, 0, 21, 0, 22, 3, 23, 3, 24, 13, 51, 13, 25, 2, 52, 26, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
