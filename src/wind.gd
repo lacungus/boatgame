@@ -39,7 +39,7 @@ func _fixed_process(delta):
 		res = load("res://assets/wind/wind_right.png")
 		
 	get_node("/root/Game/main_layer/wind_asset").set_texture(res)
-	get_node("/root/Game/ui_layer/wind_label").set_text(str(ceil(wind_strength)))
+	get_node("/root/Game/ui_layer/wind_label").set_text(str(int(ceil(wind_strength))))
 	
 	for character in level.get_characters():
 		character.apply_impulse(application.direction.VECTOR_LEFT, Vector2(wind_strength, 0))
