@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+<resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
-	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
 	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/main_menu/play.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/buttons/lifebuoy_pressed.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="75">
+			<string_array  len="81">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -76,25 +78,31 @@
 				<string> "size_flags/vertical" </string>
 				<string> "theme/theme" </string>
 				<string> "play" </string>
-				<string> "Button" </string>
+				<string> "TextureButton" </string>
 				<string> "disabled" </string>
 				<string> "toggle_mode" </string>
 				<string> "click_on_press" </string>
-				<string> "icon" </string>
-				<string> "flat" </string>
-				<string> "clip_text" </string>
+				<string> "textures/normal" </string>
+				<string> "textures/pressed" </string>
+				<string> "textures/hover" </string>
+				<string> "textures/disabled" </string>
+				<string> "textures/focused" </string>
+				<string> "textures/click_mask" </string>
 				<string> "script/script" </string>
+				<string> "play_label" </string>
 				<string> "levels" </string>
+				<string> "levels_label" </string>
 				<string> "quit" </string>
+				<string> "quit_label" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 8 </int>
+			<int> 11 </int>
 			<string> "variants" </string>
-			<array  len="42" shared="false">
+			<array  len="54" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -108,9 +116,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 16 </int>
 							<string> "sources" </string>
-							<array  len="16" shared="false">
+							<array  len="17" shared="false">
 								<string> "res://src/ui/main_menu/play.gd" </string>
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://src/level.gd" </string>
@@ -127,6 +135,7 @@
 								<string> "res://src/direction.gd" </string>
 								<string> "res://src/wind.gd" </string>
 								<string> "res://src/pre_level.gd" </string>
+								<string> "res://src/ui/common/to_levels_menu2.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -134,11 +143,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.735093 </real>
+							<real> 0.598738 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -776.647, -33.8582 </vector2>
+							<vector2> -703.703, -129.412 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -251,7 +260,7 @@
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
-				<real> 321 </real>
+				<real> 300 </real>
 				<real> 35 </real>
 				<real> 518 </real>
 				<real> 100 </real>
@@ -261,26 +270,38 @@
 				<real> -1 </real>
 				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
 				<real> 5 </real>
-				<real> 105 </real>
-				<real> 95 </real>
-				<real> 705 </real>
-				<real> 495 </real>
+				<real> 80 </real>
+				<real> 500 </real>
+				<real> 678 </real>
 				<resource  resource_type="Theme" path="res://assets/themes/main_theme.thm">  </resource>
-				<real> 600 </real>
-				<real> 47 </real>
+				<real> 200 </real>
+				<real> 168 </real>
+				<resource  resource_type="Texture" path="res://assets/buttons/lifebuoy.png">  </resource>
+				<resource name=""></resource>				<resource  resource_type="Texture" path="res://assets/buttons/lifebuoy_pressed.png">  </resource>
+				<resource  resource_type="Script" path="res://src/ui/main_menu/play.gd">  </resource>
+				<real> 53 </real>
+				<real> 61 </real>
+				<real> 653 </real>
+				<real> 101 </real>
 				<string> "Play" </string>
-				<resource name=""></resource>				<resource  resource_type="Script" path="res://src/ui/main_menu/play.gd">  </resource>
-				<real> 51 </real>
-				<real> 98 </real>
-				<string> "Levels" </string>
+				<real> 3 </real>
+				<real> 165 </real>
+				<real> 203 </real>
+				<real> 333 </real>
 				<resource  resource_type="Script" path="res://src/ui/common/to_levels_menu.gd">  </resource>
-				<real> 102 </real>
-				<real> 149 </real>
-				<string> "Exit" </string>
+				<real> 43 </real>
+				<real> 157 </real>
+				<string> "Levels" </string>
+				<real> 330 </real>
+				<real> 205 </real>
+				<real> 498 </real>
 				<resource  resource_type="Script" path="res://src/ui/common/quit.gd">  </resource>
+				<real> 63 </real>
+				<real> 122 </real>
+				<string> "Exit" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="380"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 8, 8, 5, 9, 6, 13, 9, 14, 1, 15, 4, 16, 3, 17, 3, 18, 10, 19, 10, 20, 11, 21, 12, 22, 3, 23, 13, 0, 0, 0, 25, 24, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 14, 27, 15, 28, 16, 29, 17, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 18, 37, 2, 38, 19, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 20, 47, 11, 48, 11, 49, 3, 50, 3, 51, 21, 0, 0, 0, 53, 52, -1, 7, 2, 0, 54, 22, 55, 3, 56, 1, 57, 23, 58, 1, 59, 3, 0, 0, 0, 61, 60, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 24, 27, 25, 28, 26, 29, 27, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 3, 36, 18, 62, 18, 37, 2, 63, 28, 0, 4, 0, 65, 64, -1, 25, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 29, 29, 30, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 46, 31, 69, 32, 70, 1, 71, 3, 47, 10, 72, 33, 0, 4, 0, 65, 73, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 27, 34, 28, 29, 29, 35, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 46, 36, 69, 32, 70, 1, 71, 3, 47, 10, 72, 37, 0, 4, 0, 65, 74, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 27, 38, 28, 29, 29, 39, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 46, 40, 69, 32, 70, 1, 71, 3, 47, 10, 72, 41, 0 </int_array>
+			<int_array  len="591"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 12, 11, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 8, 8, 5, 9, 6, 13, 9, 14, 1, 15, 4, 16, 3, 17, 3, 18, 10, 19, 10, 20, 11, 21, 12, 22, 3, 23, 13, 0, 0, 0, 25, 24, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 14, 27, 15, 28, 16, 29, 17, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 18, 37, 2, 38, 19, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 20, 47, 11, 48, 11, 49, 3, 50, 3, 51, 21, 0, 0, 0, 53, 52, -1, 7, 2, 0, 54, 22, 55, 3, 56, 1, 57, 23, 58, 1, 59, 3, 0, 0, 0, 61, 60, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 14, 27, 24, 28, 25, 29, 26, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 3, 36, 18, 62, 18, 37, 2, 63, 27, 0, 4, 0, 65, 64, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 28, 28, 29, 29, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 69, 30, 70, 31, 71, 32, 72, 31, 73, 31, 74, 31, 75, 33, 0, 5, 0, 25, 76, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 34, 27, 35, 28, 36, 29, 37, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 18, 37, 2, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 38, 47, 11, 48, 11, 49, 3, 50, 3, 51, 21, 0, 4, 0, 65, 77, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 39, 27, 40, 28, 41, 29, 42, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 69, 30, 70, 31, 71, 32, 72, 31, 73, 31, 74, 31, 75, 43, 0, 7, 0, 25, 78, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 44, 27, 35, 28, 45, 29, 37, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 18, 37, 2, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 46, 47, 11, 48, 11, 49, 3, 50, 3, 51, 21, 0, 4, 0, 65, 79, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 23, 27, 47, 28, 48, 29, 49, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 18, 62, 18, 37, 2, 66, 3, 67, 3, 68, 1, 69, 30, 70, 31, 71, 32, 72, 31, 73, 31, 74, 31, 75, 50, 0, 9, 0, 25, 80, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 51, 27, 35, 28, 52, 29, 37, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 18, 37, 2, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 53, 47, 11, 48, 11, 49, 3, 50, 3, 51, 21, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
