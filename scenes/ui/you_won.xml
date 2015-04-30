@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
+<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="59">
+			<string_array  len="72">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -22,6 +23,19 @@
 				<string> "transform/scale" </string>
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
+				<string> "bg" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "offset" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
 				<string> "Label" </string>
 				<string> "margin/left" </string>
 				<string> "margin/top" </string>
@@ -75,9 +89,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 7 </int>
+			<int> 8 </int>
 			<string> "variants" </string>
-			<array  len="44" shared="false">
+			<array  len="48" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -219,6 +233,12 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
+				<vector2> 400, 300 </vector2>
+				<resource  resource_type="Texture" path="res://assets/background/bg_intra-menus.png">  </resource>
+				<int> 1 </int>
+				<int> 0 </int>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
 				<real> 324 </real>
 				<real> 54 </real>
 				<real> 489 </real>
@@ -226,8 +246,6 @@
 				<int> 2 </int>
 				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 				<string> "You won!" </string>
-				<int> 1 </int>
-				<int> 0 </int>
 				<real> -1 </real>
 				<real> 321 </real>
 				<real> 176 </real>
@@ -255,7 +273,7 @@
 				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="375"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 12, 12, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 9, 14, 10, 15, 11, 16, 12, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 13, 24, 2, 25, 14, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 15, 34, 16, 35, 17, 36, 3, 37, 3, 38, 18, 0, 0, 0, 40, 39, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 19, 14, 20, 15, 21, 16, 22, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 23, 45, 24, 46, 3, 47, 3, 34, 16, 10, 25, 0, 0, 0, 40, 48, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 26, 14, 27, 15, 28, 16, 29, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 30, 45, 24, 46, 3, 47, 3, 34, 16, 10, 31, 0, 0, 0, 40, 49, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 32, 14, 33, 15, 34, 16, 35, 17, 0, 18, 0, 19, 0, 20, 0, 21, 3, 22, 1, 23, 13, 41, 13, 24, 2, 25, 14, 42, 3, 43, 3, 44, 3, 33, 36, 45, 24, 46, 3, 47, 3, 34, 16, 10, 37, 0, 0, 0, 51, 50, -1, 7, 2, 0, 52, 38, 53, 3, 54, 1, 55, 39, 56, 1, 57, 3, 0, 0, 0, 12, 58, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 13, 27, 14, 40, 15, 41, 16, 42, 17, 0, 18, 0, 19, 0, 20, 0, 21, 1, 22, 1, 23, 13, 24, 2, 25, 14, 26, 5, 27, 2, 28, 2, 29, 2, 30, 5, 31, 3, 32, 3, 33, 43, 34, 16, 35, 17, 36, 3, 37, 3, 38, 18, 0 </int_array>
+			<int_array  len="420"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 6, 14, 10, 15, 1, 16, 4, 17, 3, 18, 3, 19, 11, 20, 11, 21, 12, 22, 13, 23, 3, 24, 14, 0, 0, 0, 25, 25, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 15, 27, 16, 28, 17, 29, 18, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 19, 37, 2, 38, 20, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 21, 47, 11, 48, 12, 49, 3, 50, 3, 51, 22, 0, 0, 0, 53, 52, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 23, 27, 24, 28, 25, 29, 26, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 19, 54, 19, 37, 2, 38, 20, 55, 3, 56, 3, 57, 3, 46, 27, 58, 28, 59, 3, 60, 3, 47, 11, 10, 29, 0, 0, 0, 53, 61, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 30, 27, 31, 28, 32, 29, 33, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 19, 54, 19, 37, 2, 38, 20, 55, 3, 56, 3, 57, 3, 46, 34, 58, 28, 59, 3, 60, 3, 47, 11, 10, 35, 0, 0, 0, 53, 62, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 36, 27, 37, 28, 38, 29, 39, 30, 0, 31, 0, 32, 0, 33, 0, 34, 3, 35, 1, 36, 19, 54, 19, 37, 2, 38, 20, 55, 3, 56, 3, 57, 3, 46, 40, 58, 28, 59, 3, 60, 3, 47, 11, 10, 41, 0, 0, 0, 64, 63, -1, 7, 2, 0, 65, 42, 66, 3, 67, 1, 68, 43, 69, 1, 70, 3, 0, 0, 0, 25, 71, -1, 31, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 26, 31, 27, 44, 28, 45, 29, 46, 30, 0, 31, 0, 32, 0, 33, 0, 34, 1, 35, 1, 36, 19, 37, 2, 38, 20, 39, 5, 40, 2, 41, 2, 42, 2, 43, 5, 44, 3, 45, 3, 46, 47, 47, 11, 48, 12, 49, 3, 50, 3, 51, 22, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
