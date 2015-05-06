@@ -59,5 +59,6 @@ func reset_game_state():
 	load_game_state()
 	
 func delete_game_state():
-	Directory.new().remove(SAVE_FILE_NAME)
-	print("Save file deleted")
+	var directory = Directory.new()
+	directory.open('user://')
+	directory.remove(SAVE_FILE_NAME)
