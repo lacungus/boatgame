@@ -54,3 +54,6 @@ func goto_in_level_menu():
 
 func goto_levels_menu():
 	goto_scene("res://scenes/ui/levels_menu.xml", false)
+
+func goto_main_menu():
+	goto_scene("res://scenes/ui/main_menu.xml", false)
