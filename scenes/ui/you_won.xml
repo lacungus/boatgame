@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://assets/buttons/lifebuoy_pressed.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/buttons/lifebuoy_pressed.png" type="Texture"></ext_resource>
-	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
 	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">

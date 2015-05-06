@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/buttons/lifebuoy_pressed.png" type="Texture"></ext_resource>
 	<ext_resource path="res://src/ui/main_menu/play.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
+	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -259,7 +259,7 @@
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
-				<real> 300 </real>
+				<real> 330 </real>
 				<real> 35 </real>
 				<real> 518 </real>
 				<real> 100 </real>
@@ -273,7 +273,7 @@
 				<real> 500 </real>
 				<real> 678 </real>
 				<resource  resource_type="Theme" path="res://assets/themes/main_theme.thm">  </resource>
-				<real> 200 </real>
+				<real> 170 </real>
 				<real> 168 </real>
 				<resource  resource_type="Texture" path="res://assets/buttons/lifebuoy.png">  </resource>
 				<resource name=""></resource>				<resource  resource_type="Texture" path="res://assets/buttons/lifebuoy_pressed.png">  </resource>
