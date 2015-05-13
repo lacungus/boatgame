@@ -1,7 +1,7 @@
 extends Node2D
 
-const BUTTON_WIDTH = 500
-const BUTTON_HEIGHT = 50
+const BUTTON_WIDTH = 300
+const BUTTON_HEIGHT = 100
 
 var application 
 
