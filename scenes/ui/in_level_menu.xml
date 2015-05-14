@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://src/ui/in_level_menu/resume.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
-	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/to_main_menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/music/Marty_Gots_a_Plan.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://src/ui/in_level_menu/resume.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/common/to_main_menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -121,7 +121,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 1 </int>
+							<int> 5 </int>
 							<string> "sources" </string>
 							<array  len="7" shared="false">
 								<string> "res://src/ui/level/pause.gd" </string>
@@ -302,7 +302,7 @@
 				<real> 228 </real>
 				<real> 163 </real>
 				<string> "Resume" </string>
-				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
+				<resource  resource_type="AudioStream" path="res://assets/music/Marty_Gots_a_Plan.ogg">  </resource>
 				<real> 5 </real>
 				<real> 512 </real>
 				<real> 11 </real>

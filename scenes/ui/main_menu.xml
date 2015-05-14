@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://src/ui/main_menu/play.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/themes/main_theme.thm" type="Theme"></ext_resource>
+	<ext_resource path="res://src/ui/common/to_levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://assets/music/Marty_Gots_a_Plan.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://src/ui/main_menu/play.gd" type="Script"></ext_resource>
+	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -267,8 +267,8 @@
 				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 				<string> "Main Menu" </string>
 				<real> -1 </real>
-				<resource  resource_type="AudioStream" path="res://assets/music/Sea2_menu.ogg">  </resource>
-				<real> 5 </real>
+				<resource  resource_type="AudioStream" path="res://assets/music/Marty_Gots_a_Plan.ogg">  </resource>
+				<real> 6 </real>
 				<real> 19 </real>
 				<real> 12 </real>
 				<real> 729 </real>

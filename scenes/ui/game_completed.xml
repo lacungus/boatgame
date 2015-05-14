@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
 	<ext_resource path="res://src/ui/common/to_main_menu.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/music/Marty_Gots_a_Plan.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
-	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="68">
+			<string_array  len="76">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -76,15 +77,23 @@
 				<string> "script/script" </string>
 				<string> "main_menu_label" </string>
 				<string> "custom_colors/font_color" </string>
+				<string> "bg_music" </string>
+				<string> "StreamPlayer" </string>
+				<string> "stream/stream" </string>
+				<string> "stream/play" </string>
+				<string> "stream/loop" </string>
+				<string> "stream/volume_db" </string>
+				<string> "stream/autoplay" </string>
+				<string> "stream/paused" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 6 </int>
 			<string> "variants" </string>
-			<array  len="36" shared="false">
+			<array  len="37" shared="false">
 				<node_path> "" </node_path>
 				<int> 2 </int>
 				<bool> True </bool>
@@ -99,10 +108,12 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
-							<array  len="1" shared="false">
+							<array  len="3" shared="false">
 								<string> "res://src/scene_manager.gd" </string>
+								<string> "res://src/application.gd" </string>
+								<string> "res://src/ui/common/to_main_menu.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -219,7 +230,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 400, 300 </vector2>
 				<resource  resource_type="Texture" path="res://assets/background/bg_intra-menus.png">  </resource>
@@ -247,9 +258,10 @@
 				<color> 0, 0, 0, 1 </color>
 				<real> 2 </real>
 				<string> "Main&#000a;menu" </string>
+				<resource  resource_type="AudioStream" path="res://assets/music/Marty_Gots_a_Plan.ogg">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="275"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 9, 9, 6, 10, 7, 14, 10, 15, 2, 16, 5, 17, 4, 18, 4, 19, 11, 20, 11, 21, 12, 22, 13, 23, 4, 24, 14, 0, 0, 0, 26, 25, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 15, 28, 16, 29, 17, 30, 18, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 19, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 20, 48, 12, 49, 12, 50, 4, 51, 4, 52, 21, 0, 0, 0, 54, 53, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 22, 28, 23, 29, 24, 30, 25, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 26, 60, 27, 61, 27, 62, 27, 63, 27, 64, 27, 65, 28, 0, 3, 0, 26, 66, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 29, 28, 30, 29, 31, 30, 32, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 19, 67, 33, 40, 6, 41, 34, 42, 3, 43, 34, 44, 6, 45, 4, 46, 4, 47, 35, 48, 12, 49, 12, 50, 4, 51, 4, 52, 21, 0 </int_array>
+			<int_array  len="296"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 9, 9, 6, 10, 7, 14, 10, 15, 2, 16, 5, 17, 4, 18, 4, 19, 11, 20, 11, 21, 12, 22, 13, 23, 4, 24, 14, 0, 0, 0, 26, 25, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 15, 28, 16, 29, 17, 30, 18, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 19, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 20, 48, 12, 49, 12, 50, 4, 51, 4, 52, 21, 0, 0, 0, 54, 53, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 22, 28, 23, 29, 24, 30, 25, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 26, 60, 27, 61, 27, 62, 27, 63, 27, 64, 27, 65, 28, 0, 3, 0, 26, 66, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 29, 28, 30, 29, 31, 30, 32, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 19, 67, 33, 40, 6, 41, 34, 42, 3, 43, 34, 44, 6, 45, 4, 46, 4, 47, 35, 48, 12, 49, 12, 50, 4, 51, 4, 52, 21, 0, 0, 0, 69, 68, -1, 7, 2, 0, 70, 36, 71, 4, 72, 2, 73, 6, 74, 2, 75, 4, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
