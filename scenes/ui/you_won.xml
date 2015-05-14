@@ -116,15 +116,16 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 5 </int>
+							<int> 2 </int>
 							<string> "sources" </string>
-							<array  len="6" shared="false">
+							<array  len="7" shared="false">
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://application.gd" </string>
 								<string> "res://src/level.gd" </string>
 								<string> "res://src/ui/common/next_level.gd" </string>
 								<string> "res://src/ui/common/restart_level.gd" </string>
 								<string> "res://src/ui/you_won/you_won.gd" </string>
+								<string> "res://src/ui/in_level_menu/resume.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -241,7 +242,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 400, 300 </vector2>
 				<resource  resource_type="Texture" path="res://assets/background/bg_intra-menus.png">  </resource>
