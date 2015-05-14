@@ -43,9 +43,6 @@ func _fixed_process(delta):
 		return
 
 func _ready():
-	# The game can be paused at this moment.
-	# Resume.
-	application.get_tree().set_pause(false)
 	pre_level.start()
 
 func get_player():
@@ -104,6 +101,10 @@ func is_won():
 	return true
 
 func start():
+	# The game can be paused at this moment.
+	# Resume.
+	application.get_tree().set_pause(false)
+
 	set_level_label()
 	add_characters()
 	add_collision_exceptions()
