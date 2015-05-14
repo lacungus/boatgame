@@ -36,13 +36,16 @@ func _fixed_process(delta):
 	
 	if is_lost():
 		application.on_level_lost()
-		return	
+		return
 	if is_won():
 		calculate_stars()
 		application.on_level_won()
 		return
 
 func _ready():
+	# The game can be paused at this moment.
+	# Resume.
+	application.get_tree().set_pause(false)
 	pre_level.start()
 
 func get_player():
