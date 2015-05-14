@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
-	<ext_resource path="res://src/ui/levels_menu/levels_menu.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/music/Sea2_menu.ogg" type="AudioStream"></ext_resource>
+	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://src/ui/levels_menu/levels_menu.gd" type="Script"></ext_resource>
 	<resource type="Theme" path="local://1">
 		<resource name="default_font" resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 
@@ -122,7 +122,7 @@
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -132.764, -28.2429 </vector2>
+							<vector2> -595.644, -32.8591 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
