@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
-	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
-	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.7eb5d049c2">
+	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/you_won/you_won.gd" type="Script"></ext_resource>
 	<ext_resource path="res://src/ui/common/quit.gd" type="Script"></ext_resource>
-	<ext_resource path="res://assets/music/Marty_Gots_a_Plan.ogg" type="AudioStream"></ext_resource>
-	<ext_resource path="res://src/ui/common/next_level.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/background/bg_intra-menus.png" type="Texture"></ext_resource>
+	<ext_resource path="res://src/ui/common/restart_level.gd" type="Script"></ext_resource>
 	<ext_resource path="res://assets/fonts/FeenaFont.fnt" type="Font"></ext_resource>
+	<ext_resource path="res://assets/buttons/lifebuoy.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="80">
+			<string_array  len="72">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -83,14 +82,6 @@
 				<string> "restart_level_label" </string>
 				<string> "quit" </string>
 				<string> "quit_label" </string>
-				<string> "bg_music" </string>
-				<string> "StreamPlayer" </string>
-				<string> "stream/stream" </string>
-				<string> "stream/play" </string>
-				<string> "stream/loop" </string>
-				<string> "stream/volume_db" </string>
-				<string> "stream/autoplay" </string>
-				<string> "stream/paused" </string>
 				<string> "stars_label" </string>
 			</string_array>
 			<string> "version" </string>
@@ -98,9 +89,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 11 </int>
+			<int> 10 </int>
 			<string> "variants" </string>
-			<array  len="63" shared="false">
+			<array  len="61" shared="false">
 				<node_path> "" </node_path>
 				<int> 2 </int>
 				<bool> True </bool>
@@ -116,9 +107,9 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="7" shared="false">
+							<array  len="8" shared="false">
 								<string> "res://src/scene_manager.gd" </string>
 								<string> "res://application.gd" </string>
 								<string> "res://src/level.gd" </string>
@@ -126,6 +117,7 @@
 								<string> "res://src/ui/common/restart_level.gd" </string>
 								<string> "res://src/ui/you_won/you_won.gd" </string>
 								<string> "res://src/ui/in_level_menu/resume.gd" </string>
+								<string> "res://src/application.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -242,7 +234,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<vector2> 400, 300 </vector2>
 				<resource  resource_type="Texture" path="res://assets/background/bg_intra-menus.png">  </resource>
@@ -289,8 +281,6 @@
 				<real> 123 </real>
 				<real> 163 </real>
 				<string> "Exit" </string>
-				<resource  resource_type="AudioStream" path="res://assets/music/Marty_Gots_a_Plan.ogg">  </resource>
-				<real> 5 </real>
 				<real> 303 </real>
 				<real> 70 </real>
 				<real> 512 </real>
@@ -298,7 +288,7 @@
 				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="635"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 0, 0, 0, 14, 13, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 10, 9, 6, 10, 7, 15, 11, 16, 2, 17, 5, 18, 4, 19, 4, 20, 12, 21, 12, 22, 13, 23, 14, 24, 4, 25, 15, 0, 0, 0, 26, 26, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 16, 28, 17, 29, 18, 30, 19, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 21, 48, 12, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 53, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 23, 28, 24, 29, 25, 30, 26, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 29, 0, 3, 0, 26, 65, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 30, 28, 31, 29, 32, 30, 33, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 35, 42, 3, 43, 35, 44, 6, 45, 4, 46, 4, 47, 36, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 67, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 37, 28, 38, 29, 39, 30, 40, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 41, 0, 5, 0, 26, 68, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 42, 28, 43, 29, 44, 30, 45, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 35, 42, 3, 43, 35, 44, 6, 45, 4, 46, 4, 47, 46, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 69, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 47, 28, 48, 29, 49, 30, 50, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 51, 0, 7, 0, 26, 70, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 52, 28, 53, 29, 45, 30, 54, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 55, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 72, 71, -1, 7, 2, 0, 73, 56, 74, 4, 75, 2, 76, 57, 77, 4, 78, 4, 0, 0, 0, 26, 79, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 58, 28, 59, 29, 60, 30, 61, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 62, 48, 12, 49, 13, 50, 4, 51, 4, 52, 22, 0 </int_array>
+			<int_array  len="614"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 0, 0, 0, 14, 13, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 10, 9, 6, 10, 7, 15, 11, 16, 2, 17, 5, 18, 4, 19, 4, 20, 12, 21, 12, 22, 13, 23, 14, 24, 4, 25, 15, 0, 0, 0, 26, 26, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 16, 28, 17, 29, 18, 30, 19, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 21, 48, 12, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 53, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 23, 28, 24, 29, 25, 30, 26, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 29, 0, 3, 0, 26, 65, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 30, 28, 31, 29, 32, 30, 33, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 35, 42, 3, 43, 35, 44, 6, 45, 4, 46, 4, 47, 36, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 67, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 37, 28, 38, 29, 39, 30, 40, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 41, 0, 5, 0, 26, 68, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 42, 28, 43, 29, 44, 30, 45, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 35, 42, 3, 43, 35, 44, 6, 45, 4, 46, 4, 47, 46, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 54, 69, -1, 28, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 47, 28, 48, 29, 49, 30, 50, 31, 0, 32, 0, 33, 0, 34, 0, 35, 4, 36, 2, 37, 1, 55, 1, 38, 3, 56, 4, 57, 4, 58, 4, 59, 27, 60, 28, 61, 28, 62, 28, 63, 28, 64, 28, 11, 51, 0, 7, 0, 26, 70, -1, 32, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 52, 28, 53, 29, 45, 30, 54, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 66, 34, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 55, 48, 13, 49, 13, 50, 4, 51, 4, 52, 22, 0, 0, 0, 26, 71, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 27, 56, 28, 57, 29, 58, 30, 59, 31, 0, 32, 0, 33, 0, 34, 0, 35, 2, 36, 2, 37, 1, 38, 3, 39, 20, 40, 6, 41, 3, 42, 3, 43, 3, 44, 6, 45, 4, 46, 4, 47, 60, 48, 12, 49, 13, 50, 4, 51, 4, 52, 22, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
