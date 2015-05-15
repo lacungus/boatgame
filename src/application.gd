@@ -10,6 +10,10 @@ var persistence_manager
 
 var direction
 
+var musicPlayer
+
+var songPlaying
+
 func _ready():
 	scene_manager = preload("res://src/scene_manager.gd").new(self)
 	level_manager = preload("res://src/level_manager.gd").new(self)
@@ -21,6 +25,22 @@ func _ready():
 	persistence_manager.load_game_state()
 	
 	set_process_input(true)
+	
+
+	playMusic("res://assets/music/Zanzibar.ogg")
+	
+func playMusic(song, loop = true):
+	if (musicPlayer == null):
+		musicPlayer = StreamPlayer.new()
+		add_child(musicPlayer)
+	
+	if (song != songPlaying):
+		var stream = load(song)
+		musicPlayer.set_stream(stream)
+		musicPlayer.play()
+		musicPlayer.set_loop(loop)
+		songPlaying = song
+
 	
 func get_scene_manager():
 	return scene_manager
@@ -56,6 +76,7 @@ func on_level_won():
 	level_manager.set_stars_per_level(current_level.get_index(), current_level.get_stars())
 	scene_manager.goto_you_won()
 	persistence_manager.save_game_state(level_manager.get_current_index() + 1)
+	
 	
 func on_level_lost():
 	scene_manager.goto_you_lost()
