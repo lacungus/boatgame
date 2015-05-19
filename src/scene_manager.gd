@@ -8,6 +8,9 @@ func _init(application):
 	current_scene = root.get_child(root.get_child_count() -1)
 
 func goto_scene(scene, destroy_previous_scene):
+	call_deferred("_deferred_goto_scene", scene, destroy_previous_scene)
+
+func _deferred_goto_scene(scene, destroy_previous_scene):
 	if current_scene != null:
 		current_scene.queue_free()
 		if destroy_previous_scene:
@@ -18,6 +21,7 @@ func goto_scene(scene, destroy_previous_scene):
 	# load and add new scene to root
 	var s = ResourceLoader.load(scene)
 	current_scene = s.instance()
+	current_scene.print_tree();
 	application.get_tree().get_root().add_child(current_scene)
 	
 func goto_next_level():
@@ -36,7 +40,11 @@ func goto_level(index):
 	application.get_tree().get_root().add_child(current_scene)
 
 func restart_level():
-	current_scene.queue_free()
+	call_deferred("_deferred_restart_level")
+
+func _deferred_restart_level():
+	current_scene.free()
+
 	current_scene = application.get_level_manager().clone_current_level()
 	application.get_tree().get_root().add_child(current_scene)
 
