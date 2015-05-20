@@ -59,6 +59,12 @@ func get_index():
 func get_time_tracker():
 	return time_tracker
 
+func on_pause():
+	time_tracker.on_pause()
+
+func on_resume():
+	time_tracker.on_resume()
+
 # PRIVATE
 
 func calculate_stars():

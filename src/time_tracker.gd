@@ -2,15 +2,21 @@ extends Node2D
 
 var application
 
-var started_timestamp
+var last_started_timestamp
+
+var elapsed_before_last_pause
+
+var paused
 
 # PUBLIC
 
 func _init(application):
 	self.application = application
+	self.elapsed_before_last_pause = 0
+	self.paused = false
 
 func _ready():
-	started_timestamp = OS.get_ticks_msec()
+	last_started_timestamp = OS.get_ticks_msec()
 	set_fixed_process(true)
 
 func _fixed_process(delta):
@@ -18,7 +24,19 @@ func _fixed_process(delta):
 
 func get_time_elapsed():
 	var current_timestamp = OS.get_ticks_msec()
-	return current_timestamp - started_timestamp
+	var result = elapsed_before_last_pause
+	if !paused:
+		result += current_timestamp - last_started_timestamp
+	return result
+
+func on_pause():
+	paused = true
+	var current_timestamp = OS.get_ticks_msec()
+	elapsed_before_last_pause = elapsed_before_last_pause + current_timestamp - last_started_timestamp
+
+func on_resume():
+	paused = false
+	last_started_timestamp = OS.get_ticks_msec()
 
 # PRIVATE
 
