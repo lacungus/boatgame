@@ -15,7 +15,7 @@ func _ready():
 	
 func _fixed_process(delta):
 	var level = application.get_level_manager().get_current_level()
-	var wind_strength = get_strength(level.get_time_passed())
+	var wind_strength = get_strength(level.get_time_tracker().get_time_elapsed())
 	var res
 	
 	if wind_strength < -10:

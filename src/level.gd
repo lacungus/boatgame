@@ -8,8 +8,6 @@ var character_positions
 
 var index
 
-var level_started_timestamp = null
-
 var seconds_total = 0
 
 # To get X stars, a player has to complete the level in seconds_for_stars[X - 1] seconds of faster
@@ -21,6 +19,8 @@ var wind = null
 
 var pre_level
 
+var time_tracker
+
 # PUBLIC
 func init(application, index, characters, character_positions, seconds_for_stars, wind, pre_level_messages):
 	self.application = application
@@ -30,10 +30,9 @@ func init(application, index, characters, character_positions, seconds_for_stars
 	self.seconds_for_stars = seconds_for_stars
 	self.wind = wind
 	self.pre_level = preload("res://src/pre_level.gd").new(application, self, pre_level_messages)
+	self.time_tracker = preload("res://src/time_tracker.gd").new(application)
 	
 func _fixed_process(delta):
-	update_timer()
-	
 	if is_lost():
 		application.on_level_lost()
 		return
@@ -57,34 +56,24 @@ func get_stars():
 func get_index():
 	return index
 	
+func get_time_tracker():
+	return time_tracker
+
 # PRIVATE
 
 func calculate_stars():
-	var current_timestamp = OS.get_ticks_msec()
-	var time_passed = current_timestamp - level_started_timestamp
-	if time_passed <= seconds_for_stars[2] * 1000:
+	var time_elapsed = time_tracker.get_time_elapsed()
+	if time_elapsed <= seconds_for_stars[2] * 1000:
 		stars = 3
 		return
-	if time_passed <= seconds_for_stars[1] * 1000:
+	if time_elapsed <= seconds_for_stars[1] * 1000:
 		stars = 2
 		return
-	if time_passed <= seconds_for_stars[0] * 1000:
+	if time_elapsed <= seconds_for_stars[0] * 1000:
 		stars = 1
 		return
 	stars = 0
 	
-func update_timer():
-	var time_passed = get_time_passed()
-	
-	var text = str(time_passed / 1000) + ":" + str((time_passed % 1000) / 10)
-	
-	get_node("ui_layer/timer_label").set_text(text)
-	pass
-
-func get_time_passed():
-	var current_timestamp = OS.get_ticks_msec()
-	return current_timestamp - level_started_timestamp
-
 # Lost when the player is dead
 func is_lost():
 	if Input.is_action_pressed("lose"):
@@ -109,8 +98,8 @@ func start():
 	add_characters()
 	add_collision_exceptions()
 	add_wind()
+	add_time_tracker()
 	
-	level_started_timestamp = OS.get_ticks_msec()
 	set_fixed_process(true)
 
 func set_level_label():
@@ -128,6 +117,9 @@ func add_characters():
 
 func add_wind():
 	get_node("main_layer").add_child(wind)
+
+func add_time_tracker():
+	get_node("main_layer").add_child(time_tracker)
 
 # Add collision exceptions for each pair of characters
 func add_collision_exceptions():
