@@ -37,6 +37,17 @@ func _init(application):
 
 	self.application = application
 
+func create(type):
+	if type == "player":
+		return create_player()
+	elif type == "following":
+		return create_following_opponent()
+	elif type == "chaotic":
+		return create_chaotic_opponent()
+	else:
+		print("Unknown type: " + str(type))
+		OS.get_main_loop().quit()
+
 func create_player():
 	return create_character(preload("res://src/ai.gd").PlayerAI.new(application), PLAYER_SPEED, PLAYER_MASS, true, PLAYER_SPRITE_NAME)
 	

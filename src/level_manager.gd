@@ -59,55 +59,25 @@ func parse_config():
 		OS.get_main_loop().quit()
 
 # https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
-# TODO maybe keep this all in a config file?
-# TODO write a function for determining character positions
 func get_level(index, set_current = false):
 	if set_current:
 		count = index
-		
-	var character_factory = application.get_character_factory()
+	if index > get_level_count():
+		return null
 
 	var level_config = levels_config["levels"][index - 1]
-	print("Level config: " + str(level_config))
 	var wind = preload("res://src/wind.gd").new(application, level_config["wind"]["amplitude"], level_config["wind"]["period"])
 	var pre_level_messages = level_config["pre_level_messages"]
 	var seconds_for_stars = level_config["seconds_for_stars"]
+
+	var character_types = level_config["character_types"]
+	var character_factory = application.get_character_factory()
+	var characters = []
+	for character_type in character_types:
+		characters = characters + [character_factory.create(character_type)]
+	var positions = start_positions(characters)
 	
-	if index == 1:
-		# No wind
-		# One Chaotic Opponent
-		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = start_positions(characters)
-		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-
-	if index == 2:
-		# No wind
-		# Two Chaotic Opponents
-		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = start_positions(characters)
-		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-
-	if index == 3:
-		# Weak wind
-		# Four ghosts
-		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = start_positions(characters)
-		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-
-	if index == 4:
-		# Four ghosts,
-		# Two zombies
-		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
-		var positions = start_positions(characters)
-		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-
-	if index == 5:
-		# Six Zombies
-		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_player()]
-		var positions = start_positions(characters)
-		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-		
-	return null
+	return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 func create_level(characters, positions, seconds_for_stars, wind, pre_level_messages):
 	var scene_class = ResourceLoader.load("res://scenes/level.xml")
