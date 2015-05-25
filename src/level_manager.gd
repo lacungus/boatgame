@@ -103,4 +103,4 @@ func character_position(index):
 		return Vector2(middle_x - offset, start_y)
 
 func get_level_count():
-	return 5
+	return levels_config["levels"].size()
