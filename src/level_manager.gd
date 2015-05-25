@@ -70,6 +70,7 @@ func get_level(index, set_current = false):
 	var level_config = levels_config["levels"][index - 1]
 	print("Level config: " + str(level_config))
 	var wind = preload("res://src/wind.gd").new(application, level_config["wind"]["amplitude"], level_config["wind"]["period"])
+	var pre_level_messages = level_config["pre_level_messages"]
 	
 	if index == 1:
 		# No wind
@@ -77,7 +78,6 @@ func get_level(index, set_current = false):
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [120, 60, 30]
-		var pre_level_messages = ["Look out! There is a ghost on your boat! You have to get rid of it!", "Push the buttons in the bottom to control your character. You goal is to force the enemy to fall off the board."]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 2:
@@ -86,7 +86,6 @@ func get_level(index, set_current = false):
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [120, 60, 30]
-		var pre_level_messages = ["Oh no! Two more ghosts are here! Quick, get rid of them!"]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 3:
@@ -95,7 +94,6 @@ func get_level(index, set_current = false):
 		var characters = [character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [120, 60, 30]
-		var pre_level_messages = ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 4:
@@ -104,7 +102,6 @@ func get_level(index, set_current = false):
 		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_chaotic_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [100, 50, 25]
-		var pre_level_messages = []
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 	if index == 5:
@@ -112,7 +109,6 @@ func get_level(index, set_current = false):
 		var characters = [character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_following_opponent(), character_factory.create_player()]
 		var positions = start_positions(characters)
 		var seconds_for_stars = [100, 50, 25]
-		var pre_level_messages = ["How many zombies is too many?"]
 		return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 		
 	return null
