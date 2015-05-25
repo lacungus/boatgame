@@ -1,0 +1,19 @@
+{
+    "levels": [
+        {
+            "wind": {"amplitude": 0, "period": 1}
+        },
+        {
+            "wind": {"amplitude": 0, "period": 1}
+        },
+        {
+            "wind": {"amplitude": 0, "period": 1}
+        },
+        {
+            "wind": {"amplitude": 0, "period": 1}
+        },
+        {
+            "wind": {"amplitude": 0, "period": 1}
+        }
+    ]
+}

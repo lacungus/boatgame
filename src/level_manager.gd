@@ -9,10 +9,14 @@ var start_y
 
 var stars_per_level 
 
+var level_config
+
 const BASE_OFFSET = 10
 
 # PUBLIC
 func _init(application):
+	parse_config()
+
 	self.application = application
 	middle_x = application.get_width() / 2
 	start_y = 350
@@ -44,6 +48,15 @@ func get_current_index():
 	return count
 
 # PRIVATE
+
+func parse_config():
+	var file = File.new()
+	file.open("res://config/levels.json", 1)
+	level_config = {}
+	var status = level_config.parse_json(file.get_as_text())
+	if status != OK:
+		print("Failed to parse levels config")
+		OS.get_main_loop().quit()
 
 # https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
 # TODO maybe keep this all in a config file?
