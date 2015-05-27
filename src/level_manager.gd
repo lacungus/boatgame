@@ -70,15 +70,21 @@ func get_level(index, set_current = false):
 	var pre_level_messages = level_config["pre_level_messages"]
 	var seconds_for_stars = level_config["seconds_for_stars"]
 
+	var characters = get_characters(level_config)
+	var positions = start_positions(characters)
+
+	return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
+
+func get_characters(level_config):
 	var character_types = level_config["character_types"]
 	var character_factory = application.get_character_factory()
 	var characters = []
 	for character_type in character_types:
-		characters = characters + [character_factory.create(character_type)]
-	var positions = start_positions(characters)
+		var count = level_config["character_types"][character_type]
+		for i in range(count):
+			characters = characters + [character_factory.create(character_type)]
+	return characters;
 	
-	return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
-
 func create_level(characters, positions, seconds_for_stars, wind, pre_level_messages):
 	var scene_class = ResourceLoader.load("res://scenes/level.xml")
 	var scene_instance = scene_class.instance()
