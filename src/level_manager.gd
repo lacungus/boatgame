@@ -83,6 +83,7 @@ func get_characters(level_config):
 		var count = level_config["character_types"][character_type]
 		for i in range(count):
 			characters = characters + [character_factory.create(character_type)]
+	characters = characters + [character_factory.create("player")]
 	return characters;
 	
 func create_level(characters, positions, seconds_for_stars, wind, pre_level_messages):

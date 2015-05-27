@@ -4,31 +4,31 @@
             "wind": {"amplitude": 0, "period": 1},
             "pre_level_messages": ["Look out! There is a ghost on your boat! You have to get rid of it!", "Push the buttons in the bottom to control your character. You goal is to force the enemy to fall off the board."],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 1, "player": 1}
+            "character_types": { "chaotic": 1 }
         },
         {
             "wind": {"amplitude": 0, "period": 1},
             "pre_level_messages": ["Oh no! Two more ghosts are here! Quick, get rid of them!"],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 2, "player": 1}
+            "character_types": { "chaotic": 2 }
         },
         {
             "wind": {"amplitude": 0.0001, "period": 0.0001},
             "pre_level_messages": ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 4, "player": 1 }
+            "character_types": { "chaotic": 4 }
         },
         {
             "wind": {"amplitude": 0.001, "period": 0.0001},
             "pre_level_messages": [],
             "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 2, "chaotic": 4, "player": 1}
+            "character_types": { "following": 2, "chaotic": 4 }
         },
         {
             "wind": {"amplitude": 0.001, "period": 0.0001},
             "pre_level_messages": ["How many zombies is too many?"],
             "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 6, "player": 1 }
+            "character_types": { "following": 6 }
         }
     ]
 }
