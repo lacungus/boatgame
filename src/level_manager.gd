@@ -7,8 +7,10 @@ var application
 var current_level_id = 1
 var current_level
 
+# stars[id] - how many stars the player got for level number id.
 var stars
 
+# Parsed levels.json
 var levels_config
 
 const BASE_OFFSET = 10
@@ -18,10 +20,10 @@ func _init(application):
 	self.application = application
 	parse_config()
 	init_stars()
-	
+
 func get_current_level():
 	return current_level
-	
+
 func get_next_level():
 	current_level_id = current_level_id + 1
 	return get_level(current_level_id)
