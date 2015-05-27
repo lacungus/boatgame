@@ -16,7 +16,7 @@ func load_game_state():
 	file.open(SAVE_FILE_NAME, File.READ)
 	
 	var level_number = file.get_64()
-	application.get_level_manager().set_count(level_number)
+	application.get_level_manager().set_current_level_id(level_number)
 	var level_count = file.get_64()
 	
 	for i in range(level_count):
@@ -34,7 +34,7 @@ func save_game_state(current_level_index = null):
 	file.open(SAVE_FILE_NAME, File.WRITE)
 	
 	if current_level_index == null:
-		current_level_index = application.get_level_manager().get_current_index()
+		current_level_index = application.get_level_manager().get_current_level_id()
 		
 	file.store_64(current_level_index)
 	file.store_64(application.get_level_manager().get_level_count())

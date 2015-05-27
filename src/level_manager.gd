@@ -44,10 +44,10 @@ func set_stars_per_level(level, stars):
 func get_stars_per_level(level):
 	return stars_per_level[level]
 	
-func set_count(current_level_id):
+func set_current_level_id(current_level_id):
 	self.current_level_id = current_level_id
 	
-func get_current_index():
+func get_current_level_id():
 	return current_level_id
 
 # PRIVATE

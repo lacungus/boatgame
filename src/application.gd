@@ -75,7 +75,7 @@ func on_level_won():
 	var current_level = level_manager.get_current_level()
 	level_manager.set_stars_per_level(current_level.get_index(), current_level.get_stars())
 	scene_manager.goto_you_won()
-	persistence_manager.save_game_state(level_manager.get_current_index() + 1)
+	persistence_manager.save_game_state(level_manager.get_current_level_id() + 1)
 	
 	
 func on_level_lost():
