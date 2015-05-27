@@ -23,7 +23,7 @@ func load_game_state():
 		var stars = file.get_64()
 		if stars == -1:
 			stars = null
-		application.get_level_manager().set_stars_per_level(i + 1, stars)
+		application.get_level_manager().set_stars(i + 1, stars)
 	
 	file.close()
 	
@@ -40,7 +40,7 @@ func save_game_state(current_level_index = null):
 	file.store_64(application.get_level_manager().get_level_count())
 	
 	for i in range(application.get_level_manager().get_level_count()):
-		var stars = application.get_level_manager().get_stars_per_level(i + 1)
+		var stars = application.get_level_manager().get_stars(i + 1)
 		if stars == null:
 			stars = -1
 		file.store_64(stars)

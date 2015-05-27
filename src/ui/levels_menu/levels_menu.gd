@@ -9,7 +9,7 @@ func _ready():
 	application = get_node("/root/application")
 	
 	for i in range(application.get_level_manager().get_level_count()):
-		var stars = application.get_level_manager().get_stars_per_level(i + 1)
+		var stars = application.get_level_manager().get_stars(i + 1)
 		var button = Button.new()
 		button.set_custom_minimum_size(Vector2(BUTTON_WIDTH, BUTTON_HEIGHT))
 		button.set_text("Level " + str(i + 1) + ". " + star_message(stars))

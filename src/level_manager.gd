@@ -7,7 +7,7 @@ var application
 var current_level_id = 1
 var current_level
 
-var stars_per_level 
+var stars
 
 var levels_config
 
@@ -15,12 +15,9 @@ const BASE_OFFSET = 10
 
 # PUBLIC
 func _init(application):
-	parse_config()
-
 	self.application = application
-	stars_per_level = []
-	for i in range(get_level_count() + 1):
-		stars_per_level.append(null)
+	parse_config()
+	init_stars()
 	
 func get_current_level():
 	return current_level
@@ -32,11 +29,11 @@ func get_next_level():
 func clone_current_level():
 	return get_level(current_level_id)
 
-func set_stars_per_level(level, stars):
-	stars_per_level[level] = stars
+func set_stars(level_id, stars):
+	self.stars[level_id] = stars
 
-func get_stars_per_level(level):
-	return stars_per_level[level]
+func get_stars(level_id):
+	return self.stars[level_id]
 	
 func set_current_level_id(current_level_id):
 	self.current_level_id = current_level_id
@@ -111,3 +108,8 @@ func character_position(index, middle_x, start_y):
 
 func get_level_count():
 	return levels_config["levels"].size()
+
+func init_stars():
+	stars = []
+	for i in range(get_level_count() + 1):
+		stars.append(null)
