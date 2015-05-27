@@ -7,9 +7,6 @@ var application
 var current_level_id = 1
 var current_level
 
-var middle_x
-var start_y
-
 var stars_per_level 
 
 var levels_config
@@ -21,9 +18,6 @@ func _init(application):
 	parse_config()
 
 	self.application = application
-	middle_x = application.get_width() / 2
-	start_y = 350
-	
 	stars_per_level = []
 	for i in range(get_level_count() + 1):
 		stars_per_level.append(null)
@@ -50,6 +44,23 @@ func set_current_level_id(current_level_id):
 func get_current_level_id():
 	return current_level_id
 
+# https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
+func get_level(id, set_current = false):
+	if set_current:
+		current_level_id = id
+	if id > get_level_count():
+		return null
+
+	var level_config = levels_config["levels"][id - 1]
+	var wind = preload("res://src/wind.gd").new(application, level_config["wind"]["amplitude"], level_config["wind"]["period"])
+	var pre_level_messages = level_config["pre_level_messages"]
+	var seconds_for_stars = level_config["seconds_for_stars"]
+
+	var characters = get_characters(level_config)
+	var positions = start_positions(characters)
+
+	return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
+
 # PRIVATE
 
 func parse_config():
@@ -60,23 +71,6 @@ func parse_config():
 	if status != OK:
 		print("Failed to parse levels config")
 		OS.get_main_loop().quit()
-
-# https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
-func get_level(index, set_current = false):
-	if set_current:
-		current_level_id = index
-	if index > get_level_count():
-		return null
-
-	var level_config = levels_config["levels"][index - 1]
-	var wind = preload("res://src/wind.gd").new(application, level_config["wind"]["amplitude"], level_config["wind"]["period"])
-	var pre_level_messages = level_config["pre_level_messages"]
-	var seconds_for_stars = level_config["seconds_for_stars"]
-
-	var characters = get_characters(level_config)
-	var positions = start_positions(characters)
-
-	return create_level(characters, positions, seconds_for_stars, wind, pre_level_messages)
 
 func get_characters(level_config):
 	var character_types = level_config["character_types"]
@@ -98,14 +92,17 @@ func create_level(characters, positions, seconds_for_stars, wind, pre_level_mess
 
 func start_positions(characters):
 	var result = []
+	var middle_x = application.get_width() / 2
+	var start_y = 350
+
 	for i in range(characters.size() - 1):
 		# TODO: make sure it's always above the boat
-		result = result + [character_position(i)]
+		result = result + [character_position(i, middle_x, start_y)]
 	# Last one should always be the player
 	result += [Vector2(middle_x, start_y)]
 	return result
 
-func character_position(index):
+func character_position(index, middle_x, start_y):
 	var offset = (index + 1) * BASE_OFFSET
 	if index % 2 == 0:
 		return Vector2(middle_x + offset, start_y)
