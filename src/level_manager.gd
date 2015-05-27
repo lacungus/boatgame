@@ -1,7 +1,10 @@
-var count = 1
+# Level manager.
+# Responsible for creating levels
+# and maintaining data about them.
 
 var application
 
+var current_level_id = 1
 var current_level
 
 var middle_x
@@ -29,11 +32,11 @@ func get_current_level():
 	return current_level
 	
 func get_next_level():
-	count = count + 1
-	return get_level(count)
+	current_level_id = current_level_id + 1
+	return get_level(current_level_id)
 
 func clone_current_level():
-	return get_level(count)
+	return get_level(current_level_id)
 
 func set_stars_per_level(level, stars):
 	stars_per_level[level] = stars
@@ -41,11 +44,11 @@ func set_stars_per_level(level, stars):
 func get_stars_per_level(level):
 	return stars_per_level[level]
 	
-func set_count(count):
-	self.count = count
+func set_count(current_level_id):
+	self.current_level_id = current_level_id
 	
 func get_current_index():
-	return count
+	return current_level_id
 
 # PRIVATE
 
@@ -61,7 +64,7 @@ func parse_config():
 # https://docs.google.com/spreadsheets/d/11gLwcFh-6PSZE6FDh4btUVg8kmBojMQN6e537Xg2fT0/edit#gid=0
 func get_level(index, set_current = false):
 	if set_current:
-		count = index
+		current_level_id = index
 	if index > get_level_count():
 		return null
 
@@ -89,7 +92,7 @@ func get_characters(level_config):
 func create_level(characters, positions, seconds_for_stars, wind, pre_level_messages):
 	var scene_class = ResourceLoader.load("res://scenes/level.xml")
 	var scene_instance = scene_class.instance()
-	scene_instance.init(application, count, characters, positions, seconds_for_stars, wind, pre_level_messages)
+	scene_instance.init(application, current_level_id, characters, positions, seconds_for_stars, wind, pre_level_messages)
 	current_level = scene_instance
 	return scene_instance
 
