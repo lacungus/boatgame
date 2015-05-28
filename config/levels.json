@@ -16,19 +16,43 @@
             "wind": {"amplitude": 0.0001, "period": 0.0001},
             "pre_level_messages": ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 4 }
+            "character_types": { "chaotic": 3 }
         },
         {
             "wind": {"amplitude": 0.001, "period": 0.0001},
-            "pre_level_messages": [],
+            "pre_level_messages": ["Wind becomes stronger! Looks like you are losing control..."],
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": ["Storm is coming! Try to stay safe, calm, and well-balanced."],
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.0001},
+            "pre_level_messages": ["Hooray! Storm is gone. But is it a zombie instead?!"],
             "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 2, "chaotic": 4 }
+            "character_types": { "following": 1 }
         },
         {
             "wind": {"amplitude": 0.001, "period": 0.0001},
             "pre_level_messages": ["How many zombies is too many?"],
             "seconds_for_stars": [100, 50, 25],
             "character_types": { "following": 6 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.0001},
+            "pre_level_messages": ["Ghosts and zombies - beautiful!"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "following": 3, "chaotic": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": ["A the storm is back - wonderful!"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "following": 3, "chaotic": 3 }
         }
     ]
 }
