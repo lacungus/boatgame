@@ -16,8 +16,8 @@ const AI_FOLLOWING_SPEED = PLAYER_SPEED * 0.3
 const AI_FOLLOWING_SPRITE_NAME = "zombie"
 
 # Swinging = Hellhound
-const AI_SWINGING_MASS = PLAYER_MASS * 1
-const AI_SWINGING_SPEED = PLAYER_SPEED * 0.3
+const AI_SWINGING_MASS = PLAYER_MASS * 0.8
+const AI_SWINGING_SPEED = PLAYER_SPEED * 1.1
 const AI_SWINGING_SPRITE_NAME = "hellhound"
 
 # Evil = Demon
@@ -46,6 +46,8 @@ func create(type):
 		return create_chaotic_opponent()
 	elif type == "balancing":
 		return create_balancing_opponent()
+	elif type == "swinging":
+		return create_swinging_opponent()
 	else:
 		print("Unknown type: " + str(type))
 		OS.get_main_loop().quit()
