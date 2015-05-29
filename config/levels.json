@@ -53,6 +53,42 @@
             "pre_level_messages": ["A the storm is back - wonderful!"],
             "seconds_for_stars": [100, 50, 25],
             "character_types": { "following": 3, "chaotic": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": ["Storm is here. And skeleton here"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "balancing": 1 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": ["More skeletons?"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.009, "period": 0.001},
+            "pre_level_messages": ["A lot of skeletons and crazy wind."],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": ["Hell-o-trio!"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "following": 1, "chaotic": 1, "balancing": 1 }
+        },
+        {
+            "wind": {"amplitude": 0.001, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "following": 3, "chaotic": 3, "balancing": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.009, "period": 0.001},
+            "pre_level_messages": ["Wind is scary!"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "following": 3, "chaotic": 3, "balancing": 3 }
         }
     ]
 }
