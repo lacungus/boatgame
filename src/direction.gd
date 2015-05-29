@@ -5,7 +5,7 @@ const VECTOR_LEFT = Vector2(-1, 0)
 const VECTOR_RIGHT = Vector2(1, 0)
 
 func opposite(direction):
-	if direction == direction.LEFT:
+	if direction == LEFT:
 		return RIGHT
 	if direction == RIGHT:
 		return LEFT
