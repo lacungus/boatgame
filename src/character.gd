@@ -44,6 +44,9 @@ func get_is_player():
 
 # PRIVATE
 func run(direction):
+	var boat_angle = get_boat_angle()
+	var y_impulse = min(self.velocity * self.mass * sin(boat_angle), get_weight())
+
 	if direction == null:
 		if previous_direction != direction:
 			if animation_player.has_animation("front"):
@@ -53,11 +56,11 @@ func run(direction):
 	if direction == application.direction.LEFT:
 		if previous_direction != direction:
 			animation_player.play("going_left")
-		apply_impulse(Vector2(0, 0), Vector2(-self.velocity * self.mass, 0))
+		apply_impulse(Vector2(0, 0), Vector2(-self.velocity * self.mass * cos(boat_angle), y_impulse))
 	if direction == application.direction.RIGHT:
 		if previous_direction != direction:
 			animation_player.play("going_right")
-		apply_impulse(Vector2(0, 0), Vector2(self.velocity * self.mass, 0))
+		apply_impulse(Vector2(0, 0), Vector2(self.velocity * self.mass * cos(boat_angle), y_impulse))
 
 	previous_direction = direction
 	
@@ -65,3 +68,7 @@ func delete_wrong_sprites():
 	for child in get_children():
 		if (child extends AnimatedSprite) && (child.get_name() != sprite_name):
 			self.remove_and_delete_child(child)
+
+func get_boat_angle():
+	var boat_top = get_node("/root/Game/main_layer/boat/top")
+	return boat_top.get_rot()
