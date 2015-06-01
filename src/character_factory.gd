@@ -21,8 +21,8 @@ const AI_SWINGING_SPEED = PLAYER_SPEED * 1.1
 const AI_SWINGING_SPRITE_NAME = "hellhound"
 
 # Evil = Demon
-const AI_EVIL_MASS = PLAYER_MASS * 1
-const AI_EVIL_SPEED = PLAYER_SPEED * 0.3
+const AI_EVIL_MASS = PLAYER_MASS * 3
+const AI_EVIL_SPEED = PLAYER_SPEED * 3
 const AI_EVIL_SPRITE_NAME = "demon"
 
 const PLAYER_SPRITE_NAME = "priest"
@@ -48,6 +48,8 @@ func create(type):
 		return create_balancing_opponent()
 	elif type == "swinging":
 		return create_swinging_opponent()
+	elif type == "evil":
+		return create_evil_opponent()
 	else:
 		print("Unknown type: " + str(type))
 		OS.get_main_loop().quit()
@@ -71,7 +73,7 @@ func create_sticking_opponent():
 	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
 	
 func create_evil_opponent():
-	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_SPEED, AI_MASS, false, AI_EVIL_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").EvilAI.new(application), PLAYER_SPEED, AI_EVIL_MASS, false, AI_EVIL_SPRITE_NAME)
 
 func create_chaotic_opponent():
 	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, AI_CHAOTIC_SPRITE_NAME)
