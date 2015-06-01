@@ -1,4 +1,4 @@
-const PLAYER_MASS = 100
+const PLAYER_MASS = 300
 const PLAYER_SPEED = 3
 
 const AI_SPEED = 2
@@ -73,7 +73,7 @@ func create_sticking_opponent():
 	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
 	
 func create_evil_opponent():
-	return create_character(preload("res://src/ai.gd").EvilAI.new(application), PLAYER_SPEED, AI_EVIL_MASS, false, AI_EVIL_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), PLAYER_SPEED, AI_EVIL_MASS, false, AI_EVIL_SPRITE_NAME)
 
 func create_chaotic_opponent():
 	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, AI_CHAOTIC_SPRITE_NAME)
