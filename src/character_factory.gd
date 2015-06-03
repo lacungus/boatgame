@@ -25,6 +25,11 @@ const AI_BALANCING_MASS = PLAYER_MASS * 3
 const AI_BALANCING_SPEED = PLAYER_SPEED * 3
 const AI_BALANCING_SPRITE_NAME = "demon"
 
+# Evil = Skeleton
+const AI_EVIL_MASS = PLAYER_MASS * 1.5
+const AI_EVIL_SPEED = PLAYER_SPEED * 0.3
+const AI_EVIL_SPRITE_NAME = "skeleton"
+
 const PLAYER_SPRITE_NAME = "priest"
 const AI_SPRITE_NAME = "ghost"
 
@@ -58,10 +63,10 @@ func create_player():
 	return create_character(preload("res://src/ai.gd").PlayerAI.new(application), PLAYER_SPEED, PLAYER_MASS, true, PLAYER_SPRITE_NAME)
 	
 func create_swinging_opponent():
-	return create_character(preload("res://src/ai.gd").SwingingAI.new(application), AI_SPEED, AI_MASS, false, AI_SWINGING_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").SwingingAI.new(application), AI_SWINGING_SPEED, AI_SWINGING_MASS, false, AI_SWINGING_SPRITE_NAME)
 
 func create_following_opponent():
-	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_SPEED, AI_MASS, false, AI_FOLLOWING_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_FOLLOWING_SPEED, AI_FOLLOWING_MASS, false, AI_FOLLOWING_SPRITE_NAME)
 
 func create_balancing_opponent():
 	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_BALANCING_SPEED, AI_BALANCING_MASS, false, AI_BALANCING_SPRITE_NAME)
@@ -73,7 +78,7 @@ func create_sticking_opponent():
 	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
 	
 func create_evil_opponent():
-	return create_character(preload("res://src/ai.gd").BalancingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
+	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_EVIL_SPEED, AI_EVIL_MASS, false, AI_EVIL_SPRITE_NAME)
 
 func create_chaotic_opponent():
 	return create_character(preload("res://src/ai.gd").ChaoticAI.new(application), AI_CHAOTIC_SPEED, AI_CHAOTIC_MASS, false, AI_CHAOTIC_SPRITE_NAME)
