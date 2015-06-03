@@ -21,7 +21,6 @@ func _deferred_goto_scene(scene, destroy_previous_scene):
 	# load and add new scene to root
 	var s = ResourceLoader.load(scene)
 	current_scene = s.instance()
-	current_scene.print_tree();
 	application.get_tree().get_root().add_child(current_scene)
 	
 func goto_next_level():
