@@ -14,6 +14,8 @@ var previous_direction = null
 
 var animation_player
 
+var is_flying = false
+
 # PUBLIC 
 func init(application, ai, velocity, mass, is_player, sprite_name):
 	self.application = application
@@ -24,6 +26,7 @@ func init(application, ai, velocity, mass, is_player, sprite_name):
 	self.sprite_name = sprite_name
 
 func _ready():
+	connect_signals()
 	delete_wrong_sprites()
 	
 	animation_player = get_node(sprite_name).get_node("AnimationPlayer")
@@ -44,6 +47,9 @@ func get_is_player():
 
 # PRIVATE
 func run(direction):
+	if is_flying:
+		return
+
 	var boat_angle = get_boat_angle()
 	var y_impulse = min(self.velocity * self.mass * sin(boat_angle), get_weight())
 
@@ -72,3 +78,16 @@ func delete_wrong_sprites():
 func get_boat_angle():
 	var boat_top = get_node("/root/Game/main_layer/boat/top")
 	return boat_top.get_rot()
+
+func _on_body_enter(body):
+	# Relies on the fact that
+	# there's nothing to collide with
+	# other than the boat.
+	is_flying = false
+
+func _on_body_exit ( body ):
+	is_flying = true
+
+func connect_signals():
+	connect("body_enter", self, "_on_body_enter")
+	connect("body_exit", self, "_on_body_exit")
