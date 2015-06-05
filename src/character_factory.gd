@@ -33,8 +33,6 @@ const AI_EVIL_SPRITE_NAME = "skeleton"
 const PLAYER_SPRITE_NAME = "priest"
 const AI_SPRITE_NAME = "ghost"
 
-const SKELETON_SPRITE_NAME = "skeleton"
-
 var application
 
 # PUBLIC
