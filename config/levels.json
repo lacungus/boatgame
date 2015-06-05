@@ -8,87 +8,69 @@
         },
         {
             "wind": {"amplitude": 0, "period": 1},
-            "pre_level_messages": ["Oh no! Two more ghosts are here! Quick, get rid of them!"],
+            "pre_level_messages": ["Oh no! Three more ghosts are here! Quick, get rid of them!"],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 2 }
+            "character_types": { "chaotic": 3 }
         },
         {
-            "wind": {"amplitude": 0.0001, "period": 0.0001},
+            "wind": {"amplitude": 0.0001, "period": 0.001},
             "pre_level_messages": ["Too many ghosts! Luckily, fresh breeze is coming. Try using it for fighting your enemies."],
             "seconds_for_stars": [120, 60, 30],
-            "character_types": { "chaotic": 3 }
+            "character_types": { "chaotic": 6 }
         },
         {
-            "wind": {"amplitude": 0.001, "period": 0.0001},
-            "pre_level_messages": ["Wind becomes stronger! Looks like you are losing control..."],
+            "wind": {"amplitude": 0.0001, "period": 0.001},
+            "pre_level_messages": ["Look who's here! It's a hellhound!"],
             "seconds_for_stars": [140, 70, 40],
-            "character_types": { "chaotic": 3 }
+            "character_types": { "chaotic": 5, "evil": 1 }
         },
         {
-            "wind": {"amplitude": 0.001, "period": 0.001},
-            "pre_level_messages": ["Storm is coming! Try to stay safe, calm, and well-balanced."],
+            "wind": {"amplitude": 0.0005, "period": 0.001},
+            "pre_level_messages": [],
             "seconds_for_stars": [140, 70, 40],
-            "character_types": { "chaotic": 3 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.0001},
-            "pre_level_messages": ["Hooray! Storm is gone. But is it a zombie instead?!"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 1 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.0001},
-            "pre_level_messages": ["How many zombies is too many?"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 6 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.0001},
-            "pre_level_messages": ["Ghosts and zombies - beautiful!"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 3, "chaotic": 3 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.001},
-            "pre_level_messages": ["A the storm is back - wonderful!"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 3, "chaotic": 3 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.001},
-            "pre_level_messages": ["Storm is here. And skeleton here"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "balancing": 1 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.001},
-            "pre_level_messages": ["More skeletons?"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "balancing": 5 }
-        },
-        {
-            "wind": {"amplitude": 0.009, "period": 0.001},
-            "pre_level_messages": ["A lot of skeletons and crazy wind."],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "balancing": 5 }
-        },
-        {
-            "wind": {"amplitude": 0.001, "period": 0.001},
-            "pre_level_messages": ["Hell-o-trio!"],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 1, "chaotic": 1, "balancing": 1 }
+            "character_types": { "chaotic": 5, "evil": 5 }
         },
         {
             "wind": {"amplitude": 0.001, "period": 0.001},
             "pre_level_messages": [],
-            "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 3, "chaotic": 3, "balancing": 3 }
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 7, "evil": 7 }
         },
         {
-            "wind": {"amplitude": 0.009, "period": 0.001},
-            "pre_level_messages": ["Wind is scary!"],
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["That's right. Here are the skeletons.", "And it's really windy here."],
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 5, "evil": 5, "sticking": 2 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 5, "evil": 5, "sticking": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["And now there are really a lot of them."],
+            "seconds_for_stars": [140, 70, 40],
+            "character_types": { "chaotic": 7, "evil": 7, "sticking": 7 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["Who's missing here?", "ZOMBIE!!!"],
             "seconds_for_stars": [100, 50, 25],
-            "character_types": { "following": 3, "chaotic": 3, "balancing": 3 }
+            "character_types": { "chaotic": 3, "evil": 3, "sticking": 3, "following": 3 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["What do Zombies do?", "Follow the delicious smell of your brain, of course."],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "evil": 5, "sticking": 5, "following": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["Zombies tend to stick together, don't they?", "Together with your brain.", "If you have some, of course."],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "evil": 5, "sticking": 5, "following": 10 }
         }
     ]
 }

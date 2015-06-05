@@ -1,13 +1,13 @@
-const PLAYER_MASS = 300
-const PLAYER_SPEED = 3
+const PLAYER_MASS = 100
+const PLAYER_SPEED = 2
 
 const AI_SPEED = 2
 const AI_MASS = 10
 const AI_BALAN_MASS = 20
 
 # Chaotic = Ghost
-const AI_CHAOTIC_MASS = PLAYER_MASS * 0.5
-const AI_CHAOTIC_SPEED = PLAYER_SPEED * 0.2
+const AI_CHAOTIC_MASS = PLAYER_MASS * 0.2
+const AI_CHAOTIC_SPEED = PLAYER_SPEED * 0.3
 const AI_CHAOTIC_SPRITE_NAME = "ghost"
 
 # Following = Zombie
@@ -15,20 +15,20 @@ const AI_FOLLOWING_MASS = PLAYER_MASS * 1
 const AI_FOLLOWING_SPEED = PLAYER_SPEED * 0.3
 const AI_FOLLOWING_SPRITE_NAME = "zombie"
 
-# Swinging = Hellhound
-const AI_SWINGING_MASS = PLAYER_MASS * 0.8
-const AI_SWINGING_SPEED = PLAYER_SPEED * 1.1
-const AI_SWINGING_SPRITE_NAME = "hellhound"
+# Sticking = Skeleton
+const AI_STICKING_MASS = PLAYER_MASS * 0.2
+const AI_STICKING_SPEED = PLAYER_SPEED * 0.5
+const AI_STICKING_SPRITE_NAME = "skeleton"
+
+# Evil = Hellhound
+const AI_EVIL_MASS = PLAYER_MASS * 0.2
+const AI_EVIL_SPEED = PLAYER_SPEED * 0.5
+const AI_EVIL_SPRITE_NAME = "hellhound"
 
 # Balancing = Demon
 const AI_BALANCING_MASS = PLAYER_MASS * 3
 const AI_BALANCING_SPEED = PLAYER_SPEED * 3
 const AI_BALANCING_SPRITE_NAME = "demon"
-
-# Evil = Skeleton
-const AI_EVIL_MASS = PLAYER_MASS * 1.5
-const AI_EVIL_SPEED = PLAYER_SPEED * 0.3
-const AI_EVIL_SPRITE_NAME = "skeleton"
 
 const PLAYER_SPRITE_NAME = "priest"
 const AI_SPRITE_NAME = "ghost"
@@ -53,6 +53,8 @@ func create(type):
 		return create_swinging_opponent()
 	elif type == "evil":
 		return create_evil_opponent()
+	elif type == "sticking":
+		return create_sticking_opponent()
 	else:
 		print("Unknown type: " + str(type))
 		OS.get_main_loop().quit()
@@ -60,8 +62,8 @@ func create(type):
 func create_player():
 	return create_character(preload("res://src/ai.gd").PlayerAI.new(application), PLAYER_SPEED, PLAYER_MASS, true, PLAYER_SPRITE_NAME)
 	
-func create_swinging_opponent():
-	return create_character(preload("res://src/ai.gd").SwingingAI.new(application), AI_SWINGING_SPEED, AI_SWINGING_MASS, false, AI_SWINGING_SPRITE_NAME)
+func create_sticking_opponent():
+	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_STICKING_SPEED, AI_STICKING_MASS, false, AI_STICKING_SPRITE_NAME)
 
 func create_following_opponent():
 	return create_character(preload("res://src/ai.gd").FollowingAI.new(application), AI_FOLLOWING_SPEED, AI_FOLLOWING_MASS, false, AI_FOLLOWING_SPRITE_NAME)
@@ -72,9 +74,6 @@ func create_balancing_opponent():
 func create_opposing_opponent():
 	return create_character(preload("res://src/ai.gd").OpposingAI.new(application), AI_SPEED, AI_MASS, false, AI_SPRITE_NAME)
 
-func create_sticking_opponent():
-	return create_character(preload("res://src/ai.gd").StickingAI.new(application), AI_SPEED, 1, false, AI_SPRITE_NAME)
-	
 func create_evil_opponent():
 	return create_character(preload("res://src/ai.gd").EvilAI.new(application), AI_EVIL_SPEED, AI_EVIL_MASS, false, AI_EVIL_SPRITE_NAME)
 
