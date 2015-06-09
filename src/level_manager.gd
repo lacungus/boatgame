@@ -15,6 +15,11 @@ var levels_config
 
 const BASE_OFFSET = 10
 
+# After reaching this index,
+# it resets counter and starts
+# putting characters back from the middle.
+const MAX_OFFSET_INDEX = 15
+
 # PUBLIC
 func _init(application):
 	self.application = application
@@ -102,11 +107,14 @@ func start_positions(characters):
 	return result
 
 func character_position(index, middle_x, start_y):
+	index = index % MAX_OFFSET_INDEX
 	var offset = (index + 1) * BASE_OFFSET
+	var start_x = 0
 	if index % 2 == 0:
-		return Vector2(middle_x + offset, start_y)
+		start_x = middle_x + offset
 	else:
-		return Vector2(middle_x - offset, start_y)
+		start_x = middle_x - offset
+	return Vector2(start_x, start_y)
 
 func get_level_count():
 	return levels_config["levels"].size()
