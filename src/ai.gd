@@ -148,9 +148,15 @@ class BalancingAI:
 
 		if (center_of_mass.x < (application.get_width() / 2 - delta) && character.get_pos().x < (application.get_width() - boat_delta)):
 			return application.direction.RIGHT
+			
+		if (character.get_pos().x > (application.get_width() - boat_delta)):
+			return application.direction.LEFT
 		
 		if (center_of_mass.x > (application.get_width() / 2 + delta) && character.get_pos().x > boat_delta) :
 			return application.direction.LEFT
+			
+		if (character.get_pos().x < boat_delta):
+			return application.direction.RIGHT
 		
 		return null
 

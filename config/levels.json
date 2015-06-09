@@ -71,6 +71,54 @@
             "pre_level_messages": ["Zombies tend to stick together, don't they?", "Together with your brain.", "If you have some, of course."],
             "seconds_for_stars": [100, 50, 25],
             "character_types": { "chaotic": 5, "evil": 5, "sticking": 5, "following": 10 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": ["Doing so well! Aren't you expecting a stronger opponent? Someone truely evilish?"],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "balancing": 1 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 10, "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "evil" : 5, "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 10, "evil" : 10, "balancing" : 10 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "evil" : 5, "sticking": 5, "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 10, "evil" : 10, "sticking": 10, "balancing" : 10 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 5, "evil" : 5, "sticking": 5, "following": 5, "balancing": 5 }
+        },
+        {
+            "wind": {"amplitude": 0.002, "period": 0.001},
+            "pre_level_messages": [],
+            "seconds_for_stars": [100, 50, 25],
+            "character_types": { "chaotic": 10, "evil" : 10, "sticking": 10, "following": 10, "balancing" : 10 }
         }
     ]
 }
