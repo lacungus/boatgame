@@ -10,7 +10,7 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="59">
+			<string_array  len="62">
 				<string> "root" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -65,10 +65,13 @@
 				<string> "autowrap" </string>
 				<string> "uppercase" </string>
 				<string> "percent_visible" </string>
+				<string> "ScrollContainer" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "scroll/horizontal" </string>
+				<string> "scroll/vertical" </string>
 				<string> "levels_bar" </string>
 				<string> "VBoxContainer" </string>
 				<string> "rect/min_size" </string>
-				<string> "size_flags/vertical" </string>
 				<string> "theme/theme" </string>
 			</string_array>
 			<string> "version" </string>
@@ -76,9 +79,9 @@
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 5 </int>
 			<string> "variants" </string>
-			<array  len="29" shared="false">
+			<array  len="32" shared="false">
 				<node_path> "" </node_path>
 				<int> 2 </int>
 				<bool> True </bool>
@@ -115,7 +118,7 @@
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -595.644, -32.8591 </vector2>
+							<vector2> -432.692, -32.8591 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -235,15 +238,18 @@
 				<resource  resource_type="Font" path="res://assets/fonts/FeenaFont.fnt">  </resource>
 				<string> "Levels" </string>
 				<real> -1 </real>
-				<real> -250 </real>
-				<real> -236 </real>
-				<real> 266 </real>
-				<real> 290 </real>
+				<real> -280 </real>
+				<real> -229 </real>
+				<real> 284 </real>
+				<real> 243 </real>
+				<real> 232 </real>
+				<real> 332 </real>
+				<real> 100 </real>
 				<vector2> 100, 100 </vector2>
 				<resource  resource_type="Theme" path="local://1">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="190"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 0, 0, 0, 14, 13, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 10, 9, 6, 10, 7, 15, 11, 16, 2, 17, 10, 18, 4, 19, 4, 20, 12, 21, 12, 22, 13, 23, 14, 24, 4, 25, 15, 0, 0, 0, 27, 26, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 28, 16, 29, 17, 30, 18, 31, 19, 32, 0, 33, 0, 34, 0, 35, 0, 36, 2, 37, 2, 38, 1, 39, 3, 40, 20, 41, 6, 42, 3, 43, 3, 44, 3, 45, 6, 46, 4, 47, 4, 48, 21, 49, 12, 50, 13, 51, 4, 52, 4, 53, 22, 0, 0, 0, 55, 54, -1, 20, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 28, 23, 29, 24, 30, 25, 31, 26, 56, 27, 32, 0, 33, 0, 34, 0, 35, 0, 36, 4, 37, 4, 38, 1, 57, 1, 39, 3, 58, 28, 0 </int_array>
+			<int_array  len="233"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 0, 0, 0, 14, 13, -1, 19, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 8, 10, 9, 6, 10, 7, 15, 11, 16, 2, 17, 10, 18, 4, 19, 4, 20, 12, 21, 12, 22, 13, 23, 14, 24, 4, 25, 15, 0, 0, 0, 27, 26, -1, 31, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 28, 16, 29, 17, 30, 18, 31, 19, 32, 0, 33, 0, 34, 0, 35, 0, 36, 2, 37, 2, 38, 1, 39, 3, 40, 20, 41, 6, 42, 3, 43, 3, 44, 3, 45, 6, 46, 4, 47, 4, 48, 21, 49, 12, 50, 13, 51, 4, 52, 4, 53, 22, 0, 0, 0, 54, 54, -1, 20, 2, 0, 4, 2, 5, 3, 6, 3, 7, 4, 28, 23, 29, 24, 30, 25, 31, 26, 32, 0, 33, 0, 34, 0, 35, 0, 36, 2, 37, 4, 38, 1, 55, 1, 39, 3, 56, 4, 57, 2, 0, 3, 0, 59, 58, -1, 18, 2, 0, 4, 2, 5, 3, 6, 3, 7, 2, 28, 27, 30, 28, 31, 29, 60, 30, 32, 0, 33, 0, 34, 0, 35, 0, 36, 4, 37, 2, 55, 1, 39, 3, 61, 31, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
